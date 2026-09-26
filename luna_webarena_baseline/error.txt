@@ -1,0 +1,41 @@
+[Config file]: /tmp/tmp64p4jcpm/621.json
+[Unhandled Error] KeyError('—')
+Traceback (most recent call last):
+  File "/scratch.global/pan00389/webchal/webarena/run.py", line 296, in test
+    action = agent.next_action(
+             ^^^^^^^^^^^^^^^^^^
+  File "<@beartype(agent.agent.PromptAgent.next_action) at 0x7f6c74d3aa20>", line 84, in next_action
+  File "/scratch.global/pan00389/webchal/webarena/agent/agent.py", line 139, in next_action
+    action = create_id_based_action(parsed_response)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(browser_env.actions.create_id_based_action) at 0x7f6c766dc9a0>", line 32, in create_id_based_action
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/actions.py", line 1542, in create_id_based_action
+    return create_type_action(text=text, element_id=element_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(browser_env.actions.create_type_action) at 0x7f6c7668ac00>", line 385, in create_type_action
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/actions.py", line 679, in create_type_action
+    "text": _keys2ids(text),
+            ^^^^^^^^^^^^^^^
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/actions.py", line 341, in _keys2ids
+    return list(
+           ^^^^^
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/actions.py", line 343, in <lambda>
+    lambda key: _key2id[str(key)]
+                ~~~~~~~^^^^^^^^^^
+KeyError: '—'
+[Config file]: /tmp/tmpod1b5etg/374.json
+[Unhandled Error] AttributeError("'Page' object has no attribute 'client'")
+Traceback (most recent call last):
+  File "/scratch.global/pan00389/webchal/webarena/run.py", line 321, in test
+    obs, _, terminated, _, info = env.step(action)
+                                  ^^^^^^^^^^^^^^^^
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/envs.py", line 254, in step
+    observation = self._get_obs()
+                  ^^^^^^^^^^^^^^^
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/envs.py", line 176, in _get_obs
+    self.page, self.get_page_client(self.page)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch.global/pan00389/webchal/webarena/browser_env/envs.py", line 172, in get_page_client
+    return page.client  # type: ignore
+           ^^^^^^^^^^^
+AttributeError: 'Page' object has no attribute 'client'

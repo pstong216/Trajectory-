@@ -1,0 +1,673 @@
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:24:47,179 - INFO - [Config file]: /tmp/tmp340_wkq8/203.json
+2026-09-22 10:24:47,185 - INFO - [Intent]: Get the purchase date and order id of the most recent pending order
+2026-09-22 10:29:51,517 - INFO - [Result] (FAIL) /tmp/tmp340_wkq8/203.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:30:08,895 - INFO - [Config file]: /tmp/tmpglg4vvj6/204.json
+2026-09-22 10:30:08,895 - INFO - [Intent]: Get the product name and discounted price (low to high) of the most recent completed order
+2026-09-22 10:35:44,339 - INFO - [Result] (FAIL) /tmp/tmpglg4vvj6/204.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:36:08,995 - INFO - [Config file]: /tmp/tmp9m53lgcf/208.json
+2026-09-22 10:36:08,995 - INFO - [Intent]: Find the customer name and email with phone number +1 2058812302
+2026-09-22 10:38:57,665 - INFO - [Result] (FAIL) /tmp/tmp9m53lgcf/208.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:39:12,916 - INFO - [Config file]: /tmp/tmpycpd3pl8/209.json
+2026-09-22 10:39:12,916 - INFO - [Intent]: Find the customer name and email with phone number 2137418080
+2026-09-22 10:41:25,159 - INFO - [Result] (FAIL) /tmp/tmpycpd3pl8/209.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:41:39,697 - INFO - [Config file]: /tmp/tmp5_j5ztvn/210.json
+2026-09-22 10:41:39,697 - INFO - [Intent]: Find the customer name and email with phone number 2065555555
+2026-09-22 10:44:40,038 - INFO - [Result] (FAIL) /tmp/tmp5_j5ztvn/210.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:44:53,914 - INFO - [Config file]: /tmp/tmpf8_0e9ye/211.json
+2026-09-22 10:44:53,914 - INFO - [Intent]: Find the customer name and email with phone number 8015551212
+2026-09-22 10:47:29,575 - INFO - [Result] (FAIL) /tmp/tmpf8_0e9ye/211.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:47:43,169 - INFO - [Config file]: /tmp/tmp2jgqj00h/212.json
+2026-09-22 10:47:43,169 - INFO - [Intent]: Find the customer name and email with phone number 555-229-3326
+2026-09-22 10:51:04,324 - INFO - [Result] (FAIL) /tmp/tmp2jgqj00h/212.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:51:27,706 - INFO - [Config file]: /tmp/tmpssq5mt7n/213.json
+2026-09-22 10:51:27,706 - INFO - [Intent]: What are the key aspects that the customers don't like about Antonia Racer Tank
+2026-09-22 10:56:39,529 - INFO - [Result] (FAIL) /tmp/tmpssq5mt7n/213.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 10:56:56,560 - INFO - [Config file]: /tmp/tmp0fjtxosl/214.json
+2026-09-22 10:56:56,560 - INFO - [Intent]: What are the key aspects that the customers don't like about Zing Jump Rope
+2026-09-22 11:02:12,070 - INFO - [Result] (FAIL) /tmp/tmp0fjtxosl/214.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:02:30,797 - INFO - [Config file]: /tmp/tmp764ieb7z/215.json
+2026-09-22 11:02:30,798 - INFO - [Intent]: What are the key aspects that the customers don't like about Circe ice fleece
+2026-09-22 11:07:32,007 - INFO - [Result] (FAIL) /tmp/tmp764ieb7z/215.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:07:56,565 - INFO - [Config file]: /tmp/tmp5u5inpuo/216.json
+2026-09-22 11:07:56,566 - INFO - [Intent]: What are the key aspects that the customers don't like about Electra Bra Top
+2026-09-22 11:09:47,426 - INFO - [Result] (FAIL) /tmp/tmp5u5inpuo/216.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:10:07,555 - INFO - [Config file]: /tmp/tmps1neanvp/217.json
+2026-09-22 11:10:07,555 - INFO - [Intent]: What are the key aspects that the customers don't like about Pursuit Tone Band
+2026-09-22 11:16:06,378 - INFO - [Result] (FAIL) /tmp/tmps1neanvp/217.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:16:27,114 - INFO - [Config file]: /tmp/tmphd2lv9y_/225.json
+2026-09-22 11:16:27,114 - INFO - [Intent]: What do customers say about brush from sephora
+2026-09-22 11:17:44,302 - INFO - [Result] (FAIL) /tmp/tmphd2lv9y_/225.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:17:55,755 - INFO - [Config file]: /tmp/tmplxjzjpc8/226.json
+2026-09-22 11:17:55,755 - INFO - [Intent]: What is the price range for products from Amazon basic?
+2026-09-22 11:19:06,718 - INFO - [Result] (FAIL) /tmp/tmplxjzjpc8/226.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:19:20,713 - INFO - [Config file]: /tmp/tmpd7xur3bs/227.json
+2026-09-22 11:19:20,713 - INFO - [Intent]: What is the price range for products from EYZUTAK?
+2026-09-22 11:20:40,587 - INFO - [Result] (PASS) /tmp/tmpd7xur3bs/227.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:20:52,989 - INFO - [Config file]: /tmp/tmp25u9zr09/228.json
+2026-09-22 11:20:52,989 - INFO - [Intent]: What is the price range for products from sephora?
+2026-09-22 11:21:45,545 - INFO - [Result] (FAIL) /tmp/tmp25u9zr09/228.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:21:57,569 - INFO - [Config file]: /tmp/tmp4i3jv4g_/229.json
+2026-09-22 11:21:57,569 - INFO - [Intent]: What is the price range for products from ugreen?
+2026-09-22 11:24:17,030 - INFO - [Result] (FAIL) /tmp/tmp4i3jv4g_/229.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:24:28,378 - INFO - [Config file]: /tmp/tmp1a9bjwjx/230.json
+2026-09-22 11:24:28,378 - INFO - [Intent]: What is the price range for products from Perricone MD?
+2026-09-22 11:26:16,605 - INFO - [Result] (FAIL) /tmp/tmp1a9bjwjx/230.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:26:29,020 - INFO - [Config file]: /tmp/tmpfe89qmym/231.json
+2026-09-22 11:26:29,020 - INFO - [Intent]: Get the order number of my most recent cancelled order 
+2026-09-22 11:27:12,831 - INFO - [Result] (PASS) /tmp/tmpfe89qmym/231.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:27:31,494 - INFO - [Config file]: /tmp/tmpc9xjuv1l/232.json
+2026-09-22 11:27:31,494 - INFO - [Intent]: Get the order number of my most recent pending order 
+2026-09-22 11:28:17,649 - INFO - [Result] (PASS) /tmp/tmpc9xjuv1l/232.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:28:37,259 - INFO - [Config file]: /tmp/tmpc1eawsfz/233.json
+2026-09-22 11:28:37,259 - INFO - [Intent]: Get the order number of my most recent complete order 
+2026-09-22 11:29:16,791 - INFO - [Result] (PASS) /tmp/tmpc1eawsfz/233.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:29:30,935 - INFO - [Config file]: /tmp/tmp3o72uoai/234.json
+2026-09-22 11:29:30,935 - INFO - [Intent]: Get the order number of my most recent on hold order 
+2026-09-22 11:30:39,349 - INFO - [Result] (FAIL) /tmp/tmp3o72uoai/234.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:30:55,033 - INFO - [Config file]: /tmp/tmpgl9kj1vq/235.json
+2026-09-22 11:30:55,034 - INFO - [Intent]: Get the order number of my most recent under delivery order 
+2026-09-22 11:32:59,786 - INFO - [Result] (FAIL) /tmp/tmpgl9kj1vq/235.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:33:23,156 - INFO - [Config file]: /tmp/tmp4c1oyw90/238.json
+2026-09-22 11:33:23,156 - INFO - [Intent]: I am doing a market survey for one stop market, show me the most expensive product from PS4 accessories category
+2026-09-22 11:40:16,752 - INFO - [Result] (FAIL) /tmp/tmp4c1oyw90/238.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:40:32,023 - INFO - [Config file]: /tmp/tmphg9g7cs8/239.json
+2026-09-22 11:40:32,023 - INFO - [Intent]: I am doing a market survey for one stop market, show me the most expensive product from nutrition bars and drinks category
+2026-09-22 11:42:08,995 - INFO - [Result] (FAIL) /tmp/tmphg9g7cs8/239.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:42:20,155 - INFO - [Config file]: /tmp/tmp3wcvt1wm/240.json
+2026-09-22 11:42:20,155 - INFO - [Intent]: I am doing a market survey for one stop market, show me the most expensive product from competitive swimwear category
+2026-09-22 11:43:36,608 - INFO - [Result] (FAIL) /tmp/tmp3wcvt1wm/240.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:44:02,660 - INFO - [Config file]: /tmp/tmpqxh_djig/241.json
+2026-09-22 11:44:02,660 - INFO - [Intent]: I am doing a market survey for one stop market, show me the most expensive product from skin care tool category
+2026-09-22 11:45:05,548 - INFO - [Result] (FAIL) /tmp/tmpqxh_djig/241.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:45:18,944 - INFO - [Config file]: /tmp/tmpp6qe6spr/242.json
+2026-09-22 11:45:18,944 - INFO - [Intent]: I am doing a market survey for one stop market, show me the most expensive product from Household Supplies category
+2026-09-22 11:48:51,021 - INFO - [Result] (FAIL) /tmp/tmpp6qe6spr/242.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:49:08,913 - INFO - [Config file]: /tmp/tmpu26vkxxt/243.json
+2026-09-22 11:49:08,913 - INFO - [Intent]: Show me the email address of the customer who is the most unhappy with Circe fleece
+2026-09-22 11:52:16,639 - INFO - [Result] (FAIL) /tmp/tmpu26vkxxt/243.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:52:35,511 - INFO - [Config file]: /tmp/tmpk52rdo2o/244.json
+2026-09-22 11:52:35,511 - INFO - [Intent]: Show me the email address of the customer who is the most unhappy with Olivia zip jacket
+2026-09-22 11:55:34,112 - INFO - [Result] (FAIL) /tmp/tmpk52rdo2o/244.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:55:46,908 - INFO - [Config file]: /tmp/tmpmcj_cy8y/245.json
+2026-09-22 11:55:46,908 - INFO - [Intent]: Show me the name of the customer who is the most unhappy with Antonia racer tank
+2026-09-22 11:58:28,951 - INFO - [Result] (FAIL) /tmp/tmpmcj_cy8y/245.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 11:58:45,470 - INFO - [Config file]: /tmp/tmppk7wh4k6/246.json
+2026-09-22 11:58:45,470 - INFO - [Intent]: Show me the name of the customer who is the most unhappy with Chloe tank
+2026-09-22 12:07:01,916 - INFO - [Result] (FAIL) /tmp/tmppk7wh4k6/246.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:07:11,322 - INFO - [Config file]: /tmp/tmpznx3hkm5/247.json
+2026-09-22 12:07:11,323 - INFO - [Intent]: Show me the email address of the customer who is the most unhappy with the style of Zoe products
+2026-09-22 12:13:20,437 - INFO - [Result] (FAIL) /tmp/tmpznx3hkm5/247.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:13:30,346 - INFO - [Config file]: /tmp/tmpbna3gqoz/260.json
+2026-09-22 12:13:30,347 - INFO - [Intent]: I want to browse the products in the Video Game category
+2026-09-22 12:14:03,400 - INFO - [Result] (PASS) /tmp/tmpbna3gqoz/260.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:14:13,481 - INFO - [Config file]: /tmp/tmpbtimimsd/261.json
+2026-09-22 12:14:13,481 - INFO - [Intent]: I want to browse the products in the Headphones category
+2026-09-22 12:15:16,482 - INFO - [Result] (PASS) /tmp/tmpbtimimsd/261.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:15:30,766 - INFO - [Config file]: /tmp/tmp5h1x2fgo/262.json
+2026-09-22 12:15:30,766 - INFO - [Intent]: I want to browse the products in the Men shoes category
+2026-09-22 12:17:52,603 - INFO - [Result] (FAIL) /tmp/tmp5h1x2fgo/262.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:18:06,736 - INFO - [Config file]: /tmp/tmpk4cb8xhr/263.json
+2026-09-22 12:18:06,736 - INFO - [Intent]: I want to browse the products in the Woman clothing category
+2026-09-22 12:21:01,148 - INFO - [Result] (FAIL) /tmp/tmpk4cb8xhr/263.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:21:13,062 - INFO - [Config file]: /tmp/tmpiqevvs36/264.json
+2026-09-22 12:21:13,062 - INFO - [Intent]: I want to browse the products in the Cabinets, Racks & Shelves category
+2026-09-22 12:25:55,342 - INFO - [Result] (FAIL) /tmp/tmpiqevvs36/264.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:26:05,457 - INFO - [Config file]: /tmp/tmpr7zfoxyt/269.json
+2026-09-22 12:26:05,457 - INFO - [Intent]: Show me products under $25 in "women shoes" category
+2026-09-22 12:27:08,009 - INFO - [Result] (FAIL) /tmp/tmpr7zfoxyt/269.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:27:15,472 - INFO - [Config file]: /tmp/tmpu9a6m1jj/270.json
+2026-09-22 12:27:15,472 - INFO - [Intent]: Show me products under $30 in "men shoes" category
+2026-09-22 12:28:37,093 - INFO - [Result] (FAIL) /tmp/tmpu9a6m1jj/270.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:28:45,001 - INFO - [Config file]: /tmp/tmp3n88lcdd/271.json
+2026-09-22 12:28:45,001 - INFO - [Intent]: Show me products under $46.99 in "makeup remover" category
+2026-09-22 12:30:03,044 - INFO - [Result] (FAIL) /tmp/tmp3n88lcdd/271.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:30:15,194 - INFO - [Config file]: /tmp/tmpevdi191d/272.json
+2026-09-22 12:30:15,195 - INFO - [Intent]: Show me products under $78 in "children dental care" category
+2026-09-22 12:31:29,444 - INFO - [Result] (FAIL) /tmp/tmpevdi191d/272.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:31:38,128 - INFO - [Config file]: /tmp/tmp6pflb23g/273.json
+2026-09-22 12:31:38,129 - INFO - [Intent]: Show me products under $199 in "furtiture with accent" category
+2026-09-22 12:32:37,593 - INFO - [Result] (FAIL) /tmp/tmp6pflb23g/273.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:32:44,365 - INFO - [Config file]: /tmp/tmpqcj9ys8h/274.json
+2026-09-22 12:32:44,365 - INFO - [Intent]: Search for "usb wifi"
+2026-09-22 12:33:33,236 - INFO - [Result] (PASS) /tmp/tmpqcj9ys8h/274.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:33:44,429 - INFO - [Config file]: /tmp/tmp50d9_500/275.json
+2026-09-22 12:33:44,429 - INFO - [Intent]: Search for "xbox"
+2026-09-22 12:34:35,032 - INFO - [Result] (PASS) /tmp/tmp50d9_500/275.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:34:42,128 - INFO - [Config file]: /tmp/tmpkah5z7__/276.json
+2026-09-22 12:34:42,128 - INFO - [Intent]: Search for "switch accessories"
+2026-09-22 12:35:31,504 - INFO - [Result] (PASS) /tmp/tmpkah5z7__/276.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:35:37,263 - INFO - [Config file]: /tmp/tmphd1ay7r4/277.json
+2026-09-22 12:35:37,263 - INFO - [Intent]: Search for "batteries for iphone 13"
+2026-09-22 12:36:11,302 - INFO - [Result] (FAIL) /tmp/tmphd1ay7r4/277.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:36:17,293 - INFO - [Config file]: /tmp/tmpnr39kz5t/278.json
+2026-09-22 12:36:17,293 - INFO - [Intent]: Search for "green tea bag for weight loss"
+2026-09-22 12:41:43,183 - INFO - [Result] (FAIL) /tmp/tmpnr39kz5t/278.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:41:54,369 - INFO - [Config file]: /tmp/tmpp181km24/279.json
+2026-09-22 12:41:54,369 - INFO - [Intent]: Provide me with the complete names of Bluetooth headphones from Sony, and also share the price range for the available models
+2026-09-22 12:43:04,067 - INFO - [Result] (FAIL) /tmp/tmpp181km24/279.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:43:14,692 - INFO - [Config file]: /tmp/tmp1n5f0155/280.json
+2026-09-22 12:43:14,692 - INFO - [Intent]: Provide me with the full names of chargers from Anker, and also share the price range for the available models
+2026-09-22 12:44:22,935 - INFO - [Result] (FAIL) /tmp/tmp1n5f0155/280.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:44:30,037 - INFO - [Config file]: /tmp/tmpb4d_fykc/281.json
+2026-09-22 12:44:30,037 - INFO - [Intent]: Please provide me with the complete product names of Oral B brush heads designed for children, along with their corresponding price range per brush
+2026-09-22 12:45:59,139 - INFO - [Result] (FAIL) /tmp/tmpb4d_fykc/281.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:46:06,668 - INFO - [Config file]: /tmp/tmpxkmjy0ht/282.json
+2026-09-22 12:46:06,668 - INFO - [Intent]: List the full product names of slide slippers from Nike and tell me the price range of the available products
+2026-09-22 12:47:09,351 - INFO - [Result] (FAIL) /tmp/tmpxkmjy0ht/282.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:47:18,303 - INFO - [Config file]: /tmp/tmp01kcoq3_/283.json
+2026-09-22 12:47:18,304 - INFO - [Intent]: Look up the most recent models of XBox controllers released between 2020-2021?
+2026-09-22 12:53:59,054 - INFO - [Result] (FAIL) /tmp/tmp01kcoq3_/283.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 12:54:06,787 - INFO - [Config file]: /tmp/tmp8d1qitng/284.json
+2026-09-22 12:54:06,788 - INFO - [Intent]: Show the least expensive shoe storage with a minimum storage capacity of 12 pairs.
+2026-09-22 13:00:51,591 - INFO - [Result] (FAIL) /tmp/tmp8d1qitng/284.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:01:04,881 - INFO - [Config file]: /tmp/tmpofto9h2y/285.json
+2026-09-22 13:01:04,881 - INFO - [Intent]: Show the least expensive switch card holder with a minimum storage capacity of 15 cards.
+2026-09-22 13:03:41,543 - INFO - [Result] (FAIL) /tmp/tmpofto9h2y/285.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:03:49,035 - INFO - [Config file]: /tmp/tmpv2kivskq/286.json
+2026-09-22 13:03:49,035 - INFO - [Intent]: Show the least expensive ssd hard drive with a minimum storage capacity of 1TB.
+2026-09-22 13:10:43,452 - INFO - [Result] (FAIL) /tmp/tmpv2kivskq/286.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:10:51,451 - INFO - [Config file]: /tmp/tmpx1dke3tn/288.json
+2026-09-22 13:10:51,451 - INFO - [Intent]: Tell me the name of the customer who has the most cancellations in the history
+2026-09-22 13:27:24,282 - INFO - [Result] (FAIL) /tmp/tmpx1dke3tn/288.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:27:36,477 - INFO - [Config file]: /tmp/tmp5rg16cjx/289.json
+2026-09-22 13:27:36,477 - INFO - [Intent]: Tell me the email address, name, phone number of the customer who has the most cancellations in the history
+2026-09-22 13:36:06,363 - INFO - [Result] (FAIL) /tmp/tmp5rg16cjx/289.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:36:15,679 - INFO - [Config file]: /tmp/tmpszq7sf04/290.json
+2026-09-22 13:36:15,679 - INFO - [Intent]: Tell me the product SKUs in the most recent cancelled orders of the customer who has the most cancellations in the history
+2026-09-22 13:40:31,445 - INFO - [Result] (FAIL) /tmp/tmpszq7sf04/290.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:40:39,424 - INFO - [Config file]: /tmp/tmpb2sfl4pj/291.json
+2026-09-22 13:40:39,424 - INFO - [Intent]: Tell me the total spend on products in the most recent cancelled orders of the customer who has the most cancellations in the history
+2026-09-22 13:59:31,076 - INFO - [Result] (FAIL) /tmp/tmpb2sfl4pj/291.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 13:59:45,519 - INFO - [Config file]: /tmp/tmpk3dgyev4/292.json
+2026-09-22 13:59:45,519 - INFO - [Intent]: Tell me the total number of cancellations of the customer who has the most cancellations in the history
+2026-09-22 14:04:54,405 - INFO - [Result] (FAIL) /tmp/tmpk3dgyev4/292.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:05:06,476 - INFO - [Config file]: /tmp/tmpwlbgp44r/298.json
+2026-09-22 14:05:06,476 - INFO - [Intent]: Show the most recent completed order
+2026-09-22 14:05:48,364 - INFO - [Result] (FAIL) /tmp/tmpwlbgp44r/298.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:06:00,840 - INFO - [Config file]: /tmp/tmp779es20c/299.json
+2026-09-22 14:06:00,840 - INFO - [Intent]: Show the most recent cancelled order
+2026-09-22 14:06:48,064 - INFO - [Result] (FAIL) /tmp/tmp779es20c/299.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:06:59,374 - INFO - [Config file]: /tmp/tmpdda5nvsa/300.json
+2026-09-22 14:06:59,374 - INFO - [Intent]: Show the most recent pending order
+2026-09-22 14:07:45,419 - INFO - [Result] (FAIL) /tmp/tmpdda5nvsa/300.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:07:56,591 - INFO - [Config file]: /tmp/tmpa5jfbpyg/301.json
+2026-09-22 14:07:56,591 - INFO - [Intent]: Show the most recent processing order
+2026-09-22 14:11:21,605 - INFO - [Result] (FAIL) /tmp/tmpa5jfbpyg/301.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:11:34,236 - INFO - [Config file]: /tmp/tmpwlkmg0us/302.json
+2026-09-22 14:11:34,238 - INFO - [Intent]: Show the most recent out of delivery order
+2026-09-22 14:13:31,249 - INFO - [Result] (FAIL) /tmp/tmpwlkmg0us/302.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:13:46,164 - INFO - [Config file]: /tmp/tmpavs5vrh7/313.json
+2026-09-22 14:13:46,164 - INFO - [Intent]: Which number to call for the customer service?
+2026-09-22 14:15:11,207 - INFO - [Result] (FAIL) /tmp/tmpavs5vrh7/313.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:15:20,719 - INFO - [Config file]: /tmp/tmpripa5wst/319.json
+2026-09-22 14:15:20,719 - INFO - [Intent]: How much refund I should expect from my order canlled in April 2022, including shipping fee
+2026-09-22 14:18:04,504 - INFO - [Result] (FAIL) /tmp/tmpripa5wst/319.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:18:15,579 - INFO - [Config file]: /tmp/tmpevq95q95/320.json
+2026-09-22 14:18:15,579 - INFO - [Intent]: How much refund I should expect from my order canlled in Feb 2023, including shipping fee
+2026-09-22 14:19:39,755 - INFO - [Result] (FAIL) /tmp/tmpevq95q95/320.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:19:55,463 - INFO - [Config file]: /tmp/tmps79g5a8t/321.json
+2026-09-22 14:19:55,463 - INFO - [Intent]: How much refund I should expect from my order canlled in 2022, including shipping fee
+2026-09-22 14:21:01,660 - INFO - [Result] (FAIL) /tmp/tmps79g5a8t/321.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:21:12,678 - INFO - [Config file]: /tmp/tmppe7oq86n/322.json
+2026-09-22 14:21:12,678 - INFO - [Intent]: How much refund I should expect from my order canlled in May 2023 if I cannot get the shipping fee refunded?
+2026-09-22 14:22:27,092 - INFO - [Result] (PASS) /tmp/tmppe7oq86n/322.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:22:37,935 - INFO - [Config file]: /tmp/tmp59aqqf63/323.json
+2026-09-22 14:22:37,935 - INFO - [Intent]: How much refund I should expect from my order canlled in 2022/03? I only kept the AC-DC Adapter and the shop told me that I cannot get the shipping fee back
+2026-09-22 14:23:42,318 - INFO - [Result] (FAIL) /tmp/tmp59aqqf63/323.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:23:57,778 - INFO - [Config file]: /tmp/tmpk9ml7hv8/324.json
+2026-09-22 14:23:57,778 - INFO - [Intent]: Show me the "chairs" listings by ascending price.
+2026-09-22 14:29:00,798 - INFO - [Result] (FAIL) /tmp/tmpk9ml7hv8/324.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:29:17,139 - INFO - [Config file]: /tmp/tmpogimn7up/325.json
+2026-09-22 14:29:17,139 - INFO - [Intent]: Show me the "mouth night guard" listings by descending price.
+2026-09-22 14:30:26,715 - INFO - [Result] (FAIL) /tmp/tmpogimn7up/325.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:30:40,640 - INFO - [Config file]: /tmp/tmpm5_8vku5/326.json
+2026-09-22 14:30:40,640 - INFO - [Intent]: Show me the "Canon photo printer" listings by search relevance, from most to least.
+2026-09-22 14:37:24,375 - INFO - [Result] (PASS) /tmp/tmpm5_8vku5/326.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:37:42,312 - INFO - [Config file]: /tmp/tmpzm0ng9ta/327.json
+2026-09-22 14:37:42,312 - INFO - [Intent]: Show me the "iphone 12 phone case" listings by name alphabetically.
+2026-09-22 14:41:55,123 - INFO - [Result] (FAIL) /tmp/tmpzm0ng9ta/327.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:42:10,056 - INFO - [Config file]: /tmp/tmpgj6u48m5/328.json
+2026-09-22 14:42:10,056 - INFO - [Intent]: Show me the "iphone 12 phone case" listings by price.
+2026-09-22 14:44:18,548 - INFO - [Result] (FAIL) /tmp/tmpgj6u48m5/328.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:44:30,818 - INFO - [Config file]: /tmp/tmpkk9pfl36/329.json
+2026-09-22 14:44:30,818 - INFO - [Intent]: How much I spend on 4/19/2023 on shopping at One Stop Market?
+2026-09-22 14:45:38,134 - INFO - [Result] (FAIL) /tmp/tmpkk9pfl36/329.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:45:50,225 - INFO - [Config file]: /tmp/tmp5_twhrcn/330.json
+2026-09-22 14:45:50,225 - INFO - [Intent]: How much I spend in March 2023 on shopping at One Stop Market?
+2026-09-22 14:46:54,556 - INFO - [Result] (FAIL) /tmp/tmp5_twhrcn/330.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:47:09,441 - INFO - [Config file]: /tmp/tmp1z6o6h27/331.json
+2026-09-22 14:47:09,441 - INFO - [Intent]: How much I spend in July 2022 on shopping at One Stop Market?
+2026-09-22 14:49:26,341 - INFO - [Result] (FAIL) /tmp/tmp1z6o6h27/331.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:49:37,527 - INFO - [Config file]: /tmp/tmpr_8mgy12/332.json
+2026-09-22 14:49:37,527 - INFO - [Intent]: How much I spend each month from Jan to the end of March 2023 on shopping at One Stop Market?
+2026-09-22 14:52:22,416 - INFO - [Result] (FAIL) /tmp/tmpr_8mgy12/332.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:52:33,307 - INFO - [Config file]: /tmp/tmp20a17k_d/333.json
+2026-09-22 14:52:33,307 - INFO - [Intent]: How much did I spend on shopping at One Stop Market on November 2022? They gave me a 20% discount on the total amount for orders exceeding $200 in cash
+2026-09-22 14:53:44,668 - INFO - [Result] (FAIL) /tmp/tmp20a17k_d/333.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 14:53:56,945 - INFO - [Config file]: /tmp/tmpdnrrrb6e/334.json
+2026-09-22 14:53:56,946 - INFO - [Intent]: Tell me when I last ordered my muffin cornbread mix?
+2026-09-22 14:59:58,437 - INFO - [Result] (FAIL) /tmp/tmpdnrrrb6e/334.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:00:11,245 - INFO - [Config file]: /tmp/tmpe2a3y9mh/335.json
+2026-09-22 15:00:11,245 - INFO - [Intent]: Tell me when I last ordered my body butter?
+2026-09-22 15:06:56,465 - INFO - [Result] (FAIL) /tmp/tmpe2a3y9mh/335.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:07:09,833 - INFO - [Config file]: /tmp/tmp5yqf629u/336.json
+2026-09-22 15:07:09,833 - INFO - [Intent]: Tell me when I last ordered my conditioner?
+2026-09-22 15:13:00,976 - INFO - [Result] (FAIL) /tmp/tmp5yqf629u/336.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:13:18,730 - INFO - [Config file]: /tmp/tmpugyfnki7/337.json
+2026-09-22 15:13:18,730 - INFO - [Intent]: Tell me when I last ordered my bread olive?
+2026-09-22 15:19:40,640 - INFO - [Result] (FAIL) /tmp/tmpugyfnki7/337.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:19:52,068 - INFO - [Config file]: /tmp/tmp98kfeitn/338.json
+2026-09-22 15:19:52,068 - INFO - [Intent]: Tell me when I last ordered my toothpaste?
+2026-09-22 15:25:49,850 - INFO - [Result] (FAIL) /tmp/tmp98kfeitn/338.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:26:03,454 - INFO - [Config file]: /tmp/tmp1_asx2qm/344.json
+2026-09-22 15:26:03,454 - INFO - [Intent]: How many reviews our shop received by far?
+2026-09-22 15:27:10,097 - INFO - [Result] (PASS) /tmp/tmp1_asx2qm/344.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:27:23,328 - INFO - [Config file]: /tmp/tmpopx8z3zi/345.json
+2026-09-22 15:27:23,328 - INFO - [Intent]: How many reviews our shop received in Apr 2023?
+2026-09-22 15:31:00,792 - INFO - [Result] (FAIL) /tmp/tmpopx8z3zi/345.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:31:14,858 - INFO - [Config file]: /tmp/tmpo8iuq1j6/346.json
+2026-09-22 15:31:14,858 - INFO - [Intent]: How many reviews our shop received during 2022?
+2026-09-22 15:32:43,814 - INFO - [Result] (FAIL) /tmp/tmpo8iuq1j6/346.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:32:59,532 - INFO - [Config file]: /tmp/tmpny_mxvxj/347.json
+2026-09-22 15:32:59,532 - INFO - [Intent]: How many reviews our shop received from the beginning of the shop?
+2026-09-22 15:33:57,986 - INFO - [Result] (FAIL) /tmp/tmpny_mxvxj/347.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:34:13,666 - INFO - [Config file]: /tmp/tmp8bh9sr14/348.json
+2026-09-22 15:34:13,666 - INFO - [Intent]: How many reviews our shop received in May 2023?
+2026-09-22 15:35:49,075 - INFO - [Result] (FAIL) /tmp/tmp8bh9sr14/348.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:36:07,078 - INFO - [Config file]: /tmp/tmpdw8q8jor/351.json
+2026-09-22 15:36:07,078 - INFO - [Intent]: List products from PS4 accessories category by ascending price
+2026-09-22 15:41:47,753 - INFO - [Result] (FAIL) /tmp/tmpdw8q8jor/351.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:42:05,729 - INFO - [Config file]: /tmp/tmpkabsx2ef/352.json
+2026-09-22 15:42:05,729 - INFO - [Intent]: List products from nutrition bars and drinks category by ascending price
+2026-09-22 15:44:53,719 - INFO - [Result] (FAIL) /tmp/tmpkabsx2ef/352.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:45:08,794 - INFO - [Config file]: /tmp/tmp7oqv9_ql/353.json
+2026-09-22 15:45:08,794 - INFO - [Intent]: List products from competitive swimwear category by ascending price
+2026-09-22 15:49:25,969 - INFO - [Result] (FAIL) /tmp/tmp7oqv9_ql/353.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:49:36,577 - INFO - [Config file]: /tmp/tmphixfycwc/354.json
+2026-09-22 15:49:36,577 - INFO - [Intent]: List products from living room furtniture category by descending price
+2026-09-22 15:51:56,293 - INFO - [Result] (FAIL) /tmp/tmphixfycwc/354.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:52:08,208 - INFO - [Config file]: /tmp/tmp5sqkw6ju/355.json
+2026-09-22 15:52:08,208 - INFO - [Intent]: List products from kids' bedding category by descending price
+2026-09-22 15:53:41,877 - INFO - [Result] (FAIL) /tmp/tmp5sqkw6ju/355.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:53:57,520 - INFO - [Config file]: /tmp/tmpm6kputh0/358.json
+2026-09-22 15:53:57,520 - INFO - [Intent]: Show me the shipping method for order number 187.
+2026-09-22 15:55:08,656 - INFO - [Result] (FAIL) /tmp/tmpm6kputh0/358.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:55:18,631 - INFO - [Config file]: /tmp/tmpek0ljix8/359.json
+2026-09-22 15:55:18,631 - INFO - [Intent]: Show me the order date for order number 148.
+2026-09-22 15:56:20,829 - INFO - [Result] (FAIL) /tmp/tmpek0ljix8/359.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:56:37,591 - INFO - [Config file]: /tmp/tmpo0f955zt/360.json
+2026-09-22 15:56:37,591 - INFO - [Intent]: Show me the product names for order number 148.
+2026-09-22 15:57:33,919 - INFO - [Result] (FAIL) /tmp/tmpo0f955zt/360.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:57:43,429 - INFO - [Config file]: /tmp/tmpilbsfift/361.json
+2026-09-22 15:57:43,429 - INFO - [Intent]: Show me the order statuses for order number 170 and 189.
+2026-09-22 15:58:35,669 - INFO - [Result] (FAIL) /tmp/tmpilbsfift/361.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 15:58:48,072 - INFO - [Config file]: /tmp/tmpto3vlzmw/362.json
+2026-09-22 15:58:48,072 - INFO - [Intent]: Show me the billing address for order number 00178.
+2026-09-22 16:00:24,232 - INFO - [Result] (FAIL) /tmp/tmpto3vlzmw/362.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:00:34,100 - INFO - [Config file]: /tmp/tmph0ujq_5h/368.json
+2026-09-22 16:00:34,100 - INFO - [Intent]: find discounted items.
+2026-09-22 16:01:45,161 - INFO - [Result] (FAIL) /tmp/tmph0ujq_5h/368.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:01:56,514 - INFO - [Config file]: /tmp/tmpod1b5etg/374.json
+2026-09-22 16:01:56,514 - INFO - [Intent]: Preview the Magento Blank theme for my shop
+2026-09-22 16:03:54,976 - INFO - [Unhandled Error] AttributeError("'Page' object has no attribute 'client'")]
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:04:05,724 - INFO - [Config file]: /tmp/tmpk4gthxcy/375.json
+2026-09-22 16:04:05,725 - INFO - [Intent]: Preview the Magento Luma theme for my shop
+2026-09-22 16:05:54,689 - INFO - [Result] (FAIL) /tmp/tmpk4gthxcy/375.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:06:10,293 - INFO - [Config file]: /tmp/tmpd_18uozl/376.json
+2026-09-22 16:06:10,293 - INFO - [Intent]: Summarize customer reviews for Amazon Echo Dot 3rd generation.
+2026-09-22 16:08:59,794 - INFO - [Result] (FAIL) /tmp/tmpd_18uozl/376.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:09:15,276 - INFO - [Config file]: /tmp/tmp_7mzik21/384.json
+2026-09-22 16:09:15,276 - INFO - [Intent]: List the customer names who complain about the quality of EYZUTAK phone cases
+2026-09-22 16:10:41,351 - INFO - [Result] (FAIL) /tmp/tmp_7mzik21/384.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:10:56,864 - INFO - [Config file]: /tmp/tmpjcl9ioi7/385.json
+2026-09-22 16:10:56,865 - INFO - [Intent]: List the customer names who thinks EYZUTAK phone cases are of good looking
+2026-09-22 16:12:08,477 - INFO - [Result] (FAIL) /tmp/tmpjcl9ioi7/385.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:12:22,018 - INFO - [Config file]: /tmp/tmpnov_gayi/386.json
+2026-09-22 16:12:22,018 - INFO - [Intent]: What is the rating of Ugreen lightning to 3.5mm cable. Please round to the nearest whole number
+2026-09-22 16:13:28,879 - INFO - [Result] (FAIL) /tmp/tmpnov_gayi/386.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:13:44,184 - INFO - [Config file]: /tmp/tmpc_babatz/387.json
+2026-09-22 16:13:44,184 - INFO - [Intent]: Who gave 4 or 5 stars for phone cases from EYZUTAK
+2026-09-22 16:16:07,264 - INFO - [Result] (FAIL) /tmp/tmpc_babatz/387.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 16:16:22,217 - INFO - [Config file]: /tmp/tmp0m0_vzis/388.json
+2026-09-22 16:16:22,217 - INFO - [Intent]: Who gave 1 or 2 stars for phone cases from EYZUTAK
+2026-09-22 16:17:41,163 - INFO - [Result] (FAIL) /tmp/tmp0m0_vzis/388.json
+2026-09-22 16:17:41,801 - INFO - Average score: 0.10909090909090909
+Done convert python files to json
+Total 111 tasks left

@@ -1,0 +1,425 @@
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+2026-09-22 01:46:56,581 - INFO - Dump config to /scratch.global/pan00389/webchal/webarena/results_baseline/config.json
+2026-09-22 01:46:57,193 - INFO - [Config file]: config_files/7.json
+2026-09-22 01:46:57,193 - INFO - [Intent]: Tell me the full address of all international airports that are within a driving distance of 50 km to Carnegie Mellon University
+2026-09-22 01:48:47,884 - INFO - [Result] (FAIL) config_files/7.json
+2026-09-22 01:48:49,041 - INFO - [Config file]: config_files/8.json
+2026-09-22 01:48:49,041 - INFO - [Intent]: Tell me the full address of all international airports that are within a driving distance of 5 km to Carnegie Mellon University
+2026-09-22 01:49:45,457 - INFO - [Result] (FAIL) config_files/8.json
+2026-09-22 01:49:46,599 - INFO - [Config file]: config_files/9.json
+2026-09-22 01:49:46,599 - INFO - [Intent]: Tell me the full address of all international airports that are within a driving distance of 30 km to Carnegie Art Museum
+2026-09-22 01:50:42,604 - INFO - [Result] (FAIL) config_files/9.json
+2026-09-22 01:50:43,225 - INFO - [Config file]: config_files/10.json
+2026-09-22 01:50:43,226 - INFO - [Intent]: Tell me the full address of all US international airports that are within a driving distance of 60 km to Niagara Falls
+2026-09-22 01:51:39,619 - INFO - [Result] (FAIL) config_files/10.json
+2026-09-22 01:51:40,351 - INFO - [Config file]: config_files/16.json
+2026-09-22 01:51:40,352 - INFO - [Intent]: Compare the time for walking and driving route from 5000 Fifth Avenue, Pittsburgh to UPMC family health center
+2026-09-22 01:53:24,952 - INFO - [Result] (FAIL) config_files/16.json
+2026-09-22 01:53:26,043 - INFO - [Config file]: config_files/17.json
+2026-09-22 01:53:26,043 - INFO - [Intent]: Compare the time for walking and driving route from AMC Waterfront to Carnegie Mellon University
+2026-09-22 01:54:53,064 - INFO - [Result] (FAIL) config_files/17.json
+2026-09-22 01:54:54,137 - INFO - [Config file]: config_files/18.json
+2026-09-22 01:54:54,137 - INFO - [Intent]: Compare the time for walking and driving route from AMC Waterfront to Univ of Pittsburgh
+2026-09-22 01:56:54,598 - INFO - [Result] (FAIL) config_files/18.json
+2026-09-22 01:56:55,658 - INFO - [Config file]: config_files/19.json
+2026-09-22 01:56:55,658 - INFO - [Intent]: Compare the time for walking and driving route from Carnegie Science Center to Carnegie Mellon University
+2026-09-22 01:58:10,832 - INFO - [Result] (FAIL) config_files/19.json
+2026-09-22 01:58:11,613 - INFO - [Config file]: config_files/20.json
+2026-09-22 01:58:11,613 - INFO - [Intent]: Compare the difference in time for walking and driving route from Randyland to Carnegie Mellon University
+2026-09-22 02:01:53,194 - INFO - [Result] (FAIL) config_files/20.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:01:59,567 - INFO - [Config file]: /tmp/tmpznr3fu9g/27.json
+2026-09-22 02:01:59,567 - INFO - [Intent]: Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the Showerthoughts forum.
+2026-09-22 02:07:48,847 - INFO - [Result] (FAIL) /tmp/tmpznr3fu9g/27.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:07:54,051 - INFO - [Config file]: /tmp/tmp0lqazi0_/28.json
+2026-09-22 02:07:54,051 - INFO - [Intent]: Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the Worcester forum.
+2026-09-22 02:13:10,910 - INFO - [Result] (FAIL) /tmp/tmp0lqazi0_/28.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:13:15,156 - INFO - [Config file]: /tmp/tmp_e3fyjw2/29.json
+2026-09-22 02:13:15,156 - INFO - [Intent]: Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the DIY forum.
+2026-09-22 02:19:13,529 - INFO - [Result] (FAIL) /tmp/tmp_e3fyjw2/29.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:19:17,579 - INFO - [Config file]: /tmp/tmp134ujxiy/30.json
+2026-09-22 02:19:17,579 - INFO - [Intent]: Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the space forum.
+2026-09-22 02:25:48,682 - INFO - [Result] (FAIL) /tmp/tmp134ujxiy/30.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:25:52,405 - INFO - [Config file]: /tmp/tmpj7lc9cfh/31.json
+2026-09-22 02:25:52,405 - INFO - [Intent]: Tell me the count of comments that have received more downvotes than upvotes for the user who made the latest post on the photoshopbattles forum.
+2026-09-22 02:32:09,576 - INFO - [Result] (FAIL) /tmp/tmpj7lc9cfh/31.json
+2026-09-22 02:32:10,354 - INFO - [Config file]: config_files/32.json
+2026-09-22 02:32:10,355 - INFO - [Intent]: I will arrive Pittsburgh Airport soon. Provide the name of a Hilton hotel in the vicinity, if available. Then, tell me the the walking distance to the nearest supermarket own by a local company from the hotel.
+2026-09-22 02:33:07,267 - INFO - [Result] (FAIL) config_files/32.json
+2026-09-22 02:33:08,236 - INFO - [Config file]: config_files/33.json
+2026-09-22 02:33:08,236 - INFO - [Intent]: I will arrive Pittsburgh Airport soon. Provide the name of a Hilton hotel in the vicinity, if available. Then, tell me the the shortest walking distance to a supermarket from the hotel.
+2026-09-22 02:33:45,979 - INFO - [Result] (FAIL) config_files/33.json
+2026-09-22 02:33:46,633 - INFO - [Config file]: config_files/34.json
+2026-09-22 02:33:46,633 - INFO - [Intent]: I will arrive Pittsburgh Airport soon. Provide the name of a Hyatt hotel in the vicinity, if available. Then, tell me the the shortest walking time to a supermarket from the hotel.
+2026-09-22 02:34:55,687 - INFO - [Result] (FAIL) config_files/34.json
+2026-09-22 02:34:56,694 - INFO - [Config file]: config_files/35.json
+2026-09-22 02:34:56,694 - INFO - [Intent]: I will arrive Pittsburgh Airport soon. Provide the name of a Hyatt hotel in the vicinity, if available. Then, tell me the the minimal driving time to a supermarket from the hotel.
+2026-09-22 02:35:37,886 - INFO - [Result] (FAIL) config_files/35.json
+2026-09-22 02:35:38,561 - INFO - [Config file]: config_files/36.json
+2026-09-22 02:35:38,562 - INFO - [Intent]: Check if the social security administration in pittsburgh can be reached in one hour by car from Carnegie Mellon University
+2026-09-22 02:40:09,223 - INFO - [Result] (FAIL) config_files/36.json
+2026-09-22 02:40:10,699 - INFO - [Config file]: config_files/37.json
+2026-09-22 02:40:10,699 - INFO - [Intent]: Check if the police station in pittsburgh can be reached in one hour by car from gates building at CMU
+2026-09-22 02:44:17,695 - INFO - [Result] (FAIL) config_files/37.json
+2026-09-22 02:44:18,887 - INFO - [Config file]: config_files/38.json
+2026-09-22 02:44:18,887 - INFO - [Intent]: Check if the duquesne university in pittsburgh can be reached in one hour by car from pittsburgh airport
+2026-09-22 02:44:57,080 - INFO - [Result] (PASS) config_files/38.json
+2026-09-22 02:44:57,745 - INFO - [Config file]: config_files/39.json
+2026-09-22 02:44:57,745 - INFO - [Intent]: Check if the walmart in pittsburgh can be reached in one hour by car from 5600 fifth avenue
+2026-09-22 02:46:03,849 - INFO - [Result] (FAIL) config_files/39.json
+2026-09-22 02:46:04,765 - INFO - [Config file]: config_files/40.json
+2026-09-22 02:46:04,765 - INFO - [Intent]: Check if the amc theatre in pittsburgh can be reached in one hour by car from hobart street
+2026-09-22 02:47:09,455 - INFO - [Result] (FAIL) config_files/40.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:47:13,330 - INFO - [Config file]: /tmp/tmp1rzcldn7/44.json
+2026-09-22 02:47:13,330 - INFO - [Intent]: Check out my todos
+2026-09-22 02:47:50,334 - INFO - [Result] (PASS) /tmp/tmp1rzcldn7/44.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:47:53,677 - INFO - [Config file]: /tmp/tmp86mn97a5/45.json
+2026-09-22 02:47:53,678 - INFO - [Intent]: Check out the most recent open issues
+2026-09-22 02:48:56,919 - INFO - [Result] (FAIL) /tmp/tmp86mn97a5/45.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 02:49:01,127 - INFO - [Config file]: /tmp/tmp9kh5lu23/46.json
+2026-09-22 02:49:01,127 - INFO - [Intent]: Check out the most recent open issues
+2026-09-22 02:50:12,365 - INFO - [Result] (PASS) /tmp/tmp9kh5lu23/46.json
+2026-09-22 02:50:12,842 - INFO - [Config file]: config_files/52.json
+2026-09-22 02:50:12,842 - INFO - [Intent]: How long does it take to walk from Carnegie Mellon University to starbucks on Craig Street?
+2026-09-22 02:54:59,280 - INFO - [Result] (FAIL) config_files/52.json
+2026-09-22 02:55:01,313 - INFO - [Config file]: config_files/53.json
+2026-09-22 02:55:01,313 - INFO - [Intent]: How long does it take to walk from Univ of Pittsburgh to starbucks on Craig Street?
+2026-09-22 02:56:05,018 - INFO - [Result] (FAIL) config_files/53.json
+2026-09-22 02:56:05,693 - INFO - [Config file]: config_files/54.json
+2026-09-22 02:56:05,693 - INFO - [Intent]: How long does it take to walk from Carnegie Mellon University to Univ of Pittsburgh?
+2026-09-22 02:57:55,917 - INFO - [Result] (PASS) config_files/54.json
+2026-09-22 02:57:56,957 - INFO - [Config file]: config_files/55.json
+2026-09-22 02:57:56,957 - INFO - [Intent]: How long does it take to walk from the starbuck near CMU to Chatham university?
+2026-09-22 02:58:30,917 - INFO - [Result] (FAIL) config_files/55.json
+2026-09-22 02:58:31,571 - INFO - [Config file]: config_files/56.json
+2026-09-22 02:58:31,571 - INFO - [Intent]: How long does it take to walk from Carnegie Museum of Art to a library at CMU?
+2026-09-22 03:02:58,414 - INFO - [Result] (FAIL) config_files/56.json
+2026-09-22 03:02:59,587 - INFO - [Config file]: config_files/57.json
+2026-09-22 03:02:59,587 - INFO - [Intent]: Tell me the closest restaurant(s) to university center at Carnegie Mellon University
+2026-09-22 03:03:31,617 - INFO - [Result] (FAIL) config_files/57.json
+2026-09-22 03:03:32,510 - INFO - [Config file]: config_files/58.json
+2026-09-22 03:03:32,510 - INFO - [Intent]: Tell me the closest cafe(s) to CMU Hunt library
+2026-09-22 03:04:11,061 - INFO - [Result] (FAIL) config_files/58.json
+2026-09-22 03:04:11,661 - INFO - [Config file]: config_files/59.json
+2026-09-22 03:04:11,661 - INFO - [Intent]: Tell me the closest restaurant(s) to CMU Hunt library
+2026-09-22 03:05:53,124 - INFO - [Result] (FAIL) config_files/59.json
+2026-09-22 03:05:54,598 - INFO - [Config file]: config_files/60.json
+2026-09-22 03:05:54,599 - INFO - [Intent]: Tell me the closest restaurant(s) to CMU Posner Hall
+2026-09-22 03:06:28,602 - INFO - [Result] (FAIL) config_files/60.json
+2026-09-22 03:06:29,292 - INFO - [Config file]: config_files/61.json
+2026-09-22 03:06:29,292 - INFO - [Intent]: Tell me the closest restaurant(s) to CMU Sorrells Library
+2026-09-22 03:07:00,791 - INFO - [Result] (FAIL) config_files/61.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 03:07:04,965 - INFO - [Config file]: /tmp/tmpk_0afpar/66.json
+2026-09-22 03:07:04,965 - INFO - [Intent]: Among the top 10 post in "books" forum, show me the post URLs that recommand a single book
+2026-09-22 03:09:19,534 - INFO - [Result] (FAIL) /tmp/tmpk_0afpar/66.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 03:09:23,235 - INFO - [Config file]: /tmp/tmppvdtzouj/67.json
+2026-09-22 03:09:23,235 - INFO - [Intent]: Among the top 10 post in "books" forum, show me the book names from posts that recommand a single book
+2026-09-22 03:12:05,508 - INFO - [Result] (FAIL) /tmp/tmppvdtzouj/67.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 03:12:09,177 - INFO - [Config file]: /tmp/tmp5h1_be4_/68.json
+2026-09-22 03:12:09,177 - INFO - [Intent]: Among the top 10 post in "books" forum, show me the author name and the book name from posts that recommand a single book
+2026-09-22 03:13:26,335 - INFO - [Result] (FAIL) /tmp/tmp5h1_be4_/68.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 03:13:29,921 - INFO - [Config file]: /tmp/tmpi7zmtpbg/69.json
+2026-09-22 03:13:29,921 - INFO - [Intent]: Among the top 10 post in "books" forum, is there any post talks about supporting local book stores? If so, tell me the organizations involved
+2026-09-22 03:23:26,668 - INFO - [Result] (PASS) /tmp/tmpi7zmtpbg/69.json
+2026-09-22 03:23:28,943 - INFO - [Config file]: config_files/70.json
+2026-09-22 03:23:28,943 - INFO - [Intent]: What is the zip code of Carnegie Mellon University?
+2026-09-22 03:23:42,763 - INFO - [Result] (PASS) config_files/70.json
+2026-09-22 03:23:43,053 - INFO - [Config file]: config_files/71.json
+2026-09-22 03:23:43,053 - INFO - [Intent]: What is the zip code of Chatham University?
+2026-09-22 03:24:05,797 - INFO - [Result] (FAIL) config_files/71.json
+2026-09-22 03:24:06,342 - INFO - [Config file]: config_files/72.json
+2026-09-22 03:24:06,342 - INFO - [Intent]: What is the zip code of Yale University?
+2026-09-22 03:24:33,863 - INFO - [Result] (PASS) config_files/72.json
+2026-09-22 03:24:34,420 - INFO - [Config file]: config_files/73.json
+2026-09-22 03:24:34,420 - INFO - [Intent]: What is the zip code of Columbia University?
+2026-09-22 03:25:00,582 - INFO - [Result] (PASS) config_files/73.json
+2026-09-22 03:25:01,244 - INFO - [Config file]: config_files/74.json
+2026-09-22 03:25:01,244 - INFO - [Intent]: Given the following locations, ['Carnegie Mellon University', 'apple store shadyside', 'starbucks on craig street'], what would be the optimal route to travel through them all in order to minimize total travel time? Please note the journey begins at the first place listed.
+2026-09-22 03:26:42,830 - INFO - [Result] (FAIL) config_files/74.json
+2026-09-22 03:26:44,650 - INFO - [Config file]: config_files/75.json
+2026-09-22 03:26:44,651 - INFO - [Intent]: Given the following locations, ['Massachusetts Institute of Technology', 'Harvard University', 'Boston Logan International Airport'], what would be the optimal route to travel through them all in order to minimize total travel time? Please note the journey begins at the first place listed.
+2026-09-22 03:28:03,316 - INFO - [Result] (FAIL) config_files/75.json
+2026-09-22 03:28:04,101 - INFO - [Config file]: config_files/76.json
+2026-09-22 03:28:04,101 - INFO - [Intent]: Given the following locations, ['Princeton University', 'Yale University', 'Harvard University'], what would be the optimal route to travel through them all in order to minimize total travel time? Please note the journey begins at the first place listed.
+2026-09-22 03:30:42,667 - INFO - [Result] (FAIL) config_files/76.json
+2026-09-22 03:30:43,650 - INFO - [Config file]: config_files/80.json
+2026-09-22 03:30:43,650 - INFO - [Intent]: What is the duration required to first walk from Carnegie Mellon University to Starbucks on Craig Street, and then drive to Pittsburgh International Airport?
+2026-09-22 03:32:22,715 - INFO - [Result] (FAIL) config_files/80.json
+2026-09-22 03:32:23,881 - INFO - [Config file]: config_files/81.json
+2026-09-22 03:32:23,881 - INFO - [Intent]: What is the duration required to first walk from Univ of Pittsburgh to starbucks on Craig Street, and then drive to Pittsburgh International Airport?
+2026-09-22 03:37:45,589 - INFO - [Result] (FAIL) config_files/81.json
+2026-09-22 03:37:47,171 - INFO - [Config file]: config_files/82.json
+2026-09-22 03:37:47,171 - INFO - [Intent]: What is the duration required to first walk from Massachusetts Institute of Technology to Harvard University, and then drive to Boston Logan International Airport?
+2026-09-22 03:39:54,974 - INFO - [Result] (FAIL) config_files/82.json
+2026-09-22 03:39:56,106 - INFO - [Config file]: config_files/83.json
+2026-09-22 03:39:56,106 - INFO - [Intent]: What is the duration required to first walk from Carnegie Mellon University to apple store shadyside, and then drive to starbucks on craig street?
+2026-09-22 03:41:11,549 - INFO - [Result] (FAIL) config_files/83.json
+2026-09-22 03:41:12,503 - INFO - [Config file]: config_files/84.json
+2026-09-22 03:41:12,503 - INFO - [Intent]: From my stay at DoubleTree by Hilton New York Downtown, what's the estimated driving time to reach Keens Steakhouse?
+2026-09-22 03:42:06,029 - INFO - [Result] (PASS) config_files/84.json
+2026-09-22 03:42:06,782 - INFO - [Config file]: config_files/85.json
+2026-09-22 03:42:06,782 - INFO - [Intent]: From my stay at La Quinta Inn near the airport, what's the estimated driving time to reach Carnegie Mellon University?
+2026-09-22 03:46:49,021 - INFO - [Result] (FAIL) config_files/85.json
+2026-09-22 03:46:51,094 - INFO - [Config file]: config_files/86.json
+2026-09-22 03:46:51,095 - INFO - [Intent]: From my stay at La Quinta Inn near the airport, what's the estimated driving time to reach Upitt?
+2026-09-22 03:47:48,856 - INFO - [Result] (FAIL) config_files/86.json
+2026-09-22 03:47:49,536 - INFO - [Config file]: config_files/87.json
+2026-09-22 03:47:49,536 - INFO - [Intent]: From my stay at red roof inn, what's the estimated driving time to reach Pittsburgh science museum?
+2026-09-22 03:52:20,954 - INFO - [Result] (FAIL) config_files/87.json
+2026-09-22 03:52:22,721 - INFO - [Config file]: config_files/88.json
+2026-09-22 03:52:22,721 - INFO - [Intent]: From my stay at Homewood Suites Southpointe, what's the estimated driving time to reach PPG Paints Arena?
+2026-09-22 03:53:16,019 - INFO - [Result] (PASS) config_files/88.json
+2026-09-22 03:53:16,880 - INFO - [Config file]: config_files/89.json
+2026-09-22 03:53:16,880 - INFO - [Intent]: Which US states border Connecticut?
+2026-09-22 03:53:39,287 - INFO - [Result] (PASS) config_files/89.json
+2026-09-22 03:53:39,808 - INFO - [Config file]: config_files/90.json
+2026-09-22 03:53:39,808 - INFO - [Intent]: Which US states border Pennsylvania?
+2026-09-22 03:54:06,279 - INFO - [Result] (FAIL) config_files/90.json
+2026-09-22 03:54:06,859 - INFO - [Config file]: config_files/91.json
+2026-09-22 03:54:06,859 - INFO - [Intent]: Which US states border Massachusetts?
+2026-09-22 03:54:23,687 - INFO - [Result] (PASS) config_files/91.json
+2026-09-22 03:54:24,015 - INFO - [Config file]: config_files/92.json
+2026-09-22 03:54:24,015 - INFO - [Intent]: Which US states border Vermont?
+2026-09-22 03:54:40,301 - INFO - [Result] (PASS) config_files/92.json
+2026-09-22 03:54:40,726 - INFO - [Config file]: config_files/93.json
+2026-09-22 03:54:40,726 - INFO - [Intent]: Which US states border New Hampshire?
+2026-09-22 03:54:56,773 - INFO - [Result] (PASS) config_files/93.json
+2026-09-22 03:54:57,269 - INFO - [Config file]: config_files/97.json
+2026-09-22 03:54:57,269 - INFO - [Intent]: Tell me the distance to drive from Carnegie Mellon University to the top computer science school in massachusetts
+2026-09-22 03:56:17,618 - INFO - [Result] (FAIL) config_files/97.json
+2026-09-22 03:56:18,401 - INFO - [Config file]: config_files/98.json
+2026-09-22 03:56:18,401 - INFO - [Intent]: Where is the nearest tea cafe to University of Pittsburgh, and what is the walking distance to it?
+2026-09-22 03:57:04,524 - INFO - [Result] (FAIL) config_files/98.json
+2026-09-22 03:57:05,197 - INFO - [Config file]: config_files/99.json
+2026-09-22 03:57:05,197 - INFO - [Intent]: Where is the nearest Five Guys to 5700 Penn Ave, and what is the walking distance to it?
+2026-09-22 03:58:09,609 - INFO - [Result] (FAIL) config_files/99.json
+2026-09-22 03:58:10,422 - INFO - [Config file]: config_files/100.json
+2026-09-22 03:58:10,422 - INFO - [Intent]: Where is the nearest Starbucks to Carnegie Mellon, and what is the walking distance to it?
+2026-09-22 03:58:50,804 - INFO - [Result] (FAIL) config_files/100.json
+2026-09-22 03:58:51,575 - INFO - [Config file]: config_files/101.json
+2026-09-22 03:58:51,575 - INFO - [Intent]: Where is the nearest In-N-Out to Upitts, and what is the walking distance to it?
+2026-09-22 03:59:29,061 - INFO - [Result] (PASS) config_files/101.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 03:59:33,130 - INFO - [Config file]: /tmp/tmp00howgkj/102.json
+2026-09-22 03:59:33,130 - INFO - [Intent]: Display the list of issues in the a11yproject/a11yproject.com repository that have labels related to help needed
+2026-09-22 04:01:19,733 - INFO - [Result] (FAIL) /tmp/tmp00howgkj/102.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:01:24,225 - INFO - [Config file]: /tmp/tmpex9t8b4z/103.json
+2026-09-22 04:01:24,225 - INFO - [Intent]: Display the list of issues in the kkroening/ffmpeg-python repository that have labels related to questions
+2026-09-22 04:07:25,733 - INFO - [Result] (PASS) /tmp/tmpex9t8b4z/103.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:07:31,284 - INFO - [Config file]: /tmp/tmpqmvd5jnx/104.json
+2026-09-22 04:07:31,285 - INFO - [Intent]: Display the list of issues in the keycloak/keycloak repository that have labels related to flaky-test
+2026-09-22 04:09:04,404 - INFO - [Result] (FAIL) /tmp/tmpqmvd5jnx/104.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:09:08,288 - INFO - [Config file]: /tmp/tmplwpdjtzk/105.json
+2026-09-22 04:09:08,288 - INFO - [Intent]: Display the list of issues in the OpenAPITools/openapi-generator repository that have labels related to OpenAPI Generator CLI
+2026-09-22 04:10:51,975 - INFO - [Result] (FAIL) /tmp/tmplwpdjtzk/105.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:10:55,776 - INFO - [Config file]: /tmp/tmpw0en2h3i/106.json
+2026-09-22 04:10:55,776 - INFO - [Intent]: Display the list of issues in the umano/AndroidSlidingUpPanel repository that have labels related to BUG
+2026-09-22 04:11:40,554 - INFO - [Result] (PASS) /tmp/tmpw0en2h3i/106.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:11:44,485 - INFO - [Config file]: /tmp/tmpz9yks6cc/132.json
+2026-09-22 04:11:44,485 - INFO - [Intent]: How many commits did kilian make to a11yproject on 3/5/2023?
+2026-09-22 04:14:36,811 - INFO - [Result] (FAIL) /tmp/tmpz9yks6cc/132.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:14:41,862 - INFO - [Config file]: /tmp/tmpib69ev8f/133.json
+2026-09-22 04:14:41,862 - INFO - [Intent]: How many commits did Eric make to a11yproject on 3/2?
+2026-09-22 04:16:16,692 - INFO - [Result] (FAIL) /tmp/tmpib69ev8f/133.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:16:21,860 - INFO - [Config file]: /tmp/tmpp7tqi2fq/134.json
+2026-09-22 04:16:21,860 - INFO - [Intent]: How many commits did kilian make to a11yproject on 3/1/2023?
+2026-09-22 04:23:32,078 - INFO - [Result] (PASS) /tmp/tmpp7tqi2fq/134.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:23:38,808 - INFO - [Config file]: /tmp/tmppfssm8j5/135.json
+2026-09-22 04:23:38,808 - INFO - [Intent]: How many commits did Eric and Kilian make to a11yproject on 1/3/2023?
+2026-09-22 04:24:59,526 - INFO - [Result] (PASS) /tmp/tmppfssm8j5/135.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:25:05,538 - INFO - [Config file]: /tmp/tmpl13nuh1a/136.json
+2026-09-22 04:25:05,538 - INFO - [Intent]: How many commits did Steven Woodson make to a11y-webring.club on 2/6/2023?
+2026-09-22 04:27:53,425 - INFO - [Result] (FAIL) /tmp/tmpl13nuh1a/136.json
+2026-09-22 04:27:55,218 - INFO - [Config file]: config_files/137.json
+2026-09-22 04:27:55,218 - INFO - [Intent]: What is the estimated driving time between the city where the Liberty Bell is located and the home city of Pirates?
+2026-09-22 04:29:53,856 - INFO - [Result] (FAIL) config_files/137.json
+2026-09-22 04:29:55,784 - INFO - [Config file]: config_files/138.json
+2026-09-22 04:29:55,784 - INFO - [Intent]: What is the estimated driving time between the big apple and the city with the most authentic Philly cheesesteaks?
+2026-09-22 04:31:53,417 - INFO - [Result] (FAIL) config_files/138.json
+2026-09-22 04:31:54,730 - INFO - [Config file]: config_files/139.json
+2026-09-22 04:31:54,731 - INFO - [Intent]: What is the estimated driving time between the hometown of Joe Biden and Bridgeport?
+2026-09-22 04:32:45,037 - INFO - [Result] (PASS) config_files/139.json
+2026-09-22 04:32:45,847 - INFO - [Config file]: config_files/140.json
+2026-09-22 04:32:45,847 - INFO - [Intent]: What is the estimated driving time between the city of Niagara Falls and the city of Yale University?
+2026-09-22 04:33:57,661 - INFO - [Result] (FAIL) config_files/140.json
+2026-09-22 04:33:58,894 - INFO - [Config file]: config_files/151.json
+2026-09-22 04:33:58,894 - INFO - [Intent]: What is the minimum travel time by car from CMU to University of Pittsburgh?
+2026-09-22 04:34:59,495 - INFO - [Result] (PASS) config_files/151.json
+2026-09-22 04:35:00,558 - INFO - [Config file]: config_files/152.json
+2026-09-22 04:35:00,558 - INFO - [Intent]: What is the minimum travel time by car from Schenley park to Upitt?
+2026-09-22 04:36:00,887 - INFO - [Result] (FAIL) config_files/152.json
+2026-09-22 04:36:01,544 - INFO - [Config file]: config_files/153.json
+2026-09-22 04:36:01,544 - INFO - [Intent]: What is the minimum travel time by car from REI to CMU?
+2026-09-22 04:37:07,669 - INFO - [Result] (FAIL) config_files/153.json
+2026-09-22 04:37:08,395 - INFO - [Config file]: config_files/154.json
+2026-09-22 04:37:08,395 - INFO - [Intent]: What is the minimum travel time by car from CMU gates building to Schenley park?
+2026-09-22 04:39:39,683 - INFO - [Result] (FAIL) config_files/154.json
+2026-09-22 04:39:40,978 - INFO - [Config file]: config_files/155.json
+2026-09-22 04:39:40,978 - INFO - [Intent]: What is the minimum travel time by car from Animal Rescue League of Pittsburgh to Schenley park?
+2026-09-22 04:40:34,517 - INFO - [Result] (PASS) config_files/155.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:40:38,761 - INFO - [Config file]: /tmp/tmpwov6w441/156.json
+2026-09-22 04:40:38,761 - INFO - [Intent]: Checkout merge requests assigned to me
+2026-09-22 04:41:44,829 - INFO - [Result] (PASS) /tmp/tmpwov6w441/156.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:41:48,833 - INFO - [Config file]: /tmp/tmpco2x3xxx/168.json
+2026-09-22 04:41:48,833 - INFO - [Intent]: Tell me the full names of the repositories where I made contributions and they got more than 100 stars?
+2026-09-22 04:48:24,572 - INFO - [Result] (FAIL) /tmp/tmpco2x3xxx/168.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:48:30,420 - INFO - [Config file]: /tmp/tmpf3420ycq/169.json
+2026-09-22 04:48:30,420 - INFO - [Intent]: Tell me the full names of the repositories where I made contributions and they got the most stars?
+2026-09-22 04:55:34,352 - INFO - [Result] (FAIL) /tmp/tmpf3420ycq/169.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 04:55:39,059 - INFO - [Config file]: /tmp/tmpjxo74ro8/170.json
+2026-09-22 04:55:39,059 - INFO - [Intent]: Tell me the full names of the repositories where I made contributions and they got the least stars?
+2026-09-22 05:02:18,084 - INFO - [Result] (FAIL) /tmp/tmpjxo74ro8/170.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:02:25,037 - INFO - [Config file]: /tmp/tmptpnd7po7/171.json
+2026-09-22 05:02:25,038 - INFO - [Intent]: Tell me the full names of the repositories where I made contributions and they got less than 5 stars?
+2026-09-22 05:09:10,457 - INFO - [Result] (FAIL) /tmp/tmptpnd7po7/171.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:09:15,981 - INFO - [Config file]: /tmp/tmpd3bfyurs/172.json
+2026-09-22 05:09:15,981 - INFO - [Intent]: Tell me the full names of the repositories where I made contributions and they got no stars?
+2026-09-22 05:15:56,074 - INFO - [Result] (FAIL) /tmp/tmpd3bfyurs/172.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:16:01,488 - INFO - [Config file]: /tmp/tmpt_38cgpa/173.json
+2026-09-22 05:16:01,489 - INFO - [Intent]: Open my latest updated issue that has keyword "better" in its title to check if it is closed
+2026-09-22 05:17:31,300 - INFO - [Result] (FAIL) /tmp/tmpt_38cgpa/173.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:17:35,742 - INFO - [Config file]: /tmp/tmpke2lviwu/174.json
+2026-09-22 05:17:35,742 - INFO - [Intent]: Open my latest updated issue that has keyword "feature" in its title to check if it is closed
+2026-09-22 05:18:46,529 - INFO - [Result] (FAIL) /tmp/tmpke2lviwu/174.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:18:51,039 - INFO - [Config file]: /tmp/tmpndrrs3rv/175.json
+2026-09-22 05:18:51,039 - INFO - [Intent]: Open my latest updated issue that has keyword "dependency" in its title to check if it is closed
+2026-09-22 05:22:07,563 - INFO - [Result] (FAIL) /tmp/tmpndrrs3rv/175.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:22:13,645 - INFO - [Config file]: /tmp/tmplj_8lh5r/176.json
+2026-09-22 05:22:13,645 - INFO - [Intent]: Open my latest updated issue that has keyword "theme editor" in its title to check if it is closed
+2026-09-22 05:24:39,152 - INFO - [Result] (PASS) /tmp/tmplj_8lh5r/176.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:24:44,414 - INFO - [Config file]: /tmp/tmp5zz0ri4c/177.json
+2026-09-22 05:24:44,414 - INFO - [Intent]: Open my latest updated issue that has keyword "homepage content" in its title to check if it is closed
+2026-09-22 05:28:06,655 - INFO - [Result] (FAIL) /tmp/tmp5zz0ri4c/177.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:28:13,484 - INFO - [Config file]: /tmp/tmpf4w399l9/178.json
+2026-09-22 05:28:13,484 - INFO - [Intent]: Open my latest created issue that has better in its title to check if it is closed
+2026-09-22 05:30:24,226 - INFO - [Result] (FAIL) /tmp/tmpf4w399l9/178.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:30:29,199 - INFO - [Config file]: /tmp/tmp44ccjnfy/179.json
+2026-09-22 05:30:29,199 - INFO - [Intent]: Open my latest created issue that has feature in its title to check if it is closed
+2026-09-22 05:31:37,787 - INFO - [Result] (FAIL) /tmp/tmp44ccjnfy/179.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:31:41,900 - INFO - [Config file]: /tmp/tmp8zatn7gx/180.json
+2026-09-22 05:31:41,900 - INFO - [Intent]: Open my latest created issue that has dependency in its title to check if it is closed
+2026-09-22 05:37:08,507 - INFO - [Result] (FAIL) /tmp/tmp8zatn7gx/180.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:37:23,142 - INFO - [Config file]: /tmp/tmpln4sxs9e/181.json
+2026-09-22 05:37:23,142 - INFO - [Intent]: Open my latest created issue that has theme editor in its title to check if it is closed
+2026-09-22 05:43:12,458 - INFO - [Result] (FAIL) /tmp/tmpln4sxs9e/181.json
+/scratch.global/pan00389/webchal/envs/wa_baseline/lib/python3.11/site-packages/beartype/_util/hint/pep/utilpeptest.py:345: BeartypeDecorHintPep585DeprecationWarning: PEP 484 type hint typing.Mapping[str, gymnasium.spaces.space.Space[typing.Any]] deprecated by PEP 585 scheduled for removal in the first Python version released after October 5th, 2025. To resolve this, import this hint from "beartype.typing" rather than "typing". See this discussion for further details and alternatives:
+    https://github.com/beartype/beartype#pep-585-deprecations
+  warn(
+2026-09-22 05:43:18,561 - INFO - [Config file]: /tmp/tmp84pfl8u9/182.json
+2026-09-22 05:43:18,562 - INFO - [Intent]: Open my latest created issue that has homepage content in its title to check if it is closed
+2026-09-22 05:45:20,921 - INFO - [Result] (FAIL) /tmp/tmp84pfl8u9/182.json
+2026-09-22 05:45:22,202 - INFO - Average score: 0.2376237623762376
+Done convert python files to json
+Total 101 tasks left
