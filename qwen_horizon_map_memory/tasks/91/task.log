@@ -1,0 +1,36 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/91/runtime/runs/nogate/run-7jj439jT
+
+==============================================================================
+EPISODE · task 91
+==============================================================================
+  intent      : Which US states border Massachusetts?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/91.json
+
+▸ step 0 · planner
+      tools: get_task_state, verify_criterion, get_obligations, get_criterion, get_task_state
+  subgoal     : Provide the factual answer about which US states border Massachusetts.
+  plan_step   : answer the geographic fact
+    TERMINAL  stop_now  answer='New York, Vermont, New Hampshire, Connecticut, and Rhode Island'
+
+▸ step 0 · env · apply
+    → execute stop (none) text='New York, Vermont, New Hampshire, Connecticut, and Rhode Island'
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 91: steps=1  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-0721c1ce",
+      "task_id": "91",
+      "n_steps": 1,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

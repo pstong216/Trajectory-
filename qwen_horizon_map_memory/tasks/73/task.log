@@ -1,0 +1,55 @@
+
+==============================================================================
+EPISODE · task 73
+==============================================================================
+  intent      : What is the zip code of Columbia University?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/73.json
+
+▸ step 0 · planner
+      tools: assign, lookup_site, search_page_text, get_task_state, search_page_text, inspect_controls
+  subgoal     : Search for Columbia University in the OpenStreetMap Search box and submit to find its location, from which the zip code can be read.
+  plan_step   : search for Columbia University
+  expected    : {'url_contains': 'search', 'must_see': 'Columbia'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: get_task_state, lookup_site, inspect_page_structure, inspect_page_structure, pixel_compare
+  subgoal     : Submit the search for 'Columbia University' by clicking the Go button to navigate to search results.
+  plan_step   : click Go to submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Columbia University'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Columbia%20University#map=17/40.80799/-73.96161
+      reward=1.0  done=False
+
+▸ step 2 · planner
+  subgoal     : The search result clearly shows the address of Columbia University including the zip code 10027. Stop and report the answer.
+    TERMINAL  stop_now  answer='10027'
+
+▸ step 2 · env · apply
+    → execute stop (none) text='10027'
+      url unchanged (http://localhost:3000/search?query=Columbia%20University#map=17/40.80799/-73.96161)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 73: steps=3  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-19b75a4b",
+      "task_id": "73",
+      "n_steps": 3,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

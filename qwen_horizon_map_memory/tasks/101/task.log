@@ -1,0 +1,155 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/101/runtime/runs/nogate/run-G1ZpC2ug
+
+==============================================================================
+EPISODE · task 101
+==============================================================================
+  intent      : Where is the nearest In-N-Out to Upitts, and what is the walking distance to it?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/101.json
+
+▸ step 0 · planner
+      tools: get_site_task_history, search_experience, inspect_page_structure, get_task_state, get_obligations, compare_values
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: extract_section_records, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: get_page_experience, inspect_controls, inspect_page_structure, inspect_page_structure, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_page_experience, inspect_controls, get_task_state, search_page_text
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: get_site_task_history, search_experience, inspect_page_structure, inspect_controls, get_task_state, inspect_page_structure
+  subgoal     : Enter a search query for In-N-Out (a burger chain) in the search box to locate it, then submit to find the nearest location to the University of Pittsburgh.
+  plan_step   : fill the search box with In-N-Out
+  expected    : {'must_see': 'In-N-Out'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, compare_values, get_obligations
+  subgoal     : Click the 'Go' button to submit the In-N-Out search query.
+  plan_step   : submit search
+  expected    : {'must_see': 'In-N-Out'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=In-N-Out#map=18/39.85924/-77.51112
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, get_site_task_history, extract_structured_values, compare_values, extract_section_records
+  subgoal     : Click the 'More results' link to see all In-N-Out matches and find the nearest one to Upitts (Pittsburgh).
+  plan_step   : open more search results
+  expected    : {'url_contains': 'In-N-Out', 'must_see': 'In-N-Out'}
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to click (element_id) element_id=1046
+
+▸ step 2 · env · apply
+    → execute click (element_id) element_id=1046
+      url unchanged (http://localhost:3000/search?query=In-N-Out#map=18/39.85924/-77.51112)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_page_structure, extract_structured_values, inspect_page_structure, compare_values
+  subgoal     : Click the 'More results' link to see all In-N-Out search results and identify which is nearest to Pittsburgh (Upitts).
+  plan_step   : view all In-N-Out search results
+  expected    : {'url_contains': 'search_osm_nominatim', 'must_see': 'In-N-Out'}
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to click (element_id) element_id=1069
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1069
+      url unchanged (http://localhost:3000/search?query=In-N-Out#map=18/39.85924/-77.51112)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, inspect_page_structure, inspect_page_structure, search_page_text, get_site_task_history, lookup_site, lookup_site, search_experience, inspect_page_structure, search_page_text
+  subgoal     : Search for 'In-N-Out Burger' in the search box to find actual In-N-Out restaurant locations, since the current search only found a trail.
+  plan_step   : search for In-N-Out Burger
+  expected    : {'url_contains': 'In-N-Out+burger', 'must_see': 'In-N-Out Burger'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=In-N-Out#map=18/39.85924/-77.51112)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: lookup_site, search_page_text, search_page_text, get_task_state, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 5 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 5 · planner
+      tools: inspect_page_structure, compare_values, verify_binding, inspect_page_structure, inspect_page_structure
+  subgoal     : Click the Go button to submit the 'In-N-Out Burger' search query and see restaurant location results.
+  plan_step   : submit In-N-Out Burger search
+  expected    : {'url_contains': 'In-N-Out+burger', 'must_see': 'In-N-Out Burger'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=In-N-Out#map=18/39.85924/-77.51112  ->  http://localhost:3000/search?query=In-N-Out%20Burger#map=18/39.85924/-77.51112
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: search_page_text, get_site_task_history, get_task_state, get_task_state, get_bindings, extract_section_records, inspect_page_structure, search_page_text
+  subgoal     : No In-N-Out search results exist in the map data (search returns 'No results found'), so the requested entity and walking distance cannot be established; report the finding.
+  plan_step   : report no In-N-Out results found
+    TERMINAL  stop_now  answer="No In-N-Out locations were found in the map data (searching 'In-N-Out Burger' returned 'No results found'), so the nearest In-N-Out to Upitts and its walking distance cannot be determined."
+
+▸ step 6 · env · apply
+    → execute stop (none) text="No In-N-Out locations were found in the map data (searching 'In-N-Out Burger' returned 'No results found'), so the nearest In-N-Out to Upitts and its walking distance cannot be determined."
+      url unchanged (http://localhost:3000/search?query=In-N-Out%20Burger#map=18/39.85924/-77.51112)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 101: steps=7  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-fcc1dce1",
+      "task_id": "101",
+      "n_steps": 7,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

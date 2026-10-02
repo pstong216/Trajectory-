@@ -1,0 +1,69 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/151/runtime/runs/nogate/run-L6Iatubq
+
+==============================================================================
+EPISODE · task 151
+==============================================================================
+  intent      : What is the minimum travel time by car from CMU to University of Pittsburgh?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/151.json
+
+▸ step 0 · planner
+      tools: lookup_site, get_site_task_history, inspect_page_structure, inspect_controls, inspect_controls
+  subgoal     : Open the directions page to set up a car route between CMU and University of Pittsburgh.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, compare_values
+  subgoal     : Enter Carnegie Mellon University in the From field
+  plan_step   : fill From field
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, extract_section_records
+  subgoal     : Enter 'University of Pittsburgh' into the To field so the car route between CMU and University of Pittsburgh can be requested.
+  plan_step   : fill the To field with University of Pittsburgh
+  expected    : {'must_see': 'University of Pittsburgh'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B40.444%2C-79.962#map=15/40.4446/-79.9530
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: read_table, search_page_text, inspect_page_structure, search_page_text, search_page_text, compare_values
+  subgoal     : Report the minimum car travel time shown on the directions result.
+  plan_step   : harvest the route time
+    TERMINAL  stop_now  answer='4 minutes'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='4 minutes'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B40.444%2C-79.962#map=15/40.4446/-79.9530)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 151: steps=4  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-c86837eb",
+      "task_id": "151",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

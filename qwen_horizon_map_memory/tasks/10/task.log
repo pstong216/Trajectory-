@@ -1,0 +1,91 @@
+
+==============================================================================
+EPISODE · task 10
+==============================================================================
+  intent      : Tell me the full address of all US international airports that are within a driving distance of 60 km to Niagara Falls
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/10.json
+
+▸ step 0 · planner
+      tools: get_site_task_history, inspect_controls, compare_values, compare_values, get_task_state
+  subgoal     : Search the OpenStreetMap search box for international airports near the current Niagara Falls view to identify US international airports.
+  plan_step   : search for international airports
+  expected    : {'must_see': 'results'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, pixel_compare, search_page_text, inspect_page_structure, inspect_page_structure
+  subgoal     : Click the Go button to execute the search for 'international airport' in the current map view around Niagara Falls.
+  plan_step   : execute search for international airports
+  expected    : {'url_contains': 'search', 'must_see': 'airport'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=international%20airport#map=14/44.4729/-73.1545
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, extract_structured_values, search_page_text, inspect_page_structure, compare_values
+  subgoal     : Navigate the map to be centered on Niagara Falls (43.08, -79.07) with the international airport search query, so results reflect airports actually near Niagara Falls.
+  plan_step   : Navigate to search centered on Niagara Falls
+  navigate_to : http://localhost:3000/search?query=international%20airport#map=14/43.0800/-79.0700
+  expected    : {'url_contains': '43.08', 'must_see': 'international airport'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/search?query=international%20airport#map=14/43.0800/-79.0700'
+      url: http://localhost:3000/search?query=international%20airport#map=14/44.4729/-73.1545  ->  http://localhost:3000/search?query=international%20airport#map=14/43.0800/-79.0700
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, get_page_experience, get_obligations, inspect_page_structure, compare_values
+  subgoal     : Search for 'Buffalo Niagara International Airport' to find its full address on OpenStreetMap
+  plan_step   : search Buffalo Niagara International Airport
+  expected    : {'url_contains': 'Buffalo%20Niagara', 'must_see': 'Buffalo Niagara International Airport'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=international%20airport#map=14/43.0800/-79.0700)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: compare_values, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Execute the Go button to run the search for 'Buffalo Niagara International Airport' and display its full address in the results panel.
+  plan_step   : click Go to search Buffalo Niagara International Airport
+  expected    : {'url_contains': 'Buffalo%20Niagara%20International%20Airport', 'must_see': 'Buffalo Niagara International Airport'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=international%20airport#map=14/43.0800/-79.0700  ->  http://localhost:3000/search?query=Buffalo%20Niagara%20International%20Airport#map=15/42.9399/-78.7286
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: verify_criterion, inspect_page_structure, stop_now, get_task_state, stop_now
+  subgoal     : Report the full address of the US international airport within 60 km driving distance of Niagara Falls, as shown in the Nominatim search result panel.
+  plan_step   : answer with the full address from the search result
+    TERMINAL  stop_now  answer='Buffalo-Niagara International Airport — Wehrle Drive, Town of Amherst, Erie County, New York, 14221, United States'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='Buffalo-Niagara International Airport — Wehrle Drive, Town of Amherst, Erie County, New York, 14221, United States'
+      url unchanged (http://localhost:3000/search?query=Buffalo%20Niagara%20International%20Airport#map=15/42.9399/-78.7286)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 10: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-898e051c",
+      "task_id": "10",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

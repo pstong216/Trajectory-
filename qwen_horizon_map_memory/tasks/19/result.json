@@ -1,0 +1,67 @@
+{
+  "task_id": 19,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 529.9,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/19/runtime/runs/rev2-mvp",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 173,
+    "refusal_reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 173,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "readiness": "not_ready",
+    "state_version_now": "ab797b67287206ec",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Driving (Car OSRM): 12 minutes (0:12) over 8.4 km; Walking (Foot OSRM): 1 hour 43 minutes (1:43). Walking takes about 91 minutes longer than driving \u2014 driving is far faster."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 7,
+      "model_decision_count": 56,
+      "tool_call_count": 51,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 514.6969693230058,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.11,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 530.01,
+  "replicas_removed": true
+}

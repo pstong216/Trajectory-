@@ -1,0 +1,67 @@
+{
+  "task_id": 140,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 419.11,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/140/runtime/runs/nogate/run-FFlV9Lsf",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "b89c33c1964c",
+    "task_id": "140",
+    "spec_version": "4.1",
+    "state_version_at_issue": "b0373a85c94475f5",
+    "answer_hash": "caead5f3b6e4c014b6c1982152acb26976c00e7bc7f7daf81da91ff15b9da26c",
+    "readiness": "ready_to_submit",
+    "issued_step": 4,
+    "unverified": false,
+    "answer": "8:52 (8 hours and 52 minutes)"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 27,
+      "tool_call_count": 23,
+      "verification_probe_count": 6
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 398.7660917970061,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.37,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 419.48,
+  "replicas_removed": true
+}

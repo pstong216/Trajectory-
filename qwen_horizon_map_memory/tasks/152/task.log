@@ -1,0 +1,89 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/152/runtime/runs/nogate/run-2BLfU3Rq
+
+==============================================================================
+EPISODE · task 152
+==============================================================================
+  intent      : What is the minimum travel time by car from Schenley park to Upitt?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/152.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_controls, inspect_page_structure, lookup_site, get_site_task_history
+  subgoal     : Navigate to the directions page to set up a car route from Schenley Park to Uptown (Upitt).
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, get_site_task_history, search_page_text, search_page_text
+  subgoal     : Fill the 'From' field with 'Schenley Park' and the 'To' field with 'Upitt' in the directions form.
+  plan_step   : fill From and To fields
+  expected    : {'must_see': 'Schenley Park', 'url_contains': '/directions'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, read_field_values, get_evidence, inspect_controls, get_page_experience
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: compare_values, read_field_values, get_task_state, inspect_controls, inspect_page_structure
+  subgoal     : Type 'Upitt' into the To field of the directions form so a car route can be calculated.
+  plan_step   : fill the To field with Upitt
+  expected    : {'must_see': 'Upitt'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_page_structure
+  subgoal     : Click the Go button to calculate the car route from Schenley Park to Upitt
+  plan_step   : click Go to get route
+  expected    : {'must_see': 'min'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.435%2C-79.942%3B40.449%2C-79.945#map=15/40.4414/-79.9469
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: read_table, inspect_page_structure, search_page_text, search_page_text, compare_values
+  subgoal     : Report the car travel time from Schenley Park to Upitt as the answer.
+    TERMINAL  stop_now  answer='0:04 (4 minutes)'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='0:04 (4 minutes)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.435%2C-79.942%3B40.449%2C-79.945#map=15/40.4414/-79.9469)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 152: steps=5  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-a4f95db7",
+      "task_id": "152",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

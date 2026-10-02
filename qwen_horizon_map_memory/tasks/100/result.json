@@ -1,0 +1,67 @@
+{
+  "task_id": 100,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 2106.45,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/100/runtime/runs/nogate/run-Ig2BJ26Q",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 322,
+    "refusal_reason": "2 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 322,
+    "ending": "needs_evidence",
+    "reason": "2 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "b05c0a1e6a32d17f",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "The nearest Starbucks to Carnegie Mellon is the Starbucks on Craig Street. The walking distance could not be determined \u2014 the OpenStreetMap directions page (route=Carnegie Mellon University; Starbucks on Craig Street, foot engine) did not display a calculated route, distance, or time, so no walking distance is available."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 26,
+      "model_decision_count": 191,
+      "tool_call_count": 221,
+      "verification_probe_count": 22
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 2072.1823284550046,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.24,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 2106.69,
+  "replicas_removed": true
+}

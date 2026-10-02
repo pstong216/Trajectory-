@@ -1,0 +1,35 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/89/runtime/runs/nogate/run-fKtgHmYa
+
+==============================================================================
+EPISODE · task 89
+==============================================================================
+  intent      : Which US states border Connecticut?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/89.json
+
+▸ step 0 · planner
+      tools: compare_values, verify_criterion, get_task_state
+  subgoal     : Answer the geography question directly.
+    TERMINAL  stop_now  answer='Massachusetts and Rhode Island'
+
+▸ step 0 · env · apply
+    → execute stop (none) text='Massachusetts and Rhode Island'
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 89: steps=1  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-39cd0842",
+      "task_id": "89",
+      "n_steps": 1,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

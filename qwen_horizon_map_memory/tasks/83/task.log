@@ -1,0 +1,175 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/83/runtime/runs/nogate/run-KBfuSh8m
+
+==============================================================================
+EPISODE · task 83
+==============================================================================
+  intent      : What is the duration required to first walk from Carnegie Mellon University to apple store shadyside, and then drive to starbucks on craig street?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/83.json
+
+▸ step 0 · planner
+      tools: get_page_experience, lookup_site, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Navigate to the OpenStreetMap directions page to set up the walking route from Carnegie Mellon University to Apple Store Shadyside.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, extract_structured_values, get_attempt_history, search_experience, compare_values
+  subgoal     : Set the From field to 'Carnegie Mellon University' for the first walking leg.
+  plan_step   : fill From field with Carnegie Mellon University
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, get_page_experience, get_site_task_history
+  subgoal     : Set the To field to 'Apple Store Shadyside' and select Foot (OSRM) mode for the walking leg, then click Go to get the walking duration.
+  plan_step   : fill To and set Foot mode
+  expected    : {'must_see': 'Apple Store Shadyside'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, compare_values, compare_values
+  subgoal     : Select Foot (OSRM) mode for the walking leg from CMU to Apple Store Shadyside
+  plan_step   : choose Foot (OSRM)
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, verify_criterion, get_obligations, get_page_experience
+  subgoal     : Click the Go button to compute the walking route from Carnegie Mellon University to the Apple Store in Shadyside so the walking duration is displayed.
+  plan_step   : get walking route duration
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.451%2C-79.933#map=16/40.4477/-79.9381
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: read_table, search_page_text, search_page_text, search_page_text, read_field_values, inspect_page_structure
+  subgoal     : Set the From field to the Apple Store in Shadyside (the walking destination) to begin the driving leg.
+  plan_step   : set From to Apple Store Shadyside
+  expected    : {'must_see': 'Apple Store'}
+
+▸ step 5 · planner
+      tools: read_table, search_page_text, search_page_text, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Set the From field to the Apple Store in Shadyside (the walking destination) so the driving leg begins there.
+  plan_step   : set From to Apple Store Shadyside
+  expected    : {'must_see': 'Apple Store, Walnut Street, Shadyside'}
+
+▸ step 5 · env · apply
+    → execute type (element_id) element_id=1252
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.451%2C-79.933#map=16/40.4477/-79.9381  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4512%2C-79.9334%3B40.4512%2C-79.9334#map=19/40.45128/-79.93348
+      reward=0.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_page_structure, read_table, inspect_controls, inspect_page_structure, get_task_state
+  subgoal     : Set the From field to 'Carnegie Mellon University' and the To field to 'Apple Store, Walnut Street, Shadyside, Pittsburgh, Allegheny County, 15206, United States', keeping Foot (OSRM) mode, so the walking leg computes from CMU to Apple Store Shadyside.
+  plan_step   : set From=CMU and To=Apple Store Shadyside (walking leg)
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 6 · env · apply
+    → execute type (element_id) element_id=1252
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4512%2C-79.9334%3B40.4512%2C-79.9334#map=19/40.45128/-79.93348  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381
+      reward=0.0  done=False
+
+▸ step 7 · planner
+      tools: read_table, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure, inspect_controls
+  subgoal     : Set the From field to the Apple Store in Shadyside (the walking destination) to begin setting up the driving leg.
+  plan_step   : set From field to Apple Store Shadyside
+  expected    : {'must_see': 'Apple Store'}
+
+▸ step 7 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381)
+      reward=1.0  done=False
+
+▸ step 8 · planner
+      tools: read_table, search_page_text, search_page_text, verify_criterion, inspect_controls
+  subgoal     : Select Car (OSRM) as the routing engine to set up the driving leg from the Apple Store Shadyside to Starbucks on Craig Street.
+  plan_step   : choose Car (OSRM) engine
+  expected    : {'must_see': 'Car (OSRM)'}
+
+▸ step 8 · env · apply
+    → execute click (element_id) element_id=1658
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381)
+      reward=0.0  done=False
+
+▸ step 9 · planner
+      tools: read_table, inspect_page_structure, search_page_text, inspect_page_structure, search_page_text, compare_values, inspect_page_structure
+  subgoal     : Set the directions form for the driving leg — From = Apple Store Shadyside and To = Starbucks on Craig Street — with Car (OSRM) already selected, so the Go button can compute the driving route.
+  plan_step   : set From/To for the driving leg
+  expected    : {'must_see': 'Starbucks'}
+
+▸ step 9 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381)
+      reward=0.0  done=False
+
+▸ step 10 · planner
+      tools: read_table, inspect_page_structure, search_page_text, inspect_page_structure, search_page_text, search_page_text
+  subgoal     : Click the Go button to compute the driving route from Apple Store Shadyside to Starbucks on Craig Street with Car (OSRM), to read its travel time.
+  plan_step   : compute driving leg
+  expected    : {'url_contains': 'engine=fossgis_osrm_car', 'must_see': 'Time:'}
+
+▸ step 10 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4512%2C-79.9334%3B40.4446%2C-79.9486#map=16/40.4479/-79.9412
+      reward=1.0  done=False
+
+▸ step 11 · planner
+      tools: read_table, inspect_page_structure, inspect_page_structure, recall_step, recall_step, get_site_task_history, get_task_state
+  subgoal     : Navigate to the previously computed walking route (Foot, CMU to Apple Store Shadyside) to read its duration, since the current page only shows the driving leg (Time: 0:03).
+  plan_step   : re-open walking route to read its time
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381
+  expected    : {'url_contains': 'engine=fossgis_osrm_foot', 'must_see': 'Time:'}
+
+▸ step 11 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.45117%2C-79.93342#map=16/40.4477/-79.9381'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4512%2C-79.9334%3B40.4446%2C-79.9486#map=16/40.4479/-79.9412  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9427%3B40.4512%2C-79.9334#map=16/40.4477/-79.9381
+      reward=1.0  done=False
+
+▸ step 12 · planner
+      tools: read_table, search_page_text, get_criterion, get_site_task_history, inspect_page_structure, inspect_page_structure
+  subgoal     : Task is complete: walking leg (CMU to Apple Store Shadyside) is 19 minutes and driving leg (Apple Store Shadyside to Starbucks Craig Street) is 3 minutes, totaling 22 minutes.
+    TERMINAL  stop_now  answer='22 minutes (19 min walk + 3 min drive)'
+
+▸ step 12 · env · apply
+    → execute stop (none) text='22 minutes (19 min walk + 3 min drive)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9427%3B40.4512%2C-79.9334#map=16/40.4477/-79.9381)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 83: steps=13  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-391e1526",
+      "task_id": "83",
+      "n_steps": 13,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,302 @@
+
+==============================================================================
+EPISODE · task 52
+==============================================================================
+  intent      : How long does it take to walk from Carnegie Mellon University to starbucks on Craig Street?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/52.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, lookup_site, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Navigate to the directions page to enter walking directions between Carnegie Mellon University and Starbucks on Craig Street.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_controls, inspect_page_structure, inspect_controls, inspect_controls
+  subgoal     : Fill the From field with 'Carnegie Mellon University' and the To field with 'Starbucks on Craig Street' in the directions form.
+  plan_step   : fill origin and destination
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: inspect_page_structure, fetch_rows, compare_values, compare_values, inspect_page_structure
+  subgoal     : Type the destination 'Starbucks on Craig Street' into the To field of the directions form.
+  plan_step   : fill the To field with Starbucks on Craig Street
+  expected    : {'must_see': 'Starbucks'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1520
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, get_task_state, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_controls, compare_values
+  subgoal     : Select 'Foot (OSRM)' as the routing mode so the directions are computed for walking.
+  plan_step   : set routing mode to Foot
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1308
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, inspect_controls, search_page_text
+  subgoal     : Click the 'Go' button to compute walking directions from Carnegie Mellon University to Starbucks on Craig Street.
+  plan_step   : click Go button
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: inspect_page_structure, inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, search_page_text, search_page_text, search_page_text
+  subgoal     : Click the 'Go' button again to compute the walking directions and reveal the route travel time.
+  plan_step   : re-trigger Go to compute route
+  expected    : {'must_see': 'min'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, lookup_site, search_page_text
+  subgoal     : Re-apply the From field value to force the form to re-register and re-trigger the walking route calculation, since the prior Go clicks produced no route result.
+  plan_step   : re-set the From field value
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 6 · planner
+      tools: inspect_page_structure, lookup_site, search_experience, inspect_controls, compare_values, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 6 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 6 · planner
+      tools: search_page_text, search_page_text, get_recovery_experience, get_site_task_history, inspect_page_structure
+  subgoal     : Re-enter 'Carnegie Mellon University' into the From field of the directions form so the value is properly geocoded and accepted, since the previous write was reported as not applied and Go has produced no route.
+  plan_step   : re-set the From field value
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 6 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 7 · planner
+      tools: search_page_text, search_page_text, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure
+  subgoal     : Click the 'Go' button to compute the walking route now that both endpoints are set, and reveal the route travel time.
+  plan_step   : click Go to compute the walking route
+  expected    : {'must_see': 'min'}
+
+▸ step 7 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 8 · planner
+      tools: inspect_page_structure, get_site_task_history, lookup_site
+  subgoal     : Re-enter 'Starbucks on Craig Street' into the To field to re-trigger the site's geocoding suggestions so a concrete location can be selected.
+  plan_step   : re-type the To field to trigger geocoding
+  expected    : {'must_see': 'Starbucks'}
+
+▸ step 8 · env · apply
+    → execute type (element_id) element_id=1520
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 9 · planner
+      tools: read_field_values, search_page_text, inspect_page_structure, search_page_text, inspect_page_structure, get_recovery_experience, get_page_experience, inspect_controls, search_page_text
+  subgoal     : Click the 'Go' button to compute the walking route now that the From field is fully geocoded to 'Carnegie Mellon University, Tech Street, ...' and the To field shows 'Starbucks on Craig Street', expecting the route travel time to appear.
+  plan_step   : compute the walking route
+  expected    : {'must_see': 'min'}
+
+▸ step 9 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 10 · planner
+      tools: search_page_text, search_page_text, inspect_page_structure, search_page_text, read_field_values, get_recovery_experience, search_page_text, search_page_text
+  subgoal     : Click the 'Go' button to compute the walking route between the two entered endpoints so the travel time/distance result appears in the directions panel.
+  plan_step   : click Go to compute walking route and reveal travel time
+  expected    : {'must_see': 'min'}
+
+▸ step 10 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 11 · planner
+      tools: search_page_text, search_page_text, search_page_text, get_recovery_experience, read_field_values, lookup_site
+  subgoal     : Inspect the full directions-page source (including the omitted 27 nodes) to locate the computed walking route result — distance and travel time — that the Go button produced, since it is not visible in the current sampled accessibility tree.
+  plan_step   : read the directions result panel
+
+▸ step 11 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ step 11 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Re-apply the From field value so the geocoded origin is actually set (prior write reportedly did not take), which is required before the Go button can compute a route.
+  plan_step   : set the From field to Carnegie Mellon University
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 11 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 12 · planner
+      tools: get_recovery_experience, get_task_state, inspect_page_structure
+  subgoal     : Re-type 'Carnegie Mellon University' into the From field (clear it first) so the site's geocoding suggestion dropdown appears, to be selected as the origin.
+  plan_step   : re-trigger From geocoding suggestions
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 12 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 13 · planner
+      tools: search_page_text, search_page_text, get_recovery_experience, inspect_page_structure, search_page_text, get_site_task_history
+  subgoal     : Select the geocoding autocomplete suggestion for 'Carnegie Mellon University' that appears beneath the From field so the origin is actually resolved (prior writes left From empty and the Go button produced no time).
+  plan_step   : pick the From geocode suggestion
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 13 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 13 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, search_page_text, get_site_task_history, get_recovery_experience, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 13 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 13 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, search_page_text, search_page_text, get_recovery_experience, get_page_experience, search_experience
+  subgoal     : Interact with the From field to trigger OpenStreetMap's geocoding autocomplete and select the 'Carnegie Mellon University' suggestion so the origin is resolved to coordinates (the fields hold raw text but no route has been computed).
+  plan_step   : select the Carnegie Mellon University geocoding suggestion
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 13 · planner
+      tools: search_page_text, read_field_values, inspect_page_structure, get_page_experience, get_recovery_experience, get_task_state, get_site_task_history, lookup_site
+  subgoal     : Re-populate the empty 'From' field with 'Carnegie Mellon University' and confirm the text actually holds in the field this time (the prior write reverted to empty), so both endpoints are set before routing.
+  plan_step   : fill the From field and verify it holds
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 13 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 14 · planner
+      tools: read_field_values, search_page_text, get_page_experience, get_recovery_experience, lookup_site, inspect_page_structure
+  subgoal     : Close the 'Welcome to OpenStreetMap!' overlay so it no longer covers the directions form before re-attempting the route.
+  plan_step   : close the welcome dialog
+  expected    : {'must_see': 'Go'}
+
+▸ step 14 · env · apply
+    → execute click (element_id) element_id=1551
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 15 · planner
+      tools: inspect_page_structure, compare_values, pixel_compare
+  subgoal     : Click the Go button to compute the walking route now that both endpoints are geocoded and the overlay is closed, then read the displayed walking time.
+  plan_step   : click Go and read route time
+  expected    : {'must_see': 'min'}
+
+▸ step 15 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 16 · planner
+      tools: search_page_text, search_page_text, search_page_text, get_recovery_experience, inspect_page_structure, compare_values, get_page_experience
+  subgoal     : Re-type the destination into the 'To' field (clearing it first) so the site's geocoder resolves 'Starbucks on Craig Street' and the route can compute, then the walking time will be displayed.
+  plan_step   : set the To field value
+  expected    : {'must_see': 'Starbucks, Craig Street'}
+
+▸ step 16 · env · apply
+    → execute type (element_id) element_id=1520
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 17 · planner
+      tools: search_page_text, search_page_text, read_field_values, inspect_page_structure, inspect_controls, get_task_state
+  subgoal     : Click the Go button to compute the walking route between the now-geocoded Carnegie Mellon University origin and Starbucks on Craig Street destination, so the walking time is displayed.
+  plan_step   : click Go to compute walking route
+  expected    : {'url_contains': 'directions', 'must_see': 'min'}
+
+▸ step 17 · env · apply
+    → execute click (element_id) element_id=1533
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.445%2C-79.949#map=17/40.44440/-79.94570
+      reward=1.0  done=False
+
+▸ step 18 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, search_page_text, inspect_page_structure, search_page_text, search_page_text, search_page_text
+  subgoal     : Report the walking time derived from the displayed route (total 520 m) since the page shows only per-step distances and no explicit time.
+  expected    : {'must_see': 'Reach destination'}
+    TERMINAL  stop_now  answer='About 7 minutes (route total ≈520 m: 10+20+10+60+200+10+200+10 m)'
+
+▸ step 18 · env · apply
+    → execute stop (none) text='About 7 minutes (route total ≈520 m: 10+20+10+60+200+10+200+10 m)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.445%2C-79.949#map=17/40.44440/-79.94570)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 52: steps=19  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-85118b8a",
+      "task_id": "52",
+      "n_steps": 19,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

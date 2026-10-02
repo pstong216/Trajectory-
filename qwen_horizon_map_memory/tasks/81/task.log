@@ -1,0 +1,242 @@
+
+==============================================================================
+EPISODE · task 81
+==============================================================================
+  intent      : What is the duration required to first walk from Univ of Pittsburgh to starbucks on Craig Street, and then drive to Pittsburgh International Airport?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/81.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_page_structure, record_site, record_site, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: inspect_page_structure, compare_values
+  subgoal     : Open the directions page to begin planning the walking leg from Univ of Pittsburgh to Starbucks on Craig Street.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: compare_values, inspect_page_structure, compare_values, get_attempt_history, compare_values
+  subgoal     : Set the routing mode to Foot (OSRM) for the first (walking) leg.
+  plan_step   : choose Foot (OSRM) in mode dropdown
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=1308
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: compare_values, inspect_page_structure, inspect_page_structure, extract_structured_values
+  subgoal     : Fill From='University of Pittsburgh' and To='Starbucks, Craig Street, Pittsburgh' in the directions form (Foot mode already set) and click Go to route the walking leg.
+  plan_step   : fill walking leg and go
+  expected    : {'url_contains': 'directions', 'must_see': 'Route'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1508
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: verify_criterion, get_page_experience, inspect_page_structure, inspect_controls, assign
+  subgoal     : Set the To field to the Starbucks on Craig Street destination (From and Foot mode are already set) so the walking leg can be routed.
+  plan_step   : fill the To field with Starbucks, Craig Street
+  expected    : {'must_see': 'Starbucks, Craig Street'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1515
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, search_page_text, inspect_page_structure, get_task_state, refresh_current_state
+  subgoal     : Click Go to compute the walking route from University of Pittsburgh to Starbucks on Craig Street and reveal its duration.
+  plan_step   : route the walking leg
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1528
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.962%3B40.445%2C-79.949#map=16/40.4433/-79.9554
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, read_table, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Change the routing mode combobox from Foot (OSRM) to Car (OSRM) so the second leg is computed by driving.
+  plan_step   : set routing mode to Car (OSRM)
+  expected    : {'must_see': 'Car (OSRM)'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=1302
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.962%3B40.445%2C-79.949#map=16/40.4433/-79.9554  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4480/-79.9560
+      reward=0.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_controls, inspect_controls, inspect_page_structure
+  subgoal     : Switch the routing mode combobox to Foot (OSRM) to compute the walking duration for leg 1 (Pitt → Starbucks Craig Street).
+  plan_step   : select Foot (OSRM) mode
+  expected    : {'url_contains': 'fossgis_osrm_foot', 'must_see': 'Foot (OSRM)'}
+
+▸ step 6 · env · apply
+    → execute click (element_id) element_id=1308
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4480/-79.9560  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554
+      reward=0.0  done=False
+
+▸ step 7 · planner
+      tools: read_table, search_page_text, inspect_page_structure, inspect_page_structure, search_page_text, search_page_text
+  subgoal     : Set the To field to Pittsburgh International Airport so the second (driving) leg from Starbucks on Craig Street to the airport can be computed.
+  plan_step   : fill To field with Pittsburgh International Airport
+  expected    : {'must_see': 'Pittsburgh International Airport'}
+
+▸ step 7 · env · apply
+    → execute type (element_id) element_id=1515
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554)
+      reward=1.0  done=False
+
+▸ step 8 · planner
+      tools: inspect_page_structure, get_task_state, read_table, search_page_text, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure
+  subgoal     : Set up the second (driving) leg by filling From with the Starbucks on Craig Street and To with Pittsburgh International Airport.
+  plan_step   : fill From and To for the driving leg
+  expected    : {'must_see': 'Starbucks, Craig Street'}
+
+▸ step 8 · env · apply
+    → execute type (element_id) element_id=1508
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554)
+      reward=0.0  done=False
+
+▸ step 9 · planner
+      tools: read_table, search_page_text, inspect_page_structure, inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Switch the routing mode from Foot (OSRM) to Car (OSRM) so the second (driving) leg from Starbucks on Craig Street to Pittsburgh International Airport can be computed.
+  plan_step   : set routing mode to Car (OSRM)
+  expected    : {'url_contains': 'fossgis_osrm_car', 'must_see': 'Car (OSRM)'}
+
+▸ step 9 · env · apply
+    → execute click (element_id) element_id=1302
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554)
+      reward=0.0  done=False
+
+▸ step 10 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, inspect_controls, verify_binding
+  subgoal     : Click Go to compute the driving route from Starbucks on Craig Street to Pittsburgh International Airport so the driving duration is shown.
+  plan_step   : compute driving leg
+  expected    : {'url_contains': 'fossgis_osrm_car', 'must_see': 'Time:'}
+
+▸ step 10 · env · apply
+    → execute click (element_id) element_id=1528
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931
+      reward=1.0  done=False
+
+▸ step 11 · planner
+      tools: read_table, search_page_text, search_page_text, inspect_page_structure, search_page_text, recall_step, compare_values
+  subgoal     : Open the walking (Foot) route from University of Pittsburgh to Starbucks on Craig Street to read its duration for leg 1.
+  plan_step   : load the foot route for leg 1 and read its Time
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554
+  expected    : {'url_contains': 'fossgis_osrm_foot', 'must_see': 'Time:'}
+
+▸ step 11 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554
+      reward=1.0  done=False
+
+▸ step 12 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, inspect_page_structure, search_page_text, inspect_page_structure, recall_step
+  subgoal     : Navigate to the driving (Car) route from Starbucks on Craig Street to Pittsburgh International Airport to read the driving duration for leg 2.
+  plan_step   : open the driving leg route
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931
+  expected    : {'url_contains': 'fossgis_osrm_car', 'must_see': 'Distance'}
+
+▸ step 12 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931
+      reward=1.0  done=False
+
+▸ step 13 · planner
+      tools: read_table, read_table, inspect_page_structure, search_page_text, inspect_page_structure
+  subgoal     : Read the directions summary/result panel (the block adjacent to the 'Directions' heading and route table) to find the total driving time for the Starbucks→Pittsburgh International Airport leg.
+  plan_step   : read the driving-leg total duration
+  expected    : {'must_see': 'min'}
+
+▸ step 13 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ step 13 · planner
+      tools: search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Navigate to the walking (Foot) route from University of Pittsburgh to Starbucks on Craig Street to read the total walking time.
+  plan_step   : goto foot route UnivPitt→Starbucks
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486
+  expected    : {'url_contains': 'fossgis_osrm_foot', 'must_see': 'Time:'}
+
+▸ step 13 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554
+      reward=1.0  done=False
+
+▸ step 14 · planner
+      tools: inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, search_page_text, inspect_page_structure, get_task_state
+  subgoal     : Navigate to the driving (Car) route from Starbucks on Craig Street to Pittsburgh International Airport to read the driving duration, which must be added to the walking time of 0:18.
+  plan_step   : open driving leg 2 route
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370
+  expected    : {'url_contains': 'fossgis_osrm_car', 'must_see': 'Time'}
+
+▸ step 14 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4442%2C-79.9625%3B40.4446%2C-79.9486#map=16/40.4433/-79.9554  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931
+      reward=1.0  done=False
+
+▸ step 15 · planner
+      tools: search_page_text, get_criterion, get_evidence, pixel_compare, get_task_state
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 15 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 15 · planner
+      tools: inspect_page_structure, inspect_page_structure, read_table, search_page_text, search_page_text, inspect_page_structure, get_page_experience
+  subgoal     : Sum the walking leg (0:18) and driving leg (0:31) durations to give the total.
+  expected    : {'must_see': 'Distance: 32km. Time: 0:31.'}
+    TERMINAL  stop_now  answer='0:49'
+
+▸ step 15 · env · apply
+    → execute stop (none) text='0:49'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.4446%2C-79.9486%3B40.4918%2C-80.2370#map=12/40.4557/-80.0931)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 81: steps=16  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-6d353a67",
+      "task_id": "81",
+      "n_steps": 16,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

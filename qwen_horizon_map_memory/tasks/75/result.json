@@ -1,0 +1,67 @@
+{
+  "task_id": 75,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 231.87,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/75/runtime/runs/rev2-mvp",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 380,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 380,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "f475e94140151106",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "MIT -> Harvard University -> Boston Logan International Airport. Since MIT and Harvard are only about 2.5 km apart in Cambridge, visit the nearby Harvard first, then proceed once to the distant Boston Logan International Airport. This minimizes total travel time (roughly 2.5 km + ~9 km \u2248 11.5 km, versus going to the airport first and back to Harvard, ~6.5 km + ~9 km \u2248 15.5 km)."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 1,
+      "model_decision_count": 4,
+      "tool_call_count": 3,
+      "verification_probe_count": 2
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 204.69322959599958,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.24,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 232.11,
+  "replicas_removed": true
+}

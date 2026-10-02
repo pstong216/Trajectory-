@@ -1,0 +1,81 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/88/runtime/runs/nogate/run-qDRPyEcL
+
+==============================================================================
+EPISODE · task 88
+==============================================================================
+  intent      : From my stay at Homewood Suites Southpointe, what's the estimated driving time to reach PPG Paints Arena?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/88.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_site_task_history, get_task_state, lookup_site, lookup_site
+  subgoal     : Open the directions page to enter the two locations (Homewood Suites Southpointe to PPG Paints Arena).
+  plan_step   : open directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, get_bindings, inspect_controls, inspect_page_structure
+  subgoal     : Enter Homewood Suites Southpointe in the From field and PPG Paints Arena in the To field on the directions form (Car (OSRM) is already selected).
+  plan_step   : fill the From and To fields
+  expected    : {'must_see': 'Homewood Suites Southpointe', 'url_contains': 'directions'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1508
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, compare_values, inspect_controls, get_task_state
+  subgoal     : Type the destination 'PPG Paints Arena' into the To field of the directions form so the route can be calculated.
+  plan_step   : fill the To field
+  expected    : {'must_see': 'PPG Paints Arena'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1515
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, get_task_state, inspect_page_structure, compare_values, inspect_controls
+  subgoal     : Click the 'Go' button to calculate the driving route and reveal the estimated driving time from Homewood Suites Southpointe to PPG Paints Arena.
+  plan_step   : click Go to compute the route
+  expected    : {'url_contains': 'directions', 'must_see': 'min'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1528
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.276%2C-80.168%3B40.440%2C-79.990#map=11/40.3573/-80.0807
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: read_table, search_page_text, inspect_page_structure, search_page_text, get_task_state
+  subgoal     : Report the estimated driving time shown on the directions page.
+  plan_step   : harvest answer
+    TERMINAL  stop_now  answer='0:34'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='0:34'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.276%2C-80.168%3B40.440%2C-79.990#map=11/40.3573/-80.0807)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 88: steps=5  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-8ca42924",
+      "task_id": "88",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

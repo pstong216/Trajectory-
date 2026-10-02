@@ -1,0 +1,111 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/154/runtime/runs/nogate/run-uhRVdBsR
+
+==============================================================================
+EPISODE · task 154
+==============================================================================
+  intent      : What is the minimum travel time by car from CMU gates building to Schenley park?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/154.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_page_structure, search_experience, get_site_task_history, lookup_site
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_task_state
+  subgoal     : Navigate to the directions page to set up a car route from CMU Gates building to Schenley Park
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: verify_criterion, inspect_controls, compare_values, inspect_controls, inspect_page_structure
+  subgoal     : Enter 'CMU Gates building' into the From field of the directions form so the route origin is set.
+  plan_step   : fill the From field
+  expected    : {'must_see': 'CMU Gates building'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_controls, inspect_controls, inspect_page_structure
+  subgoal     : Enter 'Schenley park' into the To field of the directions form so the route destination is set.
+  plan_step   : fill the To field
+  expected    : {'must_see': 'Schenley park'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: verify_criterion, read_field_values, pixel_compare, search_page_text, inspect_page_structure
+  subgoal     : Click the Go button to compute the car route and display the travel time.
+  plan_step   : submit directions form
+  expected    : {'must_see': 'min'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, inspect_page_structure, compare_values, get_site_task_history, inspect_controls
+  subgoal     : Re-dispatch the Go button to compute the car route from CMU Gates building to Schenley Park and surface the travel time result.
+  plan_step   : compute the route
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, get_site_task_history, inspect_page_structure, inspect_page_structure, search_page_text, inspect_page_structure, search_page_text, search_page_text
+  subgoal     : Inspect the unexplored content regions (1186, 1187, 1226, 1229, 1230) to locate the directions result panel that shows the car travel time after the Go button was clicked.
+  plan_step   : find the route result / travel time panel
+  expected    : {'must_see': 'Time'}
+
+▸ step 5 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ step 5 · planner
+      tools: lookup_site, inspect_page_structure, get_site_task_history, search_page_text, lookup_site, search_experience
+  subgoal     : Inspect the unexplored sidebar/result regions (1286, 1355, 1357) that follow the directions form, where the route result panel with the travel time should render after the Go button.
+  plan_step   : read the directions result panel region for the Time value
+  expected    : {'must_see': 'Time:'}
+
+▸ step 5 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ episode end
+    BudgetExhausted: executor_local_result_replans
+    DONE  task 154: steps=5  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-fc6ba734",
+      "task_id": "154",
+      "n_steps": 5,
+      "final_reward": 0.0,
+      "success": false,
+      "error": "BudgetExhausted: executor_local_result_replans",
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

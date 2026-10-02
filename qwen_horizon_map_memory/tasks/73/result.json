@@ -1,0 +1,67 @@
+{
+  "task_id": 73,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 231.24,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/73/runtime/runs/rev2-mvp",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "2dfb86f869fd",
+    "task_id": "73",
+    "spec_version": "4.1",
+    "state_version_at_issue": "d67341d0fb655aae",
+    "answer_hash": "b40ab6679054c7d49369bf6f8bcede792f7d1940bd39a4ccccb32c4a5188a17b",
+    "readiness": "ready_to_submit",
+    "issued_step": 3,
+    "unverified": false,
+    "answer": "10027"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 3,
+      "model_decision_count": 13,
+      "tool_call_count": 11,
+      "verification_probe_count": 5
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 219.2236650870036,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.25,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 231.5,
+  "replicas_removed": true
+}

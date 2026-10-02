@@ -1,0 +1,67 @@
+{
+  "task_id": 35,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 461.84,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/35/runtime/runs/rev2-mvp",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 244,
+    "refusal_reason": "1 requirement(s) have not been checked because their target is not bound to anything on this site yet",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 244,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) have not been checked because their target is not bound to anything on this site yet",
+    "readiness": "not_ready",
+    "state_version_now": "eedbf7befa2f6db8",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "No Hyatt hotel is available in the vicinity of Pittsburgh Airport. The OpenStreetMap Nominatim search returned 'No results found' for 'Hyatt hotel Pittsburgh Airport', so neither a hotel name nor a driving time to a supermarket can be provided."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 24,
+      "tool_call_count": 28,
+      "verification_probe_count": 10
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 449.0843576120096,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.15,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 462.0,
+  "replicas_removed": true
+}

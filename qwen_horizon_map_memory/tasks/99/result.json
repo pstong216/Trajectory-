@@ -1,0 +1,67 @@
+{
+  "task_id": 99,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 2227.15,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/99/runtime/runs/nogate/run-IHKumX6r",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 297,
+    "refusal_reason": "2 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 297,
+    "ending": "needs_evidence",
+    "reason": "2 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "34ac0a13be2f7cde",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Nearest Five Guys: Five Guys, Freeport Road, Pittsburgh, PA. Walking distance from 5700 Penn Ave, Wilkinsburg, PA: not displayed \u2014 the OpenStreetMap directions page (Foot/OSRM mode) never rendered a Distance/Time summary for this route, so the walking distance could not be obtained from the page."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 25,
+      "model_decision_count": 164,
+      "tool_call_count": 191,
+      "verification_probe_count": 20
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 2193.581542539003,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.37,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 2227.52,
+  "replicas_removed": true
+}

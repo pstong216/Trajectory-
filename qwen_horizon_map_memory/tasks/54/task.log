@@ -1,0 +1,115 @@
+
+==============================================================================
+EPISODE · task 54
+==============================================================================
+  intent      : How long does it take to walk from Carnegie Mellon University to Univ of Pittsburgh?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/54.json
+
+▸ step 0 · planner
+      tools: inspect_controls, get_task_state, inspect_page_structure, inspect_page_structure, lookup_site
+  subgoal     : Open the directions page to enter start and end points for a walking route.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, get_criterion, inspect_page_structure, get_bindings, get_task_state
+  subgoal     : Enter the start and end places in the From and To fields to request a route between the two universities.
+  plan_step   : fill From and To fields
+  expected    : {'url_contains': '/directions', 'must_see': 'Carnegie Mellon University'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, get_task_state, inspect_page_structure, inspect_controls, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: record_site, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Set the destination in the To field to University of Pittsburgh
+  plan_step   : fill the To field
+  expected    : {'must_see': 'To'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: read_field_values, inspect_page_structure, get_attempt_history, pixel_compare, inspect_controls
+  subgoal     : Set the directions mode to walking (Foot (OSRM)) so the route reflects walking time.
+  plan_step   : choose Foot (OSRM)
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · planner
+      tools: inspect_controls, extract_section_records, inspect_page_structure, get_task_state, inspect_controls
+  subgoal     : Select the walking mode option Foot (OSRM) in the travel-mode combobox so the route reflects walking time.
+  plan_step   : set travel mode to Foot (OSRM)
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, inspect_page_structure, inspect_page_structure, inspect_controls, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 4 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 4 · planner
+      tools: get_task_state, get_page_experience, inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Click the Go button to compute the walking route between Carnegie Mellon University and University of Pittsburgh so the walking time appears on the page.
+  plan_step   : click the Go button to start the route
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.444%2C-79.962#map=15/40.4433/-79.9524
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: read_table, search_page_text, search_page_text, compare_values, get_task_state, get_task_state
+  subgoal     : Report the walking time shown on the directions page.
+  plan_step   : stop with answer
+    TERMINAL  stop_now  answer='0:25'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='0:25'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.444%2C-79.962#map=15/40.4433/-79.9524)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 54: steps=6  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-c19e1d3a",
+      "task_id": "54",
+      "n_steps": 6,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

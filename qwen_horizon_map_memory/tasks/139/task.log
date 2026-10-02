@@ -1,0 +1,79 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/139/runtime/runs/nogate/run-6D2RJlUX
+
+==============================================================================
+EPISODE · task 139
+==============================================================================
+  intent      : What is the estimated driving time between the hometown of Joe Biden and Bridgeport?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/139.json
+
+▸ step 0 · planner
+      tools: get_site_task_history, get_task_state, lookup_site, compare_values, compare_values
+  subgoal     : Open the directions page to set up a driving route between Joe Biden's hometown (Scranton, PA) and Bridgeport.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_controls, get_obligations, inspect_page_structure, inspect_controls
+  subgoal     : Fill the From field with Joe Biden's hometown (Scranton, PA) and the To field with Bridgeport so a driving route can be computed.
+  plan_step   : set From and To fields
+  expected    : {'must_see': 'Scranton, PA'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_controls, compare_values
+  subgoal     : Fill the To field with Bridgeport so the route has a destination
+  plan_step   : fill To field with Bridgeport
+  expected    : {'must_see': 'Bridgeport'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: verify_criterion, get_task_state, get_obligations, inspect_controls, inspect_controls
+  subgoal     : Click the Go button to compute the driving route and display the estimated driving time between Scranton and Bridgeport
+  plan_step   : click Go button
+  expected    : {'must_see': 'min'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=41.409%2C-75.662%3B41.167%2C-73.205#map=8/41.354/-74.427
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, search_page_text, compare_values
+    TERMINAL  stop_now  answer='3:24'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='3:24'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=41.409%2C-75.662%3B41.167%2C-73.205#map=8/41.354/-74.427)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 139: steps=5  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-6cfc6cd0",
+      "task_id": "139",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

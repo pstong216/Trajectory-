@@ -1,0 +1,205 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/85/runtime/runs/nogate/run-rEbRnYt4
+
+==============================================================================
+EPISODE · task 85
+==============================================================================
+  intent      : From my stay at La Quinta Inn near the airport, what's the estimated driving time to reach Carnegie Mellon University?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/85.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_task_state, inspect_controls, search_page_text, inspect_page_structure
+  subgoal     : Navigate to the directions page to enter the La Quinta Inn (near the airport) as the origin and Carnegie Mellon University as the destination for driving directions.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: assign, inspect_page_structure, inspect_controls, inspect_controls, compare_values
+  subgoal     : Enter the origin into the From field for driving directions to Carnegie Mellon University.
+  plan_step   : fill the From field
+  expected    : {'must_see': 'La Quinta'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, read_field_values, get_task_state, get_bindings, inspect_controls, inspect_page_structure
+  subgoal     : Enter 'Carnegie Mellon University' into the To field as the destination.
+  plan_step   : fill the To field
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, inspect_controls, compare_values, get_task_state, inspect_page_structure
+  subgoal     : Click the Go button to calculate the driving route from La Quinta Inn to Carnegie Mellon University and display the estimated driving time.
+  plan_step   : click Go to compute route
+  expected    : {'must_see': 'min'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: search_page_text, inspect_page_structure, search_page_text, search_page_text, search_page_text, search_page_text, inspect_page_structure
+  subgoal     : Re-click the Go button so the Car route from La Quinta Inn & Suites Pittsburgh Airport to Carnegie Mellon University is computed and the driving time/distance is displayed.
+  plan_step   : click Go to calculate the route
+  expected    : {'must_see': 'min'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: inspect_page_structure, search_page_text, search_page_text, get_page_experience, lookup_site, get_site_task_history, get_recovery_experience, inspect_page_structure
+  subgoal     : Re-trigger the Car route calculation now that both the From (La Quinta Inn & Suites Pittsburgh Airport) and To (Carnegie Mellon University, full geocoded address) fields are populated, so the directions panel displays the driving time and distance.
+  plan_step   : submit directions form to compute the car route
+  expected    : {'must_see': 'Time'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: get_site_task_history, inspect_page_structure, search_page_text, get_recovery_experience, lookup_site, lookup_site, inspect_page_structure, search_page_text
+  subgoal     : Re-commit the To destination field so the geocoded Carnegie Mellon University address is applied (the prior write did not take), which is the prerequisite for the Go button to compute a route.
+  plan_step   : set the To field value to commit the destination
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 6 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 7 · planner
+      tools: search_page_text, read_field_values, search_page_text, search_page_text, get_page_experience, lookup_site, lookup_site, inspect_page_structure
+  subgoal     : Re-execute the Go button to compute the Car route now that both From (La Quinta Inn & Suites Pittsburgh Airport) and To (Carnegie Mellon University) fields are populated with geocoded values.
+  plan_step   : calculate driving route
+  expected    : {'url_contains': '/directions', 'must_see': 'min'}
+
+▸ step 7 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 8 · planner
+      tools: lookup_site, search_page_text, inspect_page_structure, search_experience, get_task_state
+  subgoal     : Execute the Go button to compute the Car route from La Quinta Inn & Suites Pittsburgh Airport to Carnegie Mellon University, then read back the displayed driving time.
+  plan_step   : click Go to compute driving route
+  expected    : {'must_see': 'min'}
+
+▸ step 8 · env · apply
+    → execute click (element_id) element_id=1272
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 9 · planner
+      tools: inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, lookup_site, get_page_experience, get_recovery_experience
+  subgoal     : Re-type the From field so the geocoding autocomplete appears, then select the matching La Quinta Inn suggestion so the origin is resolved to coordinates the OSRM route engine can use.
+  plan_step   : geocode the From origin via autocomplete suggestion
+  expected    : {'must_see': 'La Quinta Inn'}
+
+▸ step 9 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to click (element_id) element_id=1252
+
+▸ step 9 · env · apply
+    → execute click (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 10 · planner
+      tools: search_page_text, read_field_values, inspect_page_structure, inspect_controls, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 10 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 10 · planner
+      tools: search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, get_recovery_experience
+  subgoal     : Re-type a short prefix of 'La Quinta Inn' into the focused From field so OpenStreetMap's geocoding autocomplete dropdown appears, then select the La Quinta Inn & Suites Pittsburgh Airport suggestion so the origin resolves to coordinates.
+  plan_step   : geocode the From origin via autocomplete
+  expected    : {'must_see': 'La Quinta Inn'}
+
+▸ step 10 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 11 · planner
+      tools: search_page_text, inspect_page_structure, search_page_text, search_page_text, get_recovery_experience, get_page_experience, search_page_text, search_page_text
+  subgoal     : Clear the From field and retype 'La Quinta Inn' to trigger OpenStreetMap's geocoding autocomplete, then select the matching La Quinta Inn & Suites Pittsburgh Airport suggestion so the origin resolves to coordinates and the Go button can compute the route.
+  plan_step   : re-geocode the From field via autocomplete selection
+  expected    : {'must_see': 'La Quinta Inn & Suites Pittsburgh Airport'}
+
+▸ step 11 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 12 · planner
+      tools: lookup_site, search_experience, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure
+  subgoal     : Clear the focused From field and retype a short distinctive prefix of the airport La Quinta name so OpenStreetMap's geocoder dropdown appears, then select the matching 'La Quinta Inn & Suites Pittsburgh Airport' suggestion so the origin resolves to coordinates and Go can compute the route.
+  plan_step   : retype From to trigger geocoder and pick the airport La Quinta suggestion
+  expected    : {'must_see': 'La Quinta Inn & Suites Pittsburgh Airport'}
+
+▸ step 12 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 13 · planner
+      tools: search_page_text, search_page_text, read_field_values, get_recovery_experience, get_page_experience, search_page_text, inspect_page_structure
+  subgoal     : Navigate directly to the OpenStreetMap directions URL with coordinates for La Quinta Inn Pittsburgh Airport and Carnegie Mellon University to bypass the unreliable text geocoding and get the driving time.
+  plan_step   : navigate to directions URL with coordinates
+  navigate_to : http://localhost:3000/directions?engine=car_osrm&route=40.4894%2C-79.9230%3B40.4433%2C-79.9436
+  expected    : {'url_contains': 'directions', 'must_see': 'min'}
+
+▸ step 13 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=car_osrm&route=40.4894%2C-79.9230%3B40.4433%2C-79.9436'
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.489%2C-79.923%3B40.443%2C-79.944#map=13/40.4658/-79.9339
+      reward=1.0  done=False
+
+▸ step 14 · planner
+      tools: read_table, search_page_text, get_task_state, verify_criterion, get_obligations
+  subgoal     : Stop with the answer since the page displays the driving time.
+  plan_step   : harvest driving time from directions page
+    TERMINAL  stop_now  answer='11 minutes'
+
+▸ step 14 · env · apply
+    → execute stop (none) text='11 minutes'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.489%2C-79.923%3B40.443%2C-79.944#map=13/40.4658/-79.9339)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 85: steps=15  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-14187c9a",
+      "task_id": "85",
+      "n_steps": 15,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

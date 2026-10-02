@@ -1,0 +1,100 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/84/runtime/runs/nogate/run-55hvPcG8
+
+==============================================================================
+EPISODE · task 84
+==============================================================================
+  intent      : From my stay at DoubleTree by Hilton New York Downtown, what's the estimated driving time to reach Keens Steakhouse?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/84.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, lookup_site, get_page_experience
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: lookup_site, get_page_experience, search_experience, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: lookup_site, get_page_experience, get_site_task_history, get_task_state, get_page_experience, compare_values
+  subgoal     : Open the directions page so I can set the origin (DoubleTree by Hilton New York Downtown) and destination (Keens Steakhouse) for a driving route.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'From'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, compare_values, get_page_experience, get_site_task_history, compare_values, compare_values
+  subgoal     : Fill the From and To fields with the hotel and restaurant names so I can request the driving route
+  plan_step   : fill From and To fields
+  expected    : {'must_see': 'DoubleTree by Hilton New York Downtown'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: assign, read_field_values
+  subgoal     : Fill the To field with 'Keens Steakhouse' so a driving route can be requested from the DoubleTree hotel
+  plan_step   : fill the To field
+  expected    : {'must_see': 'Keens Steakhouse'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, get_task_state, inspect_controls
+  subgoal     : Click the Go button to compute the driving route from the DoubleTree hotel to Keens Steakhouse so the estimated driving time appears
+  plan_step   : click Go to request directions
+  expected    : {'must_see': 'minutes'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.704%2C-74.012%3B40.751%2C-73.986#map=13/40.7276/-73.9993
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, search_page_text, read_table, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure
+  subgoal     : Report the estimated driving time shown on the directions result for the route from the DoubleTree hotel to Keens Steakhouse.
+  plan_step   : read the route time and answer
+  expected    : {'must_see': 'Distance: 6.1km. Time: 0:14.'}
+    TERMINAL  stop_now  answer='0:14 (14 minutes, 6.1 km)'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='0:14 (14 minutes, 6.1 km)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.704%2C-74.012%3B40.751%2C-73.986#map=13/40.7276/-73.9993)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 84: steps=5  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-4e8f4274",
+      "task_id": "84",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,91 @@
+
+==============================================================================
+EPISODE · task 38
+==============================================================================
+  intent      : Check if the duquesne university in pittsburgh can be reached in one hour by car from pittsburgh airport
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/38.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Navigate to the directions page to set up a car route between Pittsburgh Airport and Duquesne University.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'from'}
+
+▸ step 0 · env · apply
+    → execute click (element_id) element_id=187
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: lookup_site, get_task_state, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Navigate to the directions page to set up a car route between Pittsburgh Airport and Duquesne University.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'From'}
+
+▸ step 1 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, compare_values, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Fill the From field with the Pittsburgh Airport so the directions form has an origin.
+  plan_step   : fill the From field with Pittsburgh Airport
+  expected    : {'must_see': 'Pittsburgh International Airport'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1515
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, compare_values, read_field_values, inspect_page_structure, get_task_state
+  subgoal     : Fill the To field with Duquesne University so the directions form has a destination.
+  plan_step   : fill the To field
+  expected    : {'must_see': 'Duquesne University'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1522
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_controls, inspect_page_structure, refresh_current_state
+  subgoal     : Click the Go button to compute the car route from Pittsburgh International Airport to Duquesne University
+  plan_step   : click Go
+  expected    : {'must_see': 'minute'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1535
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.492%2C-80.237%3B40.437%2C-79.990#map=12/40.4557/-80.1139
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, search_page_text, get_task_state
+  subgoal     : Confirm the car travel time from Pittsburgh International Airport to Duquesne University is under one hour and report the answer.
+    TERMINAL  stop_now  answer='Yes'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='Yes'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.492%2C-80.237%3B40.437%2C-79.990#map=12/40.4557/-80.1139)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 38: steps=6  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-38d83833",
+      "task_id": "38",
+      "n_steps": 6,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,45 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/90/runtime/runs/nogate/run-32QfgHMs
+
+==============================================================================
+EPISODE · task 90
+==============================================================================
+  intent      : Which US states border Pennsylvania?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/90.json
+
+▸ step 0 · planner
+      tools: get_task_state, get_obligations, verify_criterion, refresh_current_state, verify_criterion
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: get_task_state, inspect_page_structure, inspect_page_structure, verify_criterion, search_page_text
+  subgoal     : Answer the geographic fact: list the US states that border Pennsylvania.
+  plan_step   : answer the bordering-states question
+    TERMINAL  stop_now  answer='New York, New Jersey, Delaware, Maryland, West Virginia, and Ohio'
+
+▸ step 0 · env · apply
+    → execute stop (none) text='New York, New Jersey, Delaware, Maryland, West Virginia, and Ohio'
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 90: steps=1  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-a1c9e6b5",
+      "task_id": "90",
+      "n_steps": 1,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

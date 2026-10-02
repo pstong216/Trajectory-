@@ -1,0 +1,116 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/153/runtime/runs/nogate/run-nbMgYyLu
+
+==============================================================================
+EPISODE · task 153
+==============================================================================
+  intent      : What is the minimum travel time by car from REI to CMU?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/153.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_page_experience, get_site_task_history, search_experience, lookup_site, get_obligations, verify_binding
+  subgoal     : Navigate to the OpenStreetMap directions page so I can enter REI as the start and CMU as the destination with car routing enabled
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'from'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: get_task_state, inspect_controls, record_site, inspect_page_structure, get_page_experience, lookup_site, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, compare_values, compare_values
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, read_field_values, inspect_page_structure, inspect_page_structure
+  subgoal     : Enter REI in the From field and CMU in the To field on the directions form (Car routing already selected).
+  plan_step   : fill From=REI, To=CMU
+  expected    : {'must_see': 'REI'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_controls, compare_values, inspect_controls, inspect_controls
+  subgoal     : Enter CMU into the To field of the directions form.
+  plan_step   : fill the To field with CMU
+  expected    : {'must_see': 'CMU'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, compare_values, get_evidence, get_attempt_history, compare_values
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: compare_values, get_task_state, inspect_page_structure
+  subgoal     : Click the Go button on the directions form to compute the car route from REI to CMU and reveal the travel time.
+  plan_step   : click Go to compute the car route
+  expected    : {'must_see': 'From REI to CMU'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.725%2C-73.995%3B40.444%2C-79.943#map=7/40.351/-76.970
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: read_table, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Answer the task: minimum car travel time from REI to CMU is shown as 7:19 on the directions result page.
+    TERMINAL  stop_now  answer='7 hours 19 minutes'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='7 hours 19 minutes'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.725%2C-73.995%3B40.444%2C-79.943#map=7/40.351/-76.970)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 153: steps=5  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-30111434",
+      "task_id": "153",
+      "n_steps": 5,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

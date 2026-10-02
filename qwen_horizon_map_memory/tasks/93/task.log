@@ -1,0 +1,36 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/93/runtime/runs/nogate/run-nAr091iL
+
+==============================================================================
+EPISODE · task 93
+==============================================================================
+  intent      : Which US states border New Hampshire?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/93.json
+
+▸ step 0 · planner
+      tools: get_task_state, compare_values, verify_criterion, get_obligations, verify_criterion
+  subgoal     : Provide the factual geographic answer for which US states border New Hampshire.
+  plan_step   : answer the geographic fact
+    TERMINAL  stop_now  answer='Maine, Vermont, Massachusetts, and Pennsylvania'
+
+▸ step 0 · env · apply
+    → execute stop (none) text='Maine, Vermont, Massachusetts, and Pennsylvania'
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 93: steps=1  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-a18e7865",
+      "task_id": "93",
+      "n_steps": 1,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

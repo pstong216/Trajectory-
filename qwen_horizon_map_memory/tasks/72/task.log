@@ -1,0 +1,75 @@
+
+==============================================================================
+EPISODE · task 72
+==============================================================================
+  intent      : What is the zip code of Yale University?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/72.json
+
+▸ step 0 · planner
+      tools: inspect_controls, get_page_experience, inspect_controls, inspect_page_structure, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: compare_values, inspect_page_structure, inspect_page_structure
+  subgoal     : Search for Yale University on OpenStreetMap to find its zip code
+  plan_step   : search for Yale University
+  expected    : {'url_contains': 'search', 'must_see': 'Yale'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: get_task_state, inspect_controls, lookup_site, inspect_page_structure, get_page_experience
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, pixel_compare, search_page_text, pixel_compare
+  subgoal     : Click the Go button to submit the Yale University search
+  plan_step   : submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Yale University'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Yale%20University#map=13/41.2900/-72.9588
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, verify_criterion, get_obligations, search_page_text, get_evidence
+  subgoal     : Report the zip code of Yale University as found on the page.
+  plan_step   : harvest zip code from search results
+    TERMINAL  stop_now  answer='06511'
+
+▸ step 2 · env · apply
+    → execute stop (none) text='06511'
+      url unchanged (http://localhost:3000/search?query=Yale%20University#map=13/41.2900/-72.9588)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 72: steps=3  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-2201220a",
+      "task_id": "72",
+      "n_steps": 3,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

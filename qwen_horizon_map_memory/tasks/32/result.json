@@ -1,0 +1,67 @@
+{
+  "task_id": 32,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 1864.66,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/32/runtime/runs/rev2-mvp",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 130,
+    "refusal_reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 130,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "readiness": "not_ready",
+    "state_version_now": "e23c37a35b5a4e74",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Hilton Garden Inn Pittsburgh Airport South-Robinson Mall, 303 Park Manor Drive, Pittsburgh, Allegheny County, 15205, United States"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 27,
+      "model_decision_count": 182,
+      "tool_call_count": 203,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 1838.8140429649939,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.1,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 1864.76,
+  "replicas_removed": true
+}

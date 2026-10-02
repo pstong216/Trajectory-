@@ -1,0 +1,112 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/137/runtime/runs/nogate/run-yIRCNDOZ
+
+==============================================================================
+EPISODE · task 137
+==============================================================================
+  intent      : What is the estimated driving time between the city where the Liberty Bell is located and the home city of Pirates?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/137.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_controls, inspect_controls, inspect_controls, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_task_state, get_page_experience, lookup_site, get_page_experience
+  subgoal     : Open the directions page with driving routing between Philadelphia (Liberty Bell) and Pittsburgh (Pirates) to obtain the estimated driving time.
+  plan_step   : open directions between Philadelphia and Pittsburgh
+  navigate_to : http://localhost:3000/directions?f=Philadelphia&to=Pittsburgh&engine=fossgis_osrm_car
+  expected    : {'url_contains': '/directions', 'must_see': 'Pittsburgh'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?f=Philadelphia&to=Pittsburgh&engine=fossgis_osrm_car'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions?f=Philadelphia&to=Pittsburgh&engine=fossgis_osrm_car
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, search_page_text, inspect_page_structure, search_page_text
+  subgoal     : Fill the From field with Philadelphia so the directions form has both endpoints, enabling the route to be computed.
+  plan_step   : fill the From field
+  expected    : {'must_see': 'Philadelphia'}
+
+▸ step 1 · planner
+      tools: inspect_page_structure, get_task_state, read_field_values, read_field_values, search_page_text
+  subgoal     : Fill the From field with Philadelphia so both endpoints are present in the form.
+  plan_step   : fill the From field
+  expected    : {'must_see': 'Philadelphia'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions?f=Philadelphia&to=Pittsburgh&engine=fossgis_osrm_car)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: compare_values, inspect_page_structure, get_task_state, get_task_state
+  subgoal     : Click the Go button in the directions form to compute the driving route and reveal the estimated travel time.
+  plan_step   : go to route result
+  expected    : {'must_see': 'h'}
+
+▸ step 2 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions?f=Philadelphia&to=Pittsburgh&engine=fossgis_osrm_car  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=44.155%2C-75.709%3B40.442%2C-79.990#map=7/42.338/-77.959
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: verify_binding, get_bindings, get_task_state, verify_criterion, get_page_experience
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_controls, compare_values, compare_values, compare_values
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: inspect_page_structure, compare_values, get_task_state, get_bindings, get_obligations
+  subgoal     : Set the From field to 'Philadelphia, Pennsylvania' so the route is computed from the correct Philadelphia (Liberty Bell's city) instead of the village in New York.
+  plan_step   : correct From to Philadelphia PA
+  expected    : {'must_see': 'Philadelphia, Pennsylvania'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=44.155%2C-75.709%3B40.442%2C-79.990#map=7/42.338/-77.959)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state
+    TERMINAL  stop_now  answer='8:34'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='8:34'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=44.155%2C-75.709%3B40.442%2C-79.990#map=7/42.338/-77.959)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 137: steps=5  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-4f77a407",
+      "task_id": "137",
+      "n_steps": 5,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,101 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/87/runtime/runs/nogate/run-sdMiUGsp
+
+==============================================================================
+EPISODE · task 87
+==============================================================================
+  intent      : From my stay at red roof inn, what's the estimated driving time to reach Pittsburgh science museum?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/87.json
+
+▸ step 0 · planner
+      tools: lookup_site, get_site_task_history, get_page_experience, get_task_state, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: get_site_task_history, lookup_site, inspect_controls, get_attempt_history, inspect_page_structure
+  subgoal     : Search for the Red Roof Inn location to establish the starting point
+  plan_step   : fill the search field with Red Roof Inn
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, get_task_state, inspect_controls, get_page_experience, lookup_site
+  subgoal     : Open the directions page to enter the start and destination for driving directions.
+  plan_step   : open the directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 1 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Enter 'Red Roof Inn' as the starting point in the From field and 'Pittsburgh Science Museum' as the destination in the To field on the directions form (Car already selected).
+  plan_step   : fill the From and To fields
+  expected    : {'must_see': 'Red Roof Inn'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1253
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: get_bindings, get_page_experience, inspect_page_structure, compare_values, inspect_controls
+  subgoal     : Enter 'Pittsburgh Science Museum' in the To field to set the destination for driving directions.
+  plan_step   : fill the To field with destination
+  expected    : {'must_see': 'Pittsburgh Science Museum'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1260
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Click the 'Go' button to calculate driving directions from Red Roof Inn (Edison, NJ) to Pittsburgh Science Museum, which will display the estimated driving time.
+  plan_step   : click Go to calculate driving directions
+  expected    : {'must_see': 'km'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1273
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, search_page_text, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure
+  subgoal     : Report the calculated driving route result from Red Roof Inn (Edison, NJ) to Pittsburgh Science Museum.
+  plan_step   : harvest the route result
+  expected    : {'must_see': '50 km'}
+    TERMINAL  stop_now  answer='50 km'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='50 km'
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 87: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-944b30a4",
+      "task_id": "87",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

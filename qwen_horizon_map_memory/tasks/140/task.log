@@ -1,0 +1,79 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/140/runtime/runs/nogate/run-FFlV9Lsf
+
+==============================================================================
+EPISODE · task 140
+==============================================================================
+  intent      : What is the estimated driving time between the city of Niagara Falls and the city of Yale University?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/140.json
+
+▸ step 0 · planner
+      tools: lookup_site, lookup_site, lookup_site, get_task_state, inspect_page_structure
+  subgoal     : Open the directions page so I can enter Niagara Falls and Yale University as the two route points.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, get_page_experience, inspect_page_structure, inspect_page_structure, get_site_task_history
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, inspect_controls
+  subgoal     : Fill the From field with 'Niagara Falls' and the To field with 'Yale University' in the directions form so the route can be computed by car.
+  plan_step   : enter the two cities into From and To
+  expected    : {'must_see': 'Niagara Falls'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Set the To field of the directions form to 'Yale University' so the route endpoint is entered.
+  plan_step   : fill the To field with Yale University
+  expected    : {'must_see': 'Yale University'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=43.084%2C-79.061%3B41.257%2C-72.990#map=7/42.208/-76.025
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, read_table, search_page_text, search_page_text, search_page_text, compare_values
+  subgoal     : The driving time is shown on the page as 'Time: 8:52' for the Car (OSRM) route from Niagara Falls to Yale University. Report the answer and stop.
+  plan_step   : report answer and stop
+    TERMINAL  stop_now  answer='8:52 (8 hours and 52 minutes)'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='8:52 (8 hours and 52 minutes)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=43.084%2C-79.061%3B41.257%2C-72.990#map=7/42.208/-76.025)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 140: steps=4  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-744bf5bf",
+      "task_id": "140",
+      "n_steps": 4,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

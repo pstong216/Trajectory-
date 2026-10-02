@@ -1,0 +1,81 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/155/runtime/runs/nogate/run-c9urrbZV
+
+==============================================================================
+EPISODE · task 155
+==============================================================================
+  intent      : What is the minimum travel time by car from Animal Rescue League of Pittsburgh to Schenley park?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/155.json
+
+▸ step 0 · planner
+      tools: inspect_controls, get_task_state, compare_values, inspect_page_structure, compare_values
+  subgoal     : Open the directions page to enter the two locations for a car route.
+  plan_step   : navigate to directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_controls, inspect_controls, inspect_controls
+  subgoal     : Fill the From field with 'Animal Rescue League of Pittsburgh' and the To field with 'Schenley Park', then click Go to get the car route and its travel time.
+  plan_step   : enter the two locations and submit the car route
+  expected    : {'must_see': 'Animal Rescue League of Pittsburgh'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1508
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, compare_values, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Fill the To field with 'Schenley Park' so the directions form has both endpoints, then the Go button can be clicked to retrieve the car route time.
+  plan_step   : fill the To field with Schenley Park
+  expected    : {'must_see': 'Schenley Park'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1515
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, get_task_state, inspect_controls
+  subgoal     : Click the Go button to compute the car route from Animal Rescue League of Pittsburgh to Schenley Park so the travel time is displayed.
+  plan_step   : click Go to compute the car route
+  expected    : {'must_see': 'minutes'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1528
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.456%2C-79.904%3B40.435%2C-79.942#map=14/40.4442/-79.9230
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: read_table, search_page_text, inspect_page_structure, search_page_text, compare_values
+  plan_step   : read the car route travel time
+  expected    : {'must_see': 'Time: 0:09'}
+    TERMINAL  stop_now  answer='0:09'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='0:09'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.456%2C-79.904%3B40.435%2C-79.942#map=14/40.4442/-79.9230)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 155: steps=5  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-bc964bab",
+      "task_id": "155",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

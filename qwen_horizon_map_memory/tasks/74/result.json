@@ -1,0 +1,67 @@
+{
+  "task_id": 74,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 395.28,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/74/runtime/runs/rev2-mvp",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 389,
+    "refusal_reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 389,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "readiness": "not_ready",
+    "state_version_now": "9c6afeab96ba3659",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Carnegie Mellon University -> Starbucks on Craig Street -> Apple Store Shadyside. All three are roughly along an east-west line in Oakland/Shadyside, Pittsburgh. Starting at CMU (the westmost point), head east to the nearer Starbucks on Craig Street, then continue east to the Apple Store Shadyside \u2014 a monotonic eastward path that avoids backtracking and thus minimizes total travel time."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 1,
+      "model_decision_count": 4,
+      "tool_call_count": 5,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 381.3661648159905,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.3,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 395.58,
+  "replicas_removed": true
+}
