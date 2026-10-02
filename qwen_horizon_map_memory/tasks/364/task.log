@@ -1,0 +1,91 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/364/runtime/runs/nogate/run-4P1UZlxQ
+
+==============================================================================
+EPISODE · task 364
+==============================================================================
+  intent      : Measure distance between Carnegie Mellon University and UPMC Shadyside by walking
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/364.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, get_page_experience, lookup_site, get_site_task_history, get_task_state
+  subgoal     : Navigate to the OpenStreetMap directions page to set up a walking route between Carnegie Mellon University and UPMC Shadyside.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': 'directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, compare_values, inspect_controls, compare_values, get_task_state
+  subgoal     : Type 'Carnegie Mellon University' into the From field to set the starting point for the walking route.
+  plan_step   : fill the From field
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, get_task_state, inspect_page_structure, get_obligations
+  subgoal     : Type 'UPMC Shadyside' into the To field to set the destination of the walking route.
+  plan_step   : fill the To field with UPMC Shadyside
+  expected    : {'must_see': 'UPMC Shadyside'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, compare_values, compare_values, get_task_state, inspect_controls
+  subgoal     : Change the route type from Car (OSRM) to Foot (OSRM) so the directions are calculated by walking.
+  plan_step   : set route type to Foot (OSRM)
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure
+  subgoal     : Click the Go button to calculate the walking route between Carnegie Mellon University and UPMC Shadyside
+  plan_step   : click Go to get directions
+  expected    : {'must_see': 'km'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.455%2C-79.940#map=15/40.4499/-79.9420
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, verify_criterion
+  subgoal     : The walking route distance is displayed on the page. Stop and report the answer.
+    TERMINAL  stop_now  answer='1.7 km'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='1.7 km'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.943%3B40.455%2C-79.940#map=15/40.4499/-79.9420)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 364: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-e4bac83f",
+      "task_id": "364",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

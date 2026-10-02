@@ -1,0 +1,67 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/250/runtime/runs/nogate/run-nLFA1tfW
+
+==============================================================================
+EPISODE · task 250
+==============================================================================
+  intent      : Tell me the coordinates of Apple Store near Pitt in DD format
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/250.json
+
+▸ step 0 · planner
+      tools: verify_binding, inspect_controls, get_page_experience, inspect_page_structure, get_task_state
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Type 'Apple Store Pittsburgh' into the Search box and click Go to find the Apple Store near Pitt.
+  plan_step   : search Apple Store Pittsburgh
+  expected    : {'url_contains': 'search?q='}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=0.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, search_page_text
+  subgoal     : Click the Go button to submit the search for 'Apple Store Pittsburgh'
+  plan_step   : submit search
+  expected    : {'url_contains': 'search'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Apple%20Store%20Pittsburgh#map=19/40.45117/-79.93342
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: compare_values, inspect_page_structure, inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Report the Apple Store's coordinates read from the map position centered on the search result.
+  expected    : {'url_contains': 'map=19/40.45117/-79.93342'}
+    TERMINAL  stop_now  answer='40.45117, -79.93342'
+
+▸ step 2 · env · apply
+    → execute stop (none) text='40.45117, -79.93342'
+      url unchanged (http://localhost:3000/search?query=Apple%20Store%20Pittsburgh#map=19/40.45117/-79.93342)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 250: steps=3  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-157aac2c",
+      "task_id": "250",
+      "n_steps": 3,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

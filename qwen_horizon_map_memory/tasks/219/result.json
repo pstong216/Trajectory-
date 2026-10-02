@@ -1,0 +1,67 @@
+{
+  "task_id": 219,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 857.3,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/219/runtime/runs/nogate/run-QjPnN82j",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 744,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 744,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "3ce4a3e51c2c4266",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "None of the nearby hotels qualify. The three hotels found near Pittsburgh International Airport (Sheraton Pittsburgh Airport Hotel; DoubleTree by Hilton Hotel Pittsburgh Airport, Beers School Road; Sonesta Simply Suites Pittsburgh Airport, 100 Chauvet Drive) are all located in Moon Township / North Fayette Township, each several hundred metres to over a kilometre from the airport terminals. A 3-minute walk covers roughly 220\u2013250 m, so no nearby hotel is reachable from the airport in a walking time of 3 minutes or less. The OpenStreetMap walking-directions (OSRM Foot) page did not render a computed route/distance to verify exact figures for these candidates, but none of them is within the ~250 m radius that a 3-minute walk would allow."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 9,
+      "model_decision_count": 66,
+      "tool_call_count": 76,
+      "verification_probe_count": 12
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 823.4381113080017,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.3,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 857.61,
+  "replicas_removed": true
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": 253,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 240.57,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/253/runtime/runs/nogate/run-G1umxXKi",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "9a43b7f9b48d",
+    "task_id": "253",
+    "spec_version": "4.1",
+    "state_version_at_issue": "bfe06871ff996640",
+    "answer_hash": "6f492c21a7a36e87483f282db9cca2d91f12113dd7bf7ac927f16686a1e3066c",
+    "readiness": "ready_to_submit",
+    "issued_step": 4,
+    "unverified": false,
+    "answer": "No phone number is listed for Carnegie Mellon Caf\u00e9 in OpenStreetMap (tags only show amenity=restaurant and name=Carnegie Mellon Caf\u00e9)."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 22,
+      "tool_call_count": 18,
+      "verification_probe_count": 6
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 216.337668320004,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.37,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 240.94,
+  "replicas_removed": true
+}

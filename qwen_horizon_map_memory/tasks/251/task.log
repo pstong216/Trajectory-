@@ -1,0 +1,67 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/251/runtime/runs/nogate/run-pc8uXTxK
+
+==============================================================================
+EPISODE · task 251
+==============================================================================
+  intent      : Tell me the coordinates of bus stop on the Carnegie art museum side of the street near CMU in DD format
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/251.json
+
+▸ step 0 · planner
+      tools: get_task_state, inspect_controls, assign, lookup_site, get_page_experience
+  subgoal     : Type 'bus stop Forbes Avenue Carnegie Museum of Art' into the Search box to find bus stops near CMU.
+  plan_step   : fill the search field
+  expected    : {'must_see': 'bus stop Forbes Avenue Carnegie Museum of Art'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, get_page_experience, get_task_state, get_attempt_history, inspect_controls
+  subgoal     : Click the Go button to submit the search for the bus stop near Carnegie Museum of Art
+  plan_step   : submit search for bus stop
+  expected    : {'must_see': 'bus stop'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=bus%20stop%20Forbes%20Avenue%20Carnegie%20Museum%20of%20Art#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, refresh_current_state, inspect_page_structure, pixel_compare
+  subgoal     : Wait for the search results to load, then read the bus stop coordinates from the Nominatim results panel
+  plan_step   : wait for search results and read coordinates
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, search_page_text, refresh_current_state, inspect_page_structure
+  subgoal     : Wait for the Nominatim search results to finish loading, then read the bus stop coordinates from the results panel.
+  plan_step   : wait for results to load and read coordinates
+  expected    : {'must_see': '40.44'}
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to none (none)
+
+▸ episode end
+    BudgetExhausted: executor_local_result_replans
+    DONE  task 251: steps=2  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-8509c2ce",
+      "task_id": "251",
+      "n_steps": 2,
+      "final_reward": 0.0,
+      "success": false,
+      "error": "BudgetExhausted: executor_local_result_replans",
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

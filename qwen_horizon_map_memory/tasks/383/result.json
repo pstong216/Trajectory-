@@ -1,0 +1,67 @@
+{
+  "task_id": 383,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 643.92,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/383/runtime/runs/nogate/run-1sypmkx4",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 273,
+    "refusal_reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 273,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "readiness": "not_ready",
+    "state_version_now": "d107c6328dee3314",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Hyatt hotel: Hyatt Regency Pittsburgh International Airport. Supermarkets within 15 minutes driving: none found \u2014 the OpenStreetMap Nominatim search for 'supermarket Pittsburgh International Airport' returned 'No results found', so no supermarket names could be determined."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 43,
+      "tool_call_count": 49,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 615.6133400820108,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.44,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 644.37,
+  "replicas_removed": true
+}

@@ -1,0 +1,113 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/287/runtime/runs/nogate/run-qoYC8sPl
+
+==============================================================================
+EPISODE · task 287
+==============================================================================
+  intent      : How much time does it take from Pittsburgh to Philadelphia by car?
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/287.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, lookup_site, inspect_page_structure, lookup_site, inspect_controls
+  subgoal     : Open the directions page to enter Pittsburgh and Philadelphia and get the driving time.
+  plan_step   : navigate to directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, get_page_experience, inspect_page_structure, get_task_state
+  subgoal     : Enter Pittsburgh into the From field of the directions form to set the origin of the car route.
+  plan_step   : fill the From field with Pittsburgh
+  expected    : {'must_see': 'Pittsburgh'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: read_field_values, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Enter Philadelphia into the To field of the directions form to set the destination of the car route.
+  plan_step   : fill the To field with Philadelphia
+  expected    : {'must_see': 'Philadelphia'}
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to type (element_id) element_id=1259
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, get_task_state, get_attempt_history, inspect_controls, inspect_page_structure
+  subgoal     : Click the Go button to compute the driving route from Pittsburgh to Philadelphia by car and reveal the travel time.
+  plan_step   : click Go to run the route
+  expected    : {'must_see': 'h', 'url_contains': 'route'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.442%2C-79.990%3B44.155%2C-75.709#map=7/42.338/-77.959
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_controls, inspect_page_structure, search_page_text, search_page_text, search_page_text
+  subgoal     : Correct the destination by typing Philadelphia, Pennsylvania into the To field so it resolves to Philadelphia in PA, not the upstate New York village.
+  plan_step   : set the To field to Philadelphia, Pennsylvania
+  expected    : {'must_see': 'Philadelphia, Pennsylvania'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.442%2C-79.990%3B44.155%2C-75.709#map=7/42.338/-77.959)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: get_task_state, get_bindings, read_table, read_field_values, get_task_state
+  subgoal     : Clear and set the To field to Philadelphia, Pennsylvania so the destination resolves to the PA city, not the upstate NY village.
+  plan_step   : re-set the To destination to Philadelphia, Pennsylvania
+  expected    : {'must_see': 'Philadelphia, Pennsylvania'}
+
+▸ step 5 · planner
+      tools: inspect_page_structure, inspect_page_structure
+  subgoal     : Click the Go button to recompute the driving route to Philadelphia, Pennsylvania
+  plan_step   : click Go
+  expected    : {'url_contains': 'route=', 'must_see': 'Philadelphia'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.442%2C-79.990%3B44.155%2C-75.709#map=7/42.338/-77.959  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.442%2C-79.990%3B40.133%2C-74.977#map=7/40.208/-77.487
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: read_table, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, search_page_text, compare_values
+  subgoal     : Report the driving time from Pittsburgh to Philadelphia shown in the directions result.
+  plan_step   : harvest the route time
+    TERMINAL  stop_now  answer='5:45'
+
+▸ step 6 · env · apply
+    → execute stop (none) text='5:45'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.442%2C-79.990%3B40.133%2C-74.977#map=7/40.208/-77.487)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 287: steps=7  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-c6175b5f",
+      "task_id": "287",
+      "n_steps": 7,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

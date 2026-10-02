@@ -1,0 +1,68 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/370/runtime/runs/nogate/run-wQ6f5eA2
+
+==============================================================================
+EPISODE · task 370
+==============================================================================
+  intent      : Pull up the description page of Carnegie Mellon University on Map
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/370.json
+
+▸ step 0 · planner
+      tools: assign, lookup_site, lookup_site, inspect_page_structure
+  subgoal     : Type 'Carnegie Mellon University' into the Search box and click Go to perform the search
+  plan_step   : search for Carnegie Mellon University
+  expected    : {'url_contains': 'search', 'must_see': 'Carnegie Mellon University'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=319
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, refresh_current_state, compare_values, get_task_state
+  subgoal     : Click the Go button to submit the search for Carnegie Mellon University
+  plan_step   : click Go to submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Carnegie Mellon University'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=489
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Carnegie%20Mellon%20University#map=16/40.4445/-79.9447
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, compare_values, get_page_experience, inspect_page_structure, inspect_page_structure
+  subgoal     : Navigate to the Carnegie Mellon University relation description page to land on its detail page.
+  plan_step   : open the CMU relation description page
+  navigate_to : http://localhost:3000/relation/2279034
+  expected    : {'url_contains': '/relation/2279034', 'must_see': 'Carnegie Mellon University'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/relation/2279034'
+      url: http://localhost:3000/search?query=Carnegie%20Mellon%20University#map=16/40.4445/-79.9447  ->  http://localhost:3000/relation/2279034
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, compare_values, verify_criterion
+    TERMINAL  stop_now  answer='Carnegie Mellon University description page: http://localhost:3000/relation/2279034 — Relation: Carnegie Mellon University (2279034), Version #12, tags: amenity=university, name=Carnegie Mellon University, short_name=CMU, type=multipolygon, wikidata=Q190080'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='Carnegie Mellon University description page: http://localhost:3000/relation/2279034 — Relation: Carnegie Mellon University (2279034), Version #12, tags: amenity=university, name=Carnegie Mellon University, short_name=CMU, type=multipolygon, wikidata=Q190080'
+      url unchanged (http://localhost:3000/relation/2279034)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 370: steps=4  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-3ac47fd9",
+      "task_id": "370",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,89 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/363/runtime/runs/nogate/run-9ZrkWsDj
+
+==============================================================================
+EPISODE · task 363
+==============================================================================
+  intent      : Measure distance between Carnegie Mellon University and Carnegie Music Hall by walking
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/363.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_page_structure, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Navigate to the directions page to set up a walking route between Carnegie Mellon University and Carnegie Music Hall.
+  plan_step   : open directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'From'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Fill the From and To fields with the two place names, and set the route type to Foot (OSRM)
+  plan_step   : fill directions form
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Set the To field to 'Carnegie Music Hall' and select Foot (OSRM) as the route type
+  plan_step   : fill To and choose Foot route type
+  expected    : {'must_see': 'Carnegie Music Hall'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1520
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B40.443%2C-79.951#map=17/40.44413/-79.94675
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Select 'Foot (OSRM)' as the route type in the directions combobox to switch from car to walking
+  plan_step   : select Foot (OSRM) in the route type dropdown
+  expected    : {'url_contains': 'fossgis_osrm_foot'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1308
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B40.443%2C-79.951#map=17/40.44413/-79.94675  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.44339%2C-79.95102#map=17/40.44410/-79.94684
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: search_page_text, search_page_text, inspect_page_structure, inspect_page_structure, search_page_text, search_page_text
+  subgoal     : Compute total walking distance by summing the route leg distances and report it.
+  plan_step   : derive total distance and stop
+    TERMINAL  stop_now  answer='780m'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='780m'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.44419%2C-79.94272%3B40.44339%2C-79.95102#map=17/40.44410/-79.94684)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 363: steps=5  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-427f459d",
+      "task_id": "363",
+      "n_steps": 5,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

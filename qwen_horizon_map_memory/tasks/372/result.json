@@ -1,0 +1,67 @@
+{
+  "task_id": 372,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 580.83,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/372/runtime/runs/nogate/run-B9ujfdjk",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "f5ab59ef5cf8",
+    "task_id": "372",
+    "spec_version": "4.1",
+    "state_version_at_issue": "831d24321ded2489",
+    "answer_hash": "bd0cc2cd7427206e4e7fdb62ab2ae7b46d152755fc45e20388837bd2d864d6a4",
+    "readiness": "ready_to_submit",
+    "issued_step": 5,
+    "unverified": false,
+    "answer": "http://localhost:3000/way/168456128 \u2014 Way: Costco (168456128), 501 Waterfront Drive West, Pittsburgh, PA 15120-5009 (river-side Costco)"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 5,
+      "model_decision_count": 41,
+      "tool_call_count": 33,
+      "verification_probe_count": 7
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 551.449169169995,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.36,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 581.19,
+  "replicas_removed": true
+}

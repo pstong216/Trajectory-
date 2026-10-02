@@ -1,0 +1,67 @@
+{
+  "task_id": 256,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 187.2,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/256/runtime/runs/nogate/run-73uqo2N9",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "19e404e1c6db",
+    "task_id": "256",
+    "spec_version": "4.1",
+    "state_version_at_issue": "6fe30a38f696a834",
+    "answer_hash": "69b1488b28160e4c85731386ddb7b6231c42965c11d0c9ff459fd8739bc4c405",
+    "readiness": "ready_to_submit",
+    "issued_step": 4,
+    "unverified": false,
+    "answer": "http://web.cmoa.org/"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 21,
+      "tool_call_count": 17,
+      "verification_probe_count": 6
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 173.7516968370037,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.46,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 187.66,
+  "replicas_removed": true
+}

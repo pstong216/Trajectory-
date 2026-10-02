@@ -1,0 +1,67 @@
+{
+  "task_id": 220,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 3287.21,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/220/runtime/runs/nogate/run-qgJB5oAv",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 348,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 348,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "cd80c02381d3e230",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "None of the nearby hotels qualify. The only hotel the site returned near Gardner Steel Conference Center (Pittsburgh) was 'Hotel, Northbridge, Worcester County, Massachusetts, 01534, United States', which is hundreds of miles away and far exceeds a 5-minute walk. No nearby hotel within a 5-minute walk of Gardner Steel Conference Center was found."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 23,
+      "model_decision_count": 178,
+      "tool_call_count": 173,
+      "verification_probe_count": 29
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 3233.649190903001,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.43,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 3287.66,
+  "replicas_removed": true
+}

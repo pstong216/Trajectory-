@@ -1,0 +1,101 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/380/runtime/runs/nogate/run-qFC1OXGe
+
+==============================================================================
+EPISODE · task 380
+==============================================================================
+  intent      : Find the bar around Carnegie Music Hall
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/380.json
+
+▸ step 0 · planner
+      tools: compare_values, inspect_controls, get_task_state, get_attempt_history
+  subgoal     : Type 'bar near Carnegie Music Hall' into the Search box to look for the bar around Carnegie Music Hall.
+  plan_step   : fill the search box with the bar query
+  expected    : {'must_see': 'bar near Carnegie Music Hall'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: compare_values, get_task_state, inspect_controls, inspect_page_structure
+  subgoal     : Click the Go button to submit the search for 'bar near Carnegie Music Hall'
+  plan_step   : submit search
+  expected    : {'url_contains': 'search', 'must_see': 'bar'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=bar%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, assign, inspect_page_structure
+  subgoal     : Clear the search box, type 'Carnegie Music Hall', and click Go to locate the venue first.
+  plan_step   : search for Carnegie Music Hall
+  expected    : {'url_contains': 'search?query=Carnegie%20Music%20Hall', 'must_see': 'Carnegie Music Hall'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=bar%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, compare_values, inspect_page_structure, inspect_page_structure, compare_values
+  subgoal     : Click the Go button to submit the search for 'Carnegie Music Hall' and locate the venue on the map.
+  plan_step   : submit search for Carnegie Music Hall
+  expected    : {'url_contains': 'search?query=Carnegie%20Music%20Hall', 'must_see': 'Carnegie Music Hall'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=bar%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180  ->  http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: compare_values, search_page_text, search_page_text, get_page_experience, inspect_page_structure, inspect_page_structure
+  subgoal     : Replace the search box text with 'bar' so Nominatim finds a bar in the current map view around Carnegie Music Hall.
+  plan_step   : set search box to 'bar'
+  expected    : {'must_see': 'bar'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: get_task_state, inspect_page_structure, inspect_controls, get_task_state, get_page_experience
+  subgoal     : Click the Go button to submit the 'bar' search within the current map view centered on Carnegie Music Hall.
+  plan_step   : submit bar search
+  expected    : {'url_contains': 'search?query=bar', 'must_see': 'Search Results'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097  ->  http://localhost:3000/search?query=bar#map=19/42.09319/-73.94475
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_page_structure, extract_section_records, search_page_text, compare_values
+  plan_step   : report the bar around Carnegie Music Hall
+    TERMINAL  stop_now  answer='Bar, Washington Avenue, Village of Saugerties, Town of Saugerties, Ulster County, New York, 12477, United States (way 406666933)'
+
+▸ step 6 · env · apply
+    → execute stop (none) text='Bar, Washington Avenue, Village of Saugerties, Town of Saugerties, Ulster County, New York, 12477, United States (way 406666933)'
+      url unchanged (http://localhost:3000/search?query=bar#map=19/42.09319/-73.94475)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 380: steps=7  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-e1bf369d",
+      "task_id": "380",
+      "n_steps": 7,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,94 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/761/runtime/runs/nogate/run-mEXuCFxR
+
+==============================================================================
+EPISODE · task 761
+==============================================================================
+  intent      : Get directions from Carnegie Science Museum to Hunt library CMU using walk options.
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/761.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, inspect_page_structure, lookup_site, inspect_controls, lookup_site
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: lookup_site, compare_values, get_task_state, search_experience, search_page_text
+  subgoal     : Open the directions page to begin routing between the two points.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, get_page_experience, get_task_state, get_criterion
+  subgoal     : Set the From field to 'Carnegie Science Museum', the To field to 'Hunt library CMU', and choose the 'Foot (OSRM)' walking mode in the directions form.
+  plan_step   : fill the directions form (from, to, foot mode)
+  expected    : {'must_see': 'Carnegie Science Museum'}
+
+▸ step 1 · planner
+      tools: inspect_controls, compare_values, inspect_page_structure, get_task_state, get_evidence
+  subgoal     : Set the From field to 'Carnegie Science Museum', the To field to 'Hunt library CMU', and select the 'Foot (OSRM)' walking mode in the directions form.
+  plan_step   : fill From/To and select Foot mode
+  expected    : {'url_contains': '/directions', 'must_see': 'Carnegie Science Museum'}
+
+▸ step 1 · planner
+      tools: compare_values, inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Set the From field to 'Carnegie Science Museum' and the To field to 'Hunt library CMU' in the directions form.
+  plan_step   : fill From and To fields
+  expected    : {'url_contains': '/directions', 'must_see': 'Carnegie Science Museum'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_page_structure
+  subgoal     : Select 'Foot (OSRM)' as the routing mode so the directions use walk options.
+  plan_step   : choose Foot (OSRM) in routing mode
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, get_criterion
+    TERMINAL  stop_now  answer='Walking (Foot/OSRM) directions from Carnegie Science Museum to Hunt library CMU set up on the OpenStreetMap directions page: From = Carnegie Science Museum, To = Hunt library CMU, routing mode = Foot (OSRM).'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='Walking (Foot/OSRM) directions from Carnegie Science Museum to Hunt library CMU set up on the OpenStreetMap directions page: From = Carnegie Science Museum, To = Hunt library CMU, routing mode = Foot (OSRM).'
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 761: steps=5  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-3ce13084",
+      "task_id": "761",
+      "n_steps": 5,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

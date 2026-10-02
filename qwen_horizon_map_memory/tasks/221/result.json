@@ -1,0 +1,67 @@
+{
+  "task_id": 221,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 1574.35,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/221/runtime/runs/nogate/run-phsivjWa",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 206,
+    "refusal_reason": "task specification unavailable: unparseable compiler output after one correction: Unterminated string starting at: line 33 column 3 (char 935)",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 206,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: unparseable compiler output after one correction: Unterminated string starting at: line 33 column 3 (char 935)",
+    "readiness": "not_ready",
+    "state_version_now": "c33b78e2b4cb5036",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "From CMU Pittsburgh (40.4442,-79.9427) to the nearest USPS office (40.4410,-79.9574), distance 1.6km: Bicycle (OSRM): 10 minutes (Time: 0:10). Car and Foot times were not captured in the current page state."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 18,
+      "model_decision_count": 161,
+      "tool_call_count": 165,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 1546.4413854070008,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.33,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 1574.68,
+  "replicas_removed": true
+}

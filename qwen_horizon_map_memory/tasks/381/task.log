@@ -1,0 +1,173 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/381/runtime/runs/nogate/run-7iPhce7G
+
+==============================================================================
+EPISODE · task 381
+==============================================================================
+  intent      : Find the hotel around Carnegie Music Hall
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/381.json
+
+▸ step 0 · planner
+      tools: inspect_controls, search_experience, compare_values, get_task_state, inspect_page_structure
+  subgoal     : Type the query 'hotel near Carnegie Music Hall' into the Search textbox to search for hotels around the venue.
+  plan_step   : fill the search box with the query
+  expected    : {'must_see': 'hotel near Carnegie Music Hall'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure, pixel_compare
+  subgoal     : Click the Go button to submit the 'hotel near Carnegie Music Hall' search and load the results.
+  plan_step   : click Go to submit search
+  expected    : {'must_see': 'hotel'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=hotel%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: search_page_text, assign, inspect_page_structure, compare_values, search_page_text
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: get_obligations, inspect_page_structure, search_page_text, inspect_page_structure, search_page_text
+  subgoal     : Replace the search query with 'Carnegie Music Hall' to locate the landmark, since the combined hotel query found nothing.
+  plan_step   : refine search to Carnegie Music Hall
+  expected    : {'url_contains': 'query=Carnegie', 'must_see': 'Carnegie Music Hall'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=hotel%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, read_field_values, get_page_experience, search_page_text, lookup_site, inspect_page_structure
+  subgoal     : Click the Go button to submit the 'Carnegie Music Hall' search query and load its location on the map.
+  plan_step   : submit Carnegie Music Hall search
+  expected    : {'url_contains': 'query=Carnegie%20Music%20Hall', 'must_see': 'Carnegie Music Hall'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=hotel%20near%20Carnegie%20Music%20Hall#map=7/42.896/-73.180  ->  http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, search_page_text, search_page_text, get_site_task_history, search_experience
+  subgoal     : Type 'hotel' into the Search textbox to search for hotels in the current map area (centered on Carnegie Music Hall) and then submit the search.
+  plan_step   : search for hotel in current map area
+  expected    : {'url_contains': 'query=hotel', 'must_see': 'hotel'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: get_task_state, get_bindings, inspect_controls, get_page_experience
+  subgoal     : Click the Go button to submit the 'hotel' search in the area centered on Carnegie Music Hall
+  plan_step   : submit hotel search
+  expected    : {'url_contains': 'query=hotel', 'must_see': 'hotel'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=Carnegie%20Music%20Hall#map=19/40.44331/-79.95097  ->  http://localhost:3000/search?query=hotel#map=18/42.11946/-71.60808
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_page_structure, inspect_controls, extract_structured_values, extract_section_records, extract_structured_values
+  subgoal     : Refine the search query to scope hotels to Carnegie, PA, by replacing the Search textbox value with 'hotel Carnegie, PA'.
+  plan_step   : fill search with 'hotel Carnegie, PA'
+  expected    : {'must_see': 'hotel Carnegie'}
+
+▸ step 6 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=hotel#map=18/42.11946/-71.60808)
+      reward=1.0  done=False
+
+▸ step 7 · planner
+      tools: inspect_page_structure, get_task_state, record_site, inspect_controls, inspect_page_structure
+  subgoal     : Click the 'More results' link to load the area-bounded hotel search results centered on Carnegie Music Hall's Pittsburgh coordinates (40.44/-79.95)
+  plan_step   : open area-bounded hotel results for Pittsburgh
+  expected    : {'url_contains': 'minlat=40.44', 'must_see': 'Pittsburgh'}
+
+▸ step 7 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=hotel#map=18/42.11946/-71.60808  ->  http://localhost:3000/search?query=hotel%20Carnegie%2C%20PA#map=18/42.11946/-71.60808
+      reward=1.0  done=False
+
+▸ step 8 · planner
+      tools: assign, get_site_task_history, lookup_site, get_page_experience, lookup_site
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 8 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 8 · planner
+      tools: get_site_task_history, search_page_text, get_page_experience, get_recovery_experience, inspect_page_structure, inspect_page_structure, inspect_controls
+  subgoal     : Navigate to the hotel search scoped to the map viewport centered on Carnegie Music Hall in Pittsburgh, so Nominatim returns hotels in that area.
+  plan_step   : teleport to hotel search centered on Carnegie Music Hall coords
+  navigate_to : http://localhost:3000/search?query=hotel#map=17/40.44331/-79.95097
+  expected    : {'url_contains': 'query=hotel', 'must_see': 'Results from OpenStreetMap Nominatim'}
+
+▸ step 8 · env · apply
+    → execute goto (none) url='http://localhost:3000/search?query=hotel#map=17/40.44331/-79.95097'
+      url: http://localhost:3000/search?query=hotel%20Carnegie%2C%20PA#map=18/42.11946/-71.60808  ->  http://localhost:3000/search?query=hotel#map=18/42.11946/-71.60808
+      reward=1.0  done=False
+
+▸ step 9 · planner
+      tools: lookup_site, search_page_text, inspect_controls, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 9 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 9 · planner
+      tools: inspect_page_structure, extract_section_records, inspect_page_structure, inspect_controls
+  subgoal     : Click the 'More results' link to load hotels in the bounding box around Carnegie Music Hall
+  plan_step   : click more results link for Pittsburgh area
+  expected    : {'url_contains': 'query=hotel', 'must_see': 'Pittsburgh'}
+
+▸ step 9 · planner
+      tools: inspect_page_structure, extract_structured_values, get_page_experience, get_site_task_history, get_attempt_history
+  subgoal     : Click the 'More results' link to load hotel results scoped to the bounding box around Carnegie Music Hall (Pittsburgh area, lat ~40.44, lon ~-79.95)
+  plan_step   : click More results link for area-bounded hotel search
+  expected    : {'url_contains': 'query=hotel', 'must_see': 'Carnegie'}
+
+▸ step 9 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to stop (none) text='yield'
+
+▸ step 9 · env · apply
+    → execute stop (none) text='yield'
+      url unchanged (http://localhost:3000/search?query=hotel#map=18/42.11946/-71.60808)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 381: steps=10  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-5c97449d",
+      "task_id": "381",
+      "n_steps": 10,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

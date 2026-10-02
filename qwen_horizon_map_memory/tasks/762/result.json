@@ -1,0 +1,67 @@
+{
+  "task_id": 762,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 487.1,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/762/runtime/runs/nogate/run-LsnPxtKj",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "63d620cacf0c",
+    "task_id": "762",
+    "spec_version": "4.1",
+    "state_version_at_issue": "e5122f8aae39d69c",
+    "answer_hash": "80d5df587e0fb7c0a96936cb624d3f50df48ffcf5f7faf5666a248b8a12bf3cf",
+    "readiness": "ready_to_submit",
+    "issued_step": 5,
+    "unverified": false,
+    "answer": "Driving directions requested from Carnegie Music Hall, New York, NY to Carnegie Mellon University using Car (OSRM) driving mode; the directions form is populated with both endpoints and the Go button was clicked to compute the route."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 42,
+      "tool_call_count": 37,
+      "verification_probe_count": 2
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 466.2721311159985,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.45,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 487.55,
+  "replicas_removed": true
+}

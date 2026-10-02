@@ -1,0 +1,101 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/365/runtime/runs/nogate/run-6iECnBd6
+
+==============================================================================
+EPISODE · task 365
+==============================================================================
+  intent      : Measure distance between Carnegie Music Hall and UPMC Shadyside by walking
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/365.json
+
+▸ step 0 · planner
+      tools: lookup_site, compare_values, inspect_controls, extract_structured_values, inspect_page_structure
+  subgoal     : Open the directions page to enter start and end points for a walking route.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_controls, inspect_controls
+  subgoal     : Enter the start location Carnegie Music Hall into the From field of the directions form.
+  plan_step   : fill From field
+  expected    : {'must_see': 'Carnegie Music Hall'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, get_task_state, inspect_page_structure
+  subgoal     : Set the To field to UPMC Shadyside and choose the Foot (OSRM) travel mode so the route is computed for walking.
+  plan_step   : fill To and set mode to walking
+  expected    : {'must_see': 'UPMC Shadyside'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_controls, get_page_experience, get_task_state, inspect_page_structure
+  subgoal     : Set the route mode combobox to Foot (OSRM) so the route is computed for walking.
+  plan_step   : choose Foot (OSRM) mode
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, inspect_page_structure, inspect_controls
+  subgoal     : Click the Go button to compute the walking route between Carnegie Music Hall and UPMC Shadyside so the distance is displayed.
+  plan_step   : click Go to compute walking route
+  expected    : {'must_see': 'mi'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.443%2C-79.951%3B40.455%2C-79.940#map=15/40.4496/-79.9457
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: search_page_text, search_page_text, get_task_state, verify_criterion, inspect_page_structure, get_criterion
+  subgoal     : Report the walking distance between Carnegie Music Hall and UPMC Shadyside as displayed on the directions page.
+  plan_step   : harvest the walking distance
+    TERMINAL  stop_now  answer='2.2km (Time: 0:29)'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='2.2km (Time: 0:29)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.443%2C-79.951%3B40.455%2C-79.940#map=15/40.4496/-79.9457)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 365: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-2b0e6701",
+      "task_id": "365",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

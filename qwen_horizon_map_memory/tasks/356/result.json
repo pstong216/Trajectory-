@@ -1,0 +1,67 @@
+{
+  "task_id": 356,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 226.51,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/356/runtime/runs/nogate/run-7i1le5Hf",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "cdd854586140",
+    "task_id": "356",
+    "spec_version": "4.1",
+    "state_version_at_issue": "32da2e45382abfeb",
+    "answer_hash": "b1f15c514bfd8d37f013ab2b5fceecf5b9afe4d0bd10bc05fd5cc4ad95388c4f",
+    "readiness": "ready_to_submit",
+    "issued_step": 2,
+    "unverified": false,
+    "answer": "The route from Carnegie Mellon University (SCS CMU), Pittsburgh, PA to Independence Hall, 520 Chestnut Street, Philadelphia, PA \u2014 where the Declaration of Independence and Constitution were signed \u2014 is now displayed on OpenStreetMap. Origin: 40.4446, -79.9440 (SCS CMU, Pittsburgh); Destination: 39.9488, -75.1503 (Independence Hall, Philadelphia); Mode: Car (OSRM)."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 2,
+      "model_decision_count": 9,
+      "tool_call_count": 7,
+      "verification_probe_count": 4
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 205.11003332999826,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.37,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 226.89,
+  "replicas_removed": true
+}

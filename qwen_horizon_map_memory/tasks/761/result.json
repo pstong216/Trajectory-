@@ -1,0 +1,67 @@
+{
+  "task_id": 761,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 505.35,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/761/runtime/runs/nogate/run-mEXuCFxR",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "bffde19e4f16",
+    "task_id": "761",
+    "spec_version": "4.1",
+    "state_version_at_issue": "ea169e8b32063094",
+    "answer_hash": "4f0ba123f1ce301c19e0f88a997e128a4277c87e1bd34d2463cc0a309a4e2ff0",
+    "readiness": "ready_to_submit",
+    "issued_step": 4,
+    "unverified": false,
+    "answer": "Walking (Foot/OSRM) directions from Carnegie Science Museum to Hunt library CMU set up on the OpenStreetMap directions page: From = Carnegie Science Museum, To = Hunt library CMU, routing mode = Foot (OSRM)."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 5,
+      "model_decision_count": 35,
+      "tool_call_count": 29,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 487.8755870610039,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.42,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 505.77,
+  "replicas_removed": true
+}

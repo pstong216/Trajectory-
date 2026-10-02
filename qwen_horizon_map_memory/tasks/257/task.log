@@ -1,0 +1,86 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/257/runtime/runs/nogate/run-1aylfTmq
+
+==============================================================================
+EPISODE · task 257
+==============================================================================
+  intent      : What is the hours of operation of Tokyo Japanese Food Store in Pittsburgh
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/257.json
+
+▸ step 0 · planner
+      tools: get_site_task_history, inspect_page_structure, get_page_experience, inspect_page_structure, inspect_controls
+  subgoal     : Type the store name into the Search box to find Tokyo Japanese Food Store
+  plan_step   : fill the search field
+  expected    : {'must_see': 'Tokyo Japanese Food Store'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_controls, compare_values, inspect_page_structure, search_page_text, search_page_text, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, compare_values
+  subgoal     : Click the Go button to submit the search for Tokyo Japanese Food Store Pittsburgh
+  plan_step   : submit search
+  expected    : {'must_see': 'Tokyo Japanese Food Store'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Tokyo%20Japanese%20Food%20Store%20Pittsburgh#map=19/40.45760/-79.92933
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Open the store's OpenStreetMap detail page (way/167278405) to read its opening hours
+  plan_step   : open the store's detail page
+  navigate_to : http://localhost:3000/way/167278405
+  expected    : {'url_contains': '/way/167278405', 'must_see': 'Tokyo Japanese Food Store'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/way/167278405'
+      url: http://localhost:3000/search?query=Tokyo%20Japanese%20Food%20Store%20Pittsburgh#map=19/40.45760/-79.92933  ->  http://localhost:3000/way/167278405
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: compare_values
+    TERMINAL  stop_now  answer='We-Su 10:00-17:00; Mo-Tu off'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='We-Su 10:00-17:00; Mo-Tu off'
+      url unchanged (http://localhost:3000/way/167278405)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 257: steps=4  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-1c3fcea0",
+      "task_id": "257",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

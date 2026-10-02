@@ -1,0 +1,67 @@
+{
+  "task_id": 767,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 1055.76,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/767/runtime/runs/nogate/run-f5T0AEy7",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 757,
+    "refusal_reason": "task specification unavailable: unparseable compiler output after one correction: Unterminated string starting at: line 31 column 22 (char 778)",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 757,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: unparseable compiler output after one correction: Unterminated string starting at: line 31 column 22 (char 778)",
+    "readiness": "not_ready",
+    "state_version_now": "332258e242c65ea7",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Walking route from 401 Shady Ave, Pittsburgh to Giant Eagle, 5550 Centre Ave, Shadyside (closest chain grocery owned by a local Pittsburgh business): 1. Start on unnamed road (50m) 2. Turn left onto Walnut Street (130m) 3. Turn right onto Shady Avenue (100m) 4. Turn left onto Alder Street (200m) 5. At the end of the road turn left onto South Highland Avenue (30m) 6. Turn right onto Alder Street (300m) 7. Turn right onto College Street (140m) 8. Turn left onto Pierce Street (300m) 9. Turn right onto unnamed road (20m) 10. Turn left onto unnamed road (80m) 11. At the fork turn right onto unnamed road (20m) 12. Turn right onto South Negley Avenue (150m) 13. Turn left onto Centre Avenue (40m) 14. Turn left onto unnamed road (40m) 15. Reach destination"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 11,
+      "model_decision_count": 94,
+      "tool_call_count": 97,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 1018.5012109609961,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.45,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 1056.21,
+  "replicas_removed": true
+}

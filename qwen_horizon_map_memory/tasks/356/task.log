@@ -1,0 +1,46 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/356/runtime/runs/nogate/run-7i1le5Hf
+
+==============================================================================
+EPISODE · task 356
+==============================================================================
+  intent      : Show the route from SCS CMU in Pittsburgh to the location where the Declaration of Independence and Constitution were signed
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/356.json
+
+▸ step 0 · planner
+      tools: lookup_site, get_site_task_history, inspect_page_structure, inspect_page_structure, lookup_site
+  subgoal     : Navigate to the OpenStreetMap directions page with SCS at CMU (Pittsburgh) as the origin and Independence Hall (Philadelphia), where the Declaration of Independence and Constitution were signed, as the destination, to display the route.
+  plan_step   : open the directions page with both points
+  navigate_to : http://localhost:3000/directions?from=40.4446,-79.9440&to=39.9488,-75.1503
+  expected    : {'url_contains': '/directions', 'must_see': 'Distance'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?from=40.4446,-79.9440&to=39.9488,-75.1503'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B39.949%2C-75.150#map=7/40.200/-77.542
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: compare_values, verify_criterion
+    TERMINAL  stop_now  answer='The route from Carnegie Mellon University (SCS CMU), Pittsburgh, PA to Independence Hall, 520 Chestnut Street, Philadelphia, PA — where the Declaration of Independence and Constitution were signed — is now displayed on OpenStreetMap. Origin: 40.4446, -79.9440 (SCS CMU, Pittsburgh); Destination: 39.9488, -75.1503 (Independence Hall, Philadelphia); Mode: Car (OSRM).'
+
+▸ step 1 · env · apply
+    → execute stop (none) text='The route from Carnegie Mellon University (SCS CMU), Pittsburgh, PA to Independence Hall, 520 Chestnut Street, Philadelphia, PA — where the Declaration of Independence and Constitution were signed — is now displayed on OpenStreetMap. Origin: 40.4446, -79.9440 (SCS CMU, Pittsburgh); Destination: 39.9488, -75.1503 (Independence Hall, Philadelphia); Mode: Car (OSRM).'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.444%2C-79.943%3B39.949%2C-75.150#map=7/40.200/-77.542)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 356: steps=2  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-32223b0e",
+      "task_id": "356",
+      "n_steps": 2,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

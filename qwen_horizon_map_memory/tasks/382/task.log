@@ -1,0 +1,127 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/382/runtime/runs/nogate/run-1npW5Y4e
+
+==============================================================================
+EPISODE · task 382
+==============================================================================
+  intent      : I am arriving at Carnegie Mellon University. Find the nearby US Citizenship and Immigration Services and the walking distance to the nearest Social Security Administration from US Citizenship and Immigration Services
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/382.json
+
+▸ step 0 · planner
+      tools: get_page_experience, inspect_controls
+  subgoal     : Search for 'US Citizenship and Immigration Services' near Carnegie Mellon University using the search box
+  plan_step   : search USCIS
+  expected    : {'url_contains': 'search', 'must_see': 'US Citizenship'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, get_page_experience, compare_values, get_task_state, get_obligations
+  subgoal     : Submit the search for the US Citizenship and Immigration Services near Carnegie Mellon University by pressing the Go button to display the location on the map.
+  plan_step   : execute search (Go)
+  expected    : {'url_contains': 'search?query=', 'must_see': 'US Citizenship and Immigration Services'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=US%20Citizenship%20and%20Immigration%20Services%20Carnegie%20Mellon%20University#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: assign
+  subgoal     : Refine the search query to 'USCIS Pittsburgh' (or 'US Citizenship and Immigration Services Pittsburgh') and submit it via the Go button to locate the USCIS office near Carnegie Mellon University.
+  plan_step   : re-search with 'USCIS Pittsburgh'
+  expected    : {'url_contains': 'search?query=', 'must_see': 'Results from OpenStreetMap Nominatim'}
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to type (element_id) element_id=79
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=US%20Citizenship%20and%20Immigration%20Services%20Carnegie%20Mellon%20University#map=7/42.896/-73.180)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: compare_values, compare_values, compare_values, compare_values, compare_values
+  subgoal     : Submit the refined search query 'USCIS Pittsburgh' by clicking the Go button to find the nearby USCIS office.
+  plan_step   : submit USCIS Pittsburgh search
+  expected    : {'url_contains': 'search?query=', 'must_see': 'USCIS'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=US%20Citizenship%20and%20Immigration%20Services%20Carnegie%20Mellon%20University#map=7/42.896/-73.180  ->  http://localhost:3000/search?query=USCIS%20Pittsburgh#map=19/40.42482/-79.96086
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: search_page_text, inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Replace the search box text with 'Social Security Administration Pittsburgh' to locate the nearest SSA office to the USCIS office.
+  plan_step   : search for Social Security Administration near USCIS
+  expected    : {'url_contains': 'search?query=Social+Security', 'must_see': 'Social Security'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=USCIS%20Pittsburgh#map=19/40.42482/-79.96086)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: inspect_page_structure, inspect_controls, get_task_state, inspect_page_structure
+  subgoal     : Click the Go button to search for 'Social Security Administration Pittsburgh' and locate the nearest SSA office.
+  plan_step   : submit SSA search
+  expected    : {'url_contains': 'search?query=Social%20Security', 'must_see': 'Social Security Administration'}
+
+▸ step 5 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=USCIS%20Pittsburgh#map=19/40.42482/-79.96086  ->  http://localhost:3000/search?query=Social%20Security%20Administration%20Pittsburgh#map=19/40.44406/-79.99756
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: get_task_state, lookup_site, inspect_page_structure, get_site_task_history, inspect_page_structure
+  subgoal     : Navigate to the directions page to set up a walking route from USCIS Pittsburgh to the SSA office on Penn Avenue to get the walking distance.
+  plan_step   : open directions for walking route
+  navigate_to : http://localhost:3000/directions?engine=osrm_foot&route=40.42482%2C-79.96086%3B40.44406%2C-79.99756
+  expected    : {'url_contains': 'directions', 'must_see': 'Distance'}
+
+▸ step 6 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=osrm_foot&route=40.42482%2C-79.96086%3B40.44406%2C-79.99756'
+      url: http://localhost:3000/search?query=Social%20Security%20Administration%20Pittsburgh#map=19/40.44406/-79.99756  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.42482%2C-79.96086%3B40.44406%2C-79.99756#map=14/40.4341/-79.9793
+      reward=1.0  done=False
+
+▸ step 7 · planner
+      tools: inspect_page_structure, read_table, inspect_controls, extract_structured_values, inspect_page_structure
+  subgoal     : Change the routing engine from Car (OSRM) to Foot (OSRM) so the directions table reflects walking distance
+  plan_step   : set engine to Foot
+  expected    : {'url_contains': 'osrm_foot', 'must_see': 'Foot (OSRM)'}
+
+▸ step 7 · env · apply
+    → execute click (element_id) element_id=1971
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.42482%2C-79.96086%3B40.44406%2C-79.99756#map=14/40.4341/-79.9793  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4248%2C-79.9609%3B40.4441%2C-79.9976#map=14/40.4343/-79.9794
+      reward=0.0  done=False
+
+▸ step 8 · planner
+      tools: read_table, search_page_text, inspect_page_structure, get_task_state
+    TERMINAL  stop_now  answer='US Citizenship and Immigration Services (USCIS) Pittsburgh is located near Carnegie Mellon University at coordinates 40.42482, -79.96086. The walking distance from USCIS to the nearest Social Security Administration (at 40.44406, -79.99756) is 4.7 km (approximately 1 hour 3 minutes on foot).'
+
+▸ step 8 · env · apply
+    → execute stop (none) text='US Citizenship and Immigration Services (USCIS) Pittsburgh is located near Carnegie Mellon University at coordinates 40.42482, -79.96086. The walking distance from USCIS to the nearest Social Security Administration (at 40.44406, -79.99756) is 4.7 km (approximately 1 hour 3 minutes on foot).'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4248%2C-79.9609%3B40.4441%2C-79.9976#map=14/40.4343/-79.9794)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 382: steps=9  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-2cccbdf3",
+      "task_id": "382",
+      "n_steps": 9,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": 764,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 900.88,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/764/runtime/runs/nogate/run-PlcyWd4X",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 676,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 676,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "341b75717b46f322",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Walking route (Foot/OSRM) from 401 Shady Ave, Pittsburgh to the closest Target (6231 Penn Avenue, East Liberty): 1. Start on unnamed road (50m) \u2192 2. Turn left onto Walnut Street (130m) \u2192 3. Turn right onto Shady Avenue (400m) \u2192 4. Turn left onto unnamed road (20m) \u2192 5. Slight left onto unnamed road (90m) \u2192 6. At the fork turn right onto unnamed road (70m) \u2192 7. At the end of the road turn left onto unnamed road (10m) \u2192 8. Turn right onto unnamed road (30m) \u2192 9. At the end of the road turn left onto unnamed road (10m) \u2192 10. Turn right onto Centre Avenue (PA 380) (60m) \u2192 11. Turn right onto unnamed road (90m) \u2192 12. Reach destination. Total walking distance about 1.17 km."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 13,
+      "model_decision_count": 84,
+      "tool_call_count": 72,
+      "verification_probe_count": 14
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 873.427316264002,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.47,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 901.34,
+  "replicas_removed": true
+}

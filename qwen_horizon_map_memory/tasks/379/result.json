@@ -1,0 +1,67 @@
+{
+  "task_id": 379,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 373.7,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/379/runtime/runs/nogate/run-UjSbzY68",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 104,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 104,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "44b957ed2892b58d",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "William Pitt Union, 3959 Fifth Avenue, North Oakland, Pittsburgh, Allegheny County, 15260, United States"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 5,
+      "model_decision_count": 26,
+      "tool_call_count": 21,
+      "verification_probe_count": 6
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 344.0341063710075,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.41,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 374.12,
+  "replicas_removed": true
+}

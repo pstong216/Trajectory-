@@ -1,0 +1,68 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/256/runtime/runs/nogate/run-73uqo2N9
+
+==============================================================================
+EPISODE · task 256
+==============================================================================
+  intent      : What is the website of Carnegie art museum in pittsburgh
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/256.json
+
+▸ step 0 · planner
+      tools: assign, inspect_controls, inspect_page_structure, lookup_site, read_field_values
+  subgoal     : Type 'Carnegie Art Museum Pittsburgh' into the Search textbox to find the museum detail page
+  plan_step   : fill search field with museum name
+  expected    : {'must_see': 'Carnegie Art Museum'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: compare_values, inspect_page_structure
+  subgoal     : Click the Go button to run the search for 'Carnegie Art Museum Pittsburgh' so the museum detail page (with its website field) loads.
+  plan_step   : submit search via Go
+  expected    : {'must_see': 'website'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Carnegie%20Art%20Museum%20Pittsburgh#map=19/40.44365/-79.94922
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Click the Carnegie Museum of Art result link to open its detail page where the website field should be displayed
+  plan_step   : open the museum way detail page
+  navigate_to : http://localhost:3000/way/31899525
+  expected    : {'must_see': 'website'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/way/31899525'
+      url: http://localhost:3000/search?query=Carnegie%20Art%20Museum%20Pittsburgh#map=19/40.44365/-79.94922  ->  http://localhost:3000/way/31899525
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, compare_values, verify_criterion, get_obligations, get_task_state
+    TERMINAL  stop_now  answer='http://web.cmoa.org/'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='http://web.cmoa.org/'
+      url unchanged (http://localhost:3000/way/31899525)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 256: steps=4  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-b127bbb3",
+      "task_id": "256",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

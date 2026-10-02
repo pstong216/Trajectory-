@@ -1,0 +1,123 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/224/runtime/runs/nogate/run-h2xSzRDT
+
+==============================================================================
+EPISODE · task 224
+==============================================================================
+  intent      : I am at CMU Pittsburgh, how long it takes to drive to the nearest wendys
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/224.json
+
+▸ step 0 · planner
+      tools: lookup_site, inspect_page_structure, search_page_text, inspect_controls, compare_values
+  subgoal     : Type 'Wendy's near CMU Pittsburgh' into the Search textbox and click Go to find the nearest Wendy's location on the map.
+  plan_step   : search for nearest Wendy's to CMU Pittsburgh
+  expected    : {'must_see': 'Wendy'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, pixel_compare, inspect_page_structure, get_page_experience, inspect_controls
+  subgoal     : Click the Go button to submit the search query for Wendy's near CMU Pittsburgh
+  plan_step   : click Go to search
+  expected    : {'url_contains': 'search', 'must_see': "Wendy's"}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Wendy%27s%20near%20CMU%20Pittsburgh#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_site_task_history, get_page_experience, lookup_site, compare_values, search_page_text, compare_values
+  subgoal     : Re-run the search with a simpler query for 'Wendy's' while anchoring the map on Pittsburgh (~40.444/-79.942) so Nominatim can find Wendy's restaurants near CMU.
+  plan_step   : navigate to Wendy's search centered on Pittsburgh
+  navigate_to : http://localhost:3000/search?query=Wendy's%20Pittsburgh#map=15/40.4442/-79.9427
+  expected    : {'url_contains': 'search?query=Wendy', 'must_see': 'Pittsburgh'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url="http://localhost:3000/search?query=Wendy's%20Pittsburgh#map=15/40.4442/-79.9427"
+      url: http://localhost:3000/search?query=Wendy%27s%20near%20CMU%20Pittsburgh#map=7/42.896/-73.180  ->  http://localhost:3000/search?query=Wendy%27s%20Pittsburgh#map=19/40.45699/-79.93750
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_site_task_history, inspect_page_structure, get_obligations, inspect_controls, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: lookup_site, get_site_task_history, lookup_site, inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Open the directions feature to compute the driving time from CMU to the nearest Wendy's (5422 Baum Boulevard).
+  plan_step   : go to the directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 3 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/search?query=Wendy%27s%20Pittsburgh#map=19/40.45699/-79.93750  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: extract_structured_values, search_page_text, inspect_page_structure, get_site_task_history, get_criterion
+  subgoal     : Set the From field to Carnegie Mellon University and the To field to the nearest Wendy's (5422 Baum Boulevard) in the directions form
+  plan_step   : fill From and To
+  expected    : {'url_contains': '/directions', 'must_see': 'Carnegie Mellon University'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=2703
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 5 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Fill the To field with the nearest Wendy's (5422 Baum Boulevard, Pittsburgh) so the driving route from CMU can be computed
+  plan_step   : set the To field to the nearest Wendy's
+  expected    : {'must_see': "Wendy's"}
+
+▸ step 5 · env · apply
+    → execute type (element_id) element_id=2710
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 6 · planner
+      tools: inspect_page_structure, refresh_current_state, inspect_page_structure, inspect_controls
+  subgoal     : Click the Go button to compute the driving route from CMU to Wendy's 5422 Baum Blvd and display the driving time.
+  plan_step   : click Go to get driving time
+  expected    : {'must_see': 'min'}
+
+▸ step 6 · env · apply
+    → execute click (element_id) element_id=2723
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.44419%2C-79.94272%3B40.45697%2C-79.93748#map=15/40.4509/-79.9413
+      reward=1.0  done=False
+
+▸ step 7 · planner
+      tools: read_table, search_page_text, search_page_text, get_task_state, get_task_state
+  subgoal     : Report the driving time from CMU Pittsburgh to the nearest Wendy's as shown on the OpenStreetMap directions page.
+    TERMINAL  stop_now  answer='0:03 (about 3 minutes), 2.0 km'
+
+▸ step 7 · env · apply
+    → execute stop (none) text='0:03 (about 3 minutes), 2.0 km'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.44419%2C-79.94272%3B40.45697%2C-79.93748#map=15/40.4509/-79.9413)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 224: steps=8  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-571c9548",
+      "task_id": "224",
+      "n_steps": 8,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,60 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/765/runtime/runs/nogate/run-oZyJn3JQ
+
+==============================================================================
+EPISODE · task 765
+==============================================================================
+  intent      : Find the walkway to the closest Japanese food market from 401 Shady Ave, Pittsburgh.
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/765.json
+
+▸ step 0 · planner
+      tools: lookup_site, get_page_experience, assign, inspect_controls, get_site_task_history
+  subgoal     : Navigate to the directions page to set up a walking route from 401 Shady Ave, Pittsburgh to Tokyo Japanese Food Store, Pittsburgh (the closest Japanese food market identified at coordinates 40.45760, -79.92933).
+  plan_step   : open directions page for walking route
+  navigate_to : http://localhost:3000/directions?engine=foot-osrm&route=40.45760%2C-79.92933%3B40.4444%2C-79.9935
+  expected    : {'url_contains': 'directions', 'must_see': 'route'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=foot-osrm&route=40.45760%2C-79.92933%3B40.4444%2C-79.9935'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.458%2C-79.929%3B40.444%2C-79.993#map=14/40.4488/-79.9626
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, get_task_state, read_field_values, inspect_page_structure, compare_values
+  subgoal     : Navigate to the walking directions from 401 Shady Ave (40.444, -79.993) to the closest Japanese food market (40.458, -79.929) using the foot OSRM engine to get the walkway route.
+  plan_step   : navigate to foot directions URL with reversed route
+  navigate_to : http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.993%3B40.458%2C-79.929
+  expected    : {'url_contains': 'engine=fossgis_osrm_foot&route=40.444,-79.993;40.458,-79.929', 'must_see': 'Foot'}
+
+▸ step 1 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.444%2C-79.993%3B40.458%2C-79.929'
+      url: http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.458%2C-79.929%3B40.444%2C-79.993#map=14/40.4488/-79.9626  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4440%2C-79.9930%3B40.4580%2C-79.9290#map=14/40.4542/-79.9613
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: read_table, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure, verify_criterion, get_obligations
+  subgoal     : Report the walkway route from 401 Shady Ave to the closest Japanese food market, which is displayed on the current walking directions page.
+  plan_step   : answer the walkway
+    TERMINAL  stop_now  answer='Walking route (Foot/OSRM) from 401 Shady Ave, Pittsburgh (40.4440,-79.9930) to the closest Japanese food market (40.4580,-79.9290), ~500 m / 2000 ft: 1. Start on unnamed road (60m); 2. Turn right onto unnamed road (50m); 3. Turn left onto unnamed road (90m); 4. Turn right onto unnamed road (1.7km); 5. At the end of the road turn left onto unnamed road (10m); 6. Turn right onto Penn Avenue (20m); 7. Turn right onto unnamed road (10m); 8. Turn left onto unnamed road (800m); 9. Turn right onto unnamed road (30m); 10. Turn left onto Spring Way (300m); 11. Slight left onto Spring Way (180m); 12. Turn right onto 34th Street (100m); 13. Turn left onto Denny Street (190m); 14. Turn right onto Cabinet Way (600m); 15. Continue on Cabinet Way (300m); 16. Turn right onto Main Street (100m); 17. Turn left onto Howley Street (30m); 18. Turn right onto unnamed road (10m); 19. Slight left onto unnamed road (70m); 20. Turn left onto unnamed road (60m); 21. Turn right onto Ella Street (10m); 22. Turn left onto Corday Way (300m); 23. Turn right onto unnamed road (40m); 24. Turn left onto unnamed road (400m); 25. Sharp left onto Gross Street (50m); 26. Sharp right onto Corday Way (130m); 27. Turn left onto South Winebiddle Street (80m); 28. Turn right onto Harriet Street (700m); 29. Continue on Roup Avenue (200m); 30. Slight right onto South Negley Avenue (200m); 31. Sharp left onto unnamed road (100m); 32. At the end of the road turn right onto unnamed road (20m); 33. Turn left onto Pierce Street (300m); 34. At the end of the road turn left onto Tay Way (80m); 35. Reach destination.'
+
+▸ step 2 · env · apply
+    → execute stop (none) text='Walking route (Foot/OSRM) from 401 Shady Ave, Pittsburgh (40.4440,-79.9930) to the closest Japanese food market (40.4580,-79.9290), ~500 m / 2000 ft: 1. Start on unnamed road (60m); 2. Turn right onto unnamed road (50m); 3. Turn left onto unnamed road (90m); 4. Turn right onto unnamed road (1.7km); 5. At the end of the road turn left onto unnamed road (10m); 6. Turn right onto Penn Avenue (20m); 7. Turn right onto unnamed road (10m); 8. Turn left onto unnamed road (800m); 9. Turn right onto unnamed road (30m); 10. Turn left onto Spring Way (300m); 11. Slight left onto Spring Way (180m); 12. Turn right onto 34th Street (100m); 13. Turn left onto Denny Street (190m); 14. Turn right onto Cabinet Way (600m); 15. Continue on Cabinet Way (300m); 16. Turn right onto Main Street (100m); 17. Turn left onto Howley Street (30m); 18. Turn right onto unnamed road (10m); 19. Slight left onto unnamed road (70m); 20. Turn left onto unnamed road (60m); 21. Turn right onto Ella Street (10m); 22. Turn left onto Corday Way (300m); 23. Turn right onto unnamed road (40m); 24. Turn left onto unnamed road (400m); 25. Sharp left onto Gross Street (50m); 26. Sharp right onto Corday Way (130m); 27. Turn left onto South Winebiddle Street (80m); 28. Turn right onto Harriet Street (700m); 29. Continue on Roup Avenue (200m); 30. Slight right onto South Negley Avenue (200m); 31. Sharp left onto unnamed road (100m); 32. At the end of the road turn right onto unnamed road (20m); 33. Turn left onto Pierce Street (300m); 34. At the end of the road turn left onto Tay Way (80m); 35. Reach destination.'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.4440%2C-79.9930%3B40.4580%2C-79.9290#map=14/40.4542/-79.9613)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 765: steps=3  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-9b7fcd12",
+      "task_id": "765",
+      "n_steps": 3,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

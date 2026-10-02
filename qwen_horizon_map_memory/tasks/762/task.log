@@ -1,0 +1,110 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/762/runtime/runs/nogate/run-LsnPxtKj
+
+==============================================================================
+EPISODE · task 762
+==============================================================================
+  intent      : Get directions from Carnegie Music Hall in NYC to Carnegie Mellon University using driving options.
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/762.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, compare_values, lookup_site, inspect_controls, compare_values
+  subgoal     : Navigate to the directions page to enter the two route endpoints
+  plan_step   : open directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: refresh_current_state, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure
+  subgoal     : Set the From field to 'Carnegie Music Hall' and the To field to 'Carnegie Mellon University' in the directions form, leaving Car (OSRM) selected.
+  plan_step   : fill the From and To fields
+  expected    : {'must_see': 'Carnegie Music Hall'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_controls, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: inspect_controls, read_field_values, inspect_page_structure
+  subgoal     : Set the To field to 'Carnegie Mellon University' (Car (OSRM) already selected), then it can be submitted.
+  plan_step   : fill To field
+  expected    : {'must_see': 'Carnegie Mellon University'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1520
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, verify_criterion, inspect_page_structure, inspect_page_structure, inspect_controls
+  subgoal     : Re-enter the From field with 'Carnegie Music Hall, New York, NY' so it resolves to the NYC venue rather than Pittsburgh, then To remains Carnegie Mellon University with Car (OSRM) selected.
+  plan_step   : set From to NYC Carnegie Music Hall
+  expected    : {'must_see': 'Carnegie Music Hall, New York'}
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: compare_values, compare_values, get_task_state, refresh_current_state, refresh_current_state, get_obligations
+  subgoal     : Click the Go button to compute the driving directions between Carnegie Music Hall, New York, NY and Carnegie Mellon University.
+  plan_step   : click Go to route
+  expected    : {'must_see': 'Carnegie Music Hall'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1533
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: get_task_state, verify_criterion, inspect_page_structure, search_page_text, search_page_text, search_page_text, search_page_text
+  subgoal     : The driving directions from Carnegie Music Hall (NYC) to Carnegie Mellon University have been requested and the form shows Car (OSRM) driving mode selected; stop as the task is complete.
+  plan_step   : stop - directions with driving options set up and Go clicked
+    TERMINAL  stop_now  answer='Driving directions requested from Carnegie Music Hall, New York, NY to Carnegie Mellon University using Car (OSRM) driving mode; the directions form is populated with both endpoints and the Go button was clicked to compute the route.'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='Driving directions requested from Carnegie Music Hall, New York, NY to Carnegie Mellon University using Car (OSRM) driving mode; the directions form is populated with both endpoints and the Go button was clicked to compute the route.'
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 762: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-3aeb8bc3",
+      "task_id": "762",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

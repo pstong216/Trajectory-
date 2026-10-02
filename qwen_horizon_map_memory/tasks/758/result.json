@@ -1,0 +1,67 @@
+{
+  "task_id": 758,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 373.75,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/758/runtime/runs/nogate/run-MFO6NNKr",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 568,
+    "refusal_reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 568,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "readiness": "not_ready",
+    "state_version_now": "a1432d5fdb5d3293",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Distance: 508km. Time: 6:34. Route: Start on Park Row \u2192 U-turn along Park Row \u2192 Frankfort Street \u2192 Pearl Street \u2192 FDR Drive North \u2192 FDR Drive \u2192 I 278 (Robert F. Kennedy Bridge / Bruckner Expressway) \u2192 New England Thruway (I 95) \u2192 Hutchinson River Parkway (HR) \u2192 I 95 North \u2192 CT 8/CT 25 \u2192 Merritt Parkway (CT 15) \u2192 Wilbur Cross Parkway \u2192 Berlin Turnpike (US 5/CT 15) \u2192 I 84/US 6 \u2192 Massachusetts Turnpike (I 90) \u2192 I 495 \u2192 I 95 \u2192 Blue Star Turnpike (I 95) \u2192 I 295 \u2192 US 1A \u2192 Congress Street \u2192 Reach destination (Portland, Maine). 38 steps total, ~508 km, ~6h 34min by car."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 22,
+      "tool_call_count": 19,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 359.2909813760052,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.44,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 374.2,
+  "replicas_removed": true
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": 364,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 262.71,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/364/runtime/runs/nogate/run-4P1UZlxQ",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "000227c937b7",
+    "task_id": "364",
+    "spec_version": "4.1",
+    "state_version_at_issue": "dc018d5404f6fcbf",
+    "answer_hash": "2c05cda9d04ebd85edc2c770b78fd6e9f87c9b2b17a4cb93dea2149f0c635a54",
+    "readiness": "ready_to_submit",
+    "issued_step": 6,
+    "unverified": false,
+    "answer": "1.7 km"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 29,
+      "tool_call_count": 23,
+      "verification_probe_count": 8
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 241.08485970999754,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.4,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 263.11,
+  "replicas_removed": true
+}

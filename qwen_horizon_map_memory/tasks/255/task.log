@@ -1,0 +1,88 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/255/runtime/runs/nogate/run-590Dpyqi
+
+==============================================================================
+EPISODE · task 255
+==============================================================================
+  intent      : Who is the operator of PIT airport
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/255.json
+
+▸ step 0 · planner
+      tools: get_site_task_history, inspect_controls, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Search for 'Pittsburgh International Airport' to navigate to the airport and view its details including operator information.
+  plan_step   : search for PIT airport
+  expected    : {'url_contains': 'search', 'must_see': 'Pittsburgh International Airport'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, get_task_state, inspect_controls, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure
+  subgoal     : Click the 'Go' button to submit the search for Pittsburgh International Airport
+  plan_step   : submit search for PIT airport
+  expected    : {'must_see': 'Pittsburgh International Airport'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Pittsburgh%20International%20Airport#map=14/40.4918/-80.2421
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, compare_values
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Open the Pittsburgh International Airport way detail page to read its operator tag.
+  plan_step   : open airport way/209051849 page
+  navigate_to : http://localhost:3000/way/209051849
+  expected    : {'must_see': 'operator'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/way/209051849'
+      url: http://localhost:3000/search?query=Pittsburgh%20International%20Airport#map=14/40.4918/-80.2421  ->  http://localhost:3000/way/209051849
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: read_table, verify_criterion, get_task_state, verify_criterion
+  subgoal     : Answer the operator of PIT airport from the airport way's tag table
+  plan_step   : report operator tag value
+    TERMINAL  stop_now  answer='Allegheny County Airport Authority'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='Allegheny County Airport Authority'
+      url unchanged (http://localhost:3000/way/209051849)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 255: steps=4  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-a840341c",
+      "task_id": "255",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

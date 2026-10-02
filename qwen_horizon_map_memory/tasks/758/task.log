@@ -1,0 +1,68 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/758/runtime/runs/nogate/run-MFO6NNKr
+
+==============================================================================
+EPISODE · task 758
+==============================================================================
+  intent      : Show me the path and travel time from the big apple to biggest city in Maine.
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/758.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, lookup_site, inspect_page_structure, inspect_page_structure, inspect_controls
+  subgoal     : Open the directions page to set up a route from New York City to Portland, Maine.
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'must_see': 'directions', 'url_contains': '/directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Enter New York City in the From field and Portland, Maine in the To field to set up the route.
+  plan_step   : fill From and To fields
+  expected    : {'must_see': 'New York City'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1513
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, get_criterion, get_obligations, get_task_state, get_evidence
+  subgoal     : Set the 'To' field to 'Portland, Maine' since the 'From' field already correctly shows 'City of New York, New York, United States' (the OSM geocoded form of New York City).
+  plan_step   : fill the To field with Portland, Maine
+  expected    : {'must_see': 'Portland, Maine'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1520
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.713%2C-74.006%3B43.659%2C-70.257#map=7/42.208/-72.125
+      reward=0.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, read_table, search_page_text, compare_values
+    TERMINAL  stop_now  answer='Distance: 508km. Time: 6:34. Route: Start on Park Row → U-turn along Park Row → Frankfort Street → Pearl Street → FDR Drive North → FDR Drive → I 278 (Robert F. Kennedy Bridge / Bruckner Expressway) → New England Thruway (I 95) → Hutchinson River Parkway (HR) → I 95 North → CT 8/CT 25 → Merritt Parkway (CT 15) → Wilbur Cross Parkway → Berlin Turnpike (US 5/CT 15) → I 84/US 6 → Massachusetts Turnpike (I 90) → I 495 → I 95 → Blue Star Turnpike (I 95) → I 295 → US 1A → Congress Street → Reach destination (Portland, Maine). 38 steps total, ~508 km, ~6h 34min by car.'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='Distance: 508km. Time: 6:34. Route: Start on Park Row → U-turn along Park Row → Frankfort Street → Pearl Street → FDR Drive North → FDR Drive → I 278 (Robert F. Kennedy Bridge / Bruckner Expressway) → New England Thruway (I 95) → Hutchinson River Parkway (HR) → I 95 North → CT 8/CT 25 → Merritt Parkway (CT 15) → Wilbur Cross Parkway → Berlin Turnpike (US 5/CT 15) → I 84/US 6 → Massachusetts Turnpike (I 90) → I 495 → I 95 → Blue Star Turnpike (I 95) → I 295 → US 1A → Congress Street → Reach destination (Portland, Maine). 38 steps total, ~508 km, ~6h 34min by car.'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.713%2C-74.006%3B43.659%2C-70.257#map=7/42.208/-72.125)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 758: steps=4  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-ade38d00",
+      "task_id": "758",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

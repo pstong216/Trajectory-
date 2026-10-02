@@ -1,0 +1,67 @@
+{
+  "task_id": 370,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 269.3,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/370/runtime/runs/nogate/run-wQ6f5eA2",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "ea2c1f7388c5",
+    "task_id": "370",
+    "spec_version": "4.1",
+    "state_version_at_issue": "95e234d1418028f2",
+    "answer_hash": "292e106d9343104dcd96427dfc26729bd37b7ab9624c0a42df05ad9c2a3fd8b5",
+    "readiness": "ready_to_submit",
+    "issued_step": 4,
+    "unverified": false,
+    "answer": "Carnegie Mellon University description page: http://localhost:3000/relation/2279034 \u2014 Relation: Carnegie Mellon University (2279034), Version #12, tags: amenity=university, name=Carnegie Mellon University, short_name=CMU, type=multipolygon, wikidata=Q190080"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 4,
+      "model_decision_count": 20,
+      "tool_call_count": 16,
+      "verification_probe_count": 6
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 247.3302398770029,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.4,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 269.7,
+  "replicas_removed": true
+}

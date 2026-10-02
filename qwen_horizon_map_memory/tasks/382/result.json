@@ -1,0 +1,67 @@
+{
+  "task_id": 382,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 523.65,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/382/runtime/runs/nogate/run-1npW5Y4e",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 292,
+    "refusal_reason": "2 requirement(s) not yet met",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 292,
+    "ending": "needs_evidence",
+    "reason": "2 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "d187271e9a2461e9",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "US Citizenship and Immigration Services (USCIS) Pittsburgh is located near Carnegie Mellon University at coordinates 40.42482, -79.96086. The walking distance from USCIS to the nearest Social Security Administration (at 40.44406, -79.99756) is 4.7 km (approximately 1 hour 3 minutes on foot)."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 9,
+      "model_decision_count": 46,
+      "tool_call_count": 36,
+      "verification_probe_count": 10
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 498.13232879299903,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.41,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 524.06,
+  "replicas_removed": true
+}

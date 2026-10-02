@@ -1,0 +1,119 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/763/runtime/runs/nogate/run-H8Dy4Axn
+
+==============================================================================
+EPISODE · task 763
+==============================================================================
+  intent      : Find the walkway to the closest Trader Joe's from 401 Shady Ave, Pittsburgh.
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/763.json
+
+▸ step 0 · planner
+      tools: get_task_state, get_obligations, get_bindings, get_task_state, lookup_site, get_page_experience
+  subgoal     : Open the directions page to set up a walking route.
+  plan_step   : go to directions page
+  navigate_to : directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 0 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_controls, get_task_state
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: get_task_state, get_site_task_history, search_experience, get_criterion, compare_values, compare_values
+  subgoal     : Enter the starting address '401 Shady Ave, Pittsburgh' into the From field of the directions form.
+  plan_step   : fill the From field with the start address
+  expected    : {'must_see': '401 Shady Ave, Pittsburgh'}
+
+▸ step 1 · env · apply
+    → execute type (element_id) element_id=1252
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: get_task_state, inspect_page_structure, verify_binding, verify_criterion, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: get_task_state, read_field_values, inspect_page_structure, inspect_controls, inspect_controls
+  subgoal     : Enter 'Trader Joe's, Pittsburgh' into the To field of the directions form.
+  plan_step   : fill the To field with Trader Joe's
+  expected    : {'must_see': "Trader Joe's, Pittsburgh"}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=1259
+      url unchanged (http://localhost:3000/directions)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: get_task_state, refresh_current_state, inspect_page_structure, get_task_state, get_obligations
+  subgoal     : Set the travel mode combobox to 'Foot (OSRM)' so the route is computed as a walkway.
+  plan_step   : select Foot (OSRM) walking mode
+  expected    : {'must_see': 'Foot (OSRM)'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=1667
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: get_task_state, read_field_values, get_attempt_history
+  subgoal     : Click the Go button to compute the walking route from 401 Shady Ave to the closest Trader Joe's.
+  plan_step   : run directions
+  expected    : {'must_see': 'route', 'url_contains': '/directions'}
+
+▸ step 4 · env · apply
+    → execute click (element_id) element_id=1272
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.455%2C-79.921%3B40.459%2C-79.919#map=17/40.45720/-79.91898
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: read_table, get_task_state, search_page_text, search_page_text, compare_values
+  subgoal     : Confirm the walking route to the closest Trader Joe's is displayed; task complete.
+  plan_step   : verify the computed walkway route
+  expected    : {'must_see': 'Reach destination'}
+    TERMINAL  stop_now  answer="Walk from 401 Shady Ave (Kenmawr Apartments) to Trader Joe's, 6343 Penn Avenue (East Liberty), Pittsburgh: 1. Start on unnamed road 50m; 2. Turn right onto Walnut Street 100m; 3. Turn left onto Denniston Street 20m; 4. Turn right onto Social Way 130m; 5. Turn left onto Sally's Path 180m; 6. Turn left onto Living Place 120m; 7. Turn right onto Reizenstein Way 60m; 8. Turn left onto Penn Avenue (PA 380) 40m; 9. Turn right onto unnamed road 70m; 10. Turn left onto unnamed road 170m; 11. At the end of the road turn left onto unnamed road 30m; 12. Reach destination."
+
+▸ step 5 · env · apply
+    → execute stop (none) text="Walk from 401 Shady Ave (Kenmawr Apartments) to Trader Joe's, 6343 Penn Avenue (East Liberty), Pittsburgh: 1. Start on unnamed road 50m; 2. Turn right onto Walnut Street 100m; 3. Turn left onto Denniston Street 20m; 4. Turn right onto Social Way 130m; 5. Turn left onto Sally's Path 180m; 6. Turn left onto Living Place 120m; 7. Turn right onto Reizenstein Way 60m; 8. Turn left onto Penn Avenue (PA 380) 40m; 9. Turn right onto unnamed road 70m; 10. Turn left onto unnamed road 170m; 11. At the end of the road turn left onto unnamed road 30m; 12. Reach destination."
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_foot&route=40.455%2C-79.921%3B40.459%2C-79.919#map=17/40.45720/-79.91898)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 763: steps=6  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-46ec6fb9",
+      "task_id": "763",
+      "n_steps": 6,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": 765,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 352.45,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/765/runtime/runs/nogate/run-oZyJn3JQ",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 1590,
+    "refusal_reason": "1 requirement(s) not yet met",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 1590,
+    "ending": "needs_evidence",
+    "reason": "1 requirement(s) not yet met",
+    "readiness": "not_ready",
+    "state_version_now": "972226b2fde15c5a",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Walking route (Foot/OSRM) from 401 Shady Ave, Pittsburgh (40.4440,-79.9930) to the closest Japanese food market (40.4580,-79.9290), ~500 m / 2000 ft: 1. Start on unnamed road (60m); 2. Turn right onto unnamed road (50m); 3. Turn left onto unnamed road (90m); 4. Turn right onto unnamed road (1.7km); 5. At the end of the road turn left onto unnamed road (10m); 6. Turn right onto Penn Avenue (20m); 7. Turn right onto unnamed road (10m); 8. Turn left onto unnamed road (800m); 9. Turn right onto unnamed road (30m); 10. Turn left onto Spring Way (300m); 11. Slight left onto Spring Way (180m); 12. Turn right onto 34th Street (100m); 13. Turn left onto Denny Street (190m); 14. Turn right onto Cabinet Way (600m); 15. Continue on Cabinet Way (300m); 16. Turn right onto Main Street (100m); 17. Turn left onto Howley Street (30m); 18. Turn right onto unnamed road (10m); 19. Slight left onto unnamed road (70m); 20. Turn left onto unnamed road (60m); 21. Turn right onto Ella Street (10m); 22. Turn left onto Corday Way (300m); 23. Turn right onto unnamed road (40m); 24. Turn left onto unnamed road (400m); 25. Sharp left onto Gross Street (50m); 26. Sharp right onto Corday Way (130m); 27. Turn left onto South Winebiddle Street (80m); 28. Turn right onto Harriet Street (700m); 29. Continue on Roup Avenue (200m); 30. Slight right onto South Negley Avenue (200m); 31. Sharp left onto unnamed road (100m); 32. At the end of the road turn right onto unnamed road (20m); 33. Turn left onto Pierce Street (300m); 34. At the end of the road turn left onto Tay Way (80m); 35. Reach destination."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 3,
+      "model_decision_count": 18,
+      "tool_call_count": 17,
+      "verification_probe_count": 4
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 338.5084631469945,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.47,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 352.91,
+  "replicas_removed": true
+}

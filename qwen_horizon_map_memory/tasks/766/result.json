@@ -1,0 +1,67 @@
+{
+  "task_id": 766,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 381.78,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/766/runtime/runs/nogate/run-7Scpzscu",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "needs_evidence",
+  "final_outcome": {
+    "gate_ending": "needs_evidence",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 845,
+    "refusal_reason": "2 requirement(s) have not been checked because their target is not bound to anything on this site yet",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 845,
+    "ending": "needs_evidence",
+    "reason": "2 requirement(s) have not been checked because their target is not bound to anything on this site yet",
+    "readiness": "not_ready",
+    "state_version_now": "eb31a79e1794969c",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Walking route (Foot/OSRM) from 401 Shady Ave, Pittsburgh (Kenmawr Apartments) to Whole Foods Market, 5700 Penn Ave, East Liberty (closest Amazon-owned grocery): 1. Start on unnamed road (50m) 2. Turn left onto Walnut Street (130m) 3. Turn right onto Shady Avenue (100m) 4. Turn left onto Alder Street (150m) 5. Turn right onto Yardley Way (110m) 6. Turn left onto unnamed road (50m) 7. Turn right onto Carron Street (30m) 8. Turn left onto unnamed road (60m) 9. Turn right onto South Highland Avenue (200m) 10. Turn left onto Baum Boulevard (90m) 11. Continue on Baum Square (30m) 12. Turn right onto South Whitfield Street (20m) 13. Turn left onto Mignonette Street (100m) 14. Turn right onto South Beatty Street (90m) 15. Turn left onto Penn Avenue (90m) 16. At the fork turn left onto Penn Avenue (70m) 17. Reach destination. Total \u2248 1,370 m."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 38,
+      "tool_call_count": 35,
+      "verification_probe_count": 1
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 366.139671034005,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.45,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 382.23,
+  "replicas_removed": true
+}

@@ -1,0 +1,102 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/372/runtime/runs/nogate/run-B9ujfdjk
+
+==============================================================================
+EPISODE · task 372
+==============================================================================
+  intent      : Pull up the description page of the Costco in Pittsburhg near a river on Map
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/372.json
+
+▸ step 0 · planner
+      tools: inspect_controls, inspect_page_structure, refresh_current_state, get_site_task_history, lookup_site
+  subgoal     : Type 'Costco Pittsburgh' into the Search textbox to find Costco locations in Pittsburgh.
+  plan_step   : search for Costco Pittsburgh
+  expected    : {'must_see': 'Costco'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_controls, search_page_text, pixel_compare
+  subgoal     : Click the 'Go' button to submit the 'Costco Pittsburgh' search and see the list of results on the map.
+  plan_step   : submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Costco'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Costco%20Pittsburgh#map=19/40.45945/-80.16508
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, search_page_text, refresh_current_state, get_page_experience
+  subgoal     : Wait for the search results to finish loading, then read the results panel to identify and click the Costco in Pittsburgh that is near a river (the Monongahela/Allegheny), opening its OSM detail/description page.
+  plan_step   : wait for results and click the river-side Costco result
+  expected    : {'url_contains': '/way/', 'must_see': 'Costco'}
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+    → grounds to scroll (none) direction='down'
+
+▸ step 2 · env · apply
+    → execute scroll (none) direction='down'
+      url unchanged (http://localhost:3000/search?query=Costco%20Pittsburgh#map=19/40.45945/-80.16508)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, lookup_site, inspect_controls, inspect_page_structure, lookup_site
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: lookup_site, inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure, compare_values
+  subgoal     : Navigate to the OSM description page of the river-side (Waterfront) Costco, opening /way/168456128.
+  plan_step   : open the Waterfront Costco description page
+  navigate_to : http://localhost:3000/way/168456128
+  expected    : {'url_contains': '/way/168456128', 'must_see': 'Waterfront'}
+
+▸ step 3 · env · apply
+    → execute goto (none) url='http://localhost:3000/way/168456128'
+      url: http://localhost:3000/search?query=Costco%20Pittsburgh#map=19/40.45945/-80.16508  ->  http://localhost:3000/way/168456128
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: refresh_current_state, get_task_state, get_criterion
+  expected    : {'url_contains': '/way/168456128', 'must_see': 'Way: Costco (168456128)'}
+    TERMINAL  stop_now  answer='http://localhost:3000/way/168456128 — Way: Costco (168456128), 501 Waterfront Drive West, Pittsburgh, PA 15120-5009 (river-side Costco)'
+
+▸ step 4 · env · apply
+    → execute stop (none) text='http://localhost:3000/way/168456128 — Way: Costco (168456128), 501 Waterfront Drive West, Pittsburgh, PA 15120-5009 (river-side Costco)'
+      url unchanged (http://localhost:3000/way/168456128)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 372: steps=5  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-270de25b",
+      "task_id": "372",
+      "n_steps": 5,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

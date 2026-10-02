@@ -1,0 +1,109 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/223/runtime/runs/nogate/run-zZlTFwDt
+
+==============================================================================
+EPISODE · task 223
+==============================================================================
+  intent      : I am at CMU Pittsburgh, how long it takes to drive to the nearest Mcdonald's
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/223.json
+
+▸ step 0 · planner
+      tools: lookup_site, assign, inspect_page_structure, search_page_text, get_site_task_history
+  subgoal     : Type 'McDonald's' into the OSM search box and submit to find McDonald's locations near the current map view (Pittsburgh, PA area).
+  plan_step   : search for McDonald's near Pittsburgh
+  expected    : {'must_see': "McDonald's"}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=80
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: compare_values, inspect_controls, get_task_state, inspect_page_structure, refresh_current_state
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: get_task_state, compare_values, get_task_state, compare_values, compare_values
+  subgoal     : Click the Go button to submit the McDonald's Pittsburgh search and display results on the map.
+  plan_step   : submit McDonald's search
+  expected    : {'url_contains': 'search', 'must_see': "McDonald's"}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=McDonald%27s%20Pittsburgh#map=19/40.40996/-79.99101
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, get_site_task_history, lookup_site, lookup_site, search_experience
+  subgoal     : Open the directions page to compute the driving route from CMU Pittsburgh to the nearest McDonald's (3708 Forbes Avenue, Oakland).
+  plan_step   : open the directions page
+  navigate_to : http://localhost:3000/directions
+  expected    : {'url_contains': '/directions', 'must_see': 'directions'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/directions'
+      url: http://localhost:3000/search?query=McDonald%27s%20Pittsburgh#map=19/40.40996/-79.99101  ->  http://localhost:3000/directions
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure, compare_values, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 3 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Fill the From field with 'Carnegie Mellon University Pittsburgh' and the To field with '3708 Forbes Avenue, Oakland, Pittsburgh' so the driving route can be computed.
+  plan_step   : fill From and To fields
+
+▸ step 3 · env · apply
+    → execute type (element_id) element_id=1677
+      url unchanged (http://localhost:3000/directions)
+      reward=0.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Fill the To field with the nearest McDonald's address (3708 Forbes Avenue, Oakland, Pittsburgh) without touching the already-correct From field, so the driving route can be computed.
+  plan_step   : fill the To field with the McDonald's address
+  expected    : {'must_see': '3708 Forbes Avenue'}
+
+▸ step 4 · env · apply
+    → execute type (element_id) element_id=1684
+      url: http://localhost:3000/directions  ->  http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.44419%2C-79.94272%3B40.44124%2C-79.95726#map=16/40.4438/-79.9509
+      reward=0.0  done=False
+
+▸ step 5 · planner
+      tools: inspect_page_structure, inspect_page_structure, search_page_text, search_page_text, stop_now, get_obligations
+  subgoal     : Task is complete; the directions page shows the drive time from CMU Pittsburgh to the nearest McDonald's.
+  plan_step   : harvest the printed driving time
+    TERMINAL  stop_now  answer='4 minutes (0:04, a 2.1 km drive)'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='4 minutes (0:04, a 2.1 km drive)'
+      url unchanged (http://localhost:3000/directions?engine=fossgis_osrm_car&route=40.44419%2C-79.94272%3B40.44124%2C-79.95726#map=16/40.4438/-79.9509)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 223: steps=6  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-8e6121a3",
+      "task_id": "223",
+      "n_steps": 6,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

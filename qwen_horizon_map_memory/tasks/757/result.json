@@ -1,0 +1,67 @@
+{
+  "task_id": 757,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 679.68,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/757/runtime/runs/nogate/run-9a9WeDvc",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 607,
+    "refusal_reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 607,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: unparseable compiler output after one correction: no JSON in compiler output: ''",
+    "readiness": "not_ready",
+    "state_version_now": "7b9dc80b9c988d60",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Route (car, OSRM/FOSSGIS) from Pittsburgh, Allegheny County, PA (home of 1980 Super Bowl champions, the Steelers) to City of New York, NY (home of 1991 Super Bowl champions, the Giants). The Directions page shows a 34-step path beginning '1. Start on Logan Street' and ending '34. Reach destination', via Bedford Avenue \u2192 Crosstown Boulevard (I 579) \u2192 Boulevard of the Allies (PA 885) \u2192 I 376 East (Penn-Lincoln Parkway East) \u2192 US 22/US 30 \u2192 ... \u2192 Centre Street. Note: OpenStreetMap displays per-leg distances (e.g. 150m, 1.6km, 19km, 500m) but does not print a single total travel-time figure on this page."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 36,
+      "tool_call_count": 32,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 656.6269140709919,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.44,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 680.12,
+  "replicas_removed": true
+}

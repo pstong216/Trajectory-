@@ -1,0 +1,92 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/373/runtime/runs/nogate/run-Cykoy8pC
+
+==============================================================================
+EPISODE · task 373
+==============================================================================
+  intent      : Pull up the description page of Whole Foods near Carnegie Mellon on Map
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/373.json
+
+▸ step 0 · planner
+      tools: inspect_controls, inspect_page_structure, inspect_page_structure
+  subgoal     : Type 'Whole Foods' into the search box to find the store near Carnegie Mellon.
+  plan_step   : search Whole Foods
+  expected    : {'must_see': 'Whole Foods'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, inspect_page_structure, pixel_compare, search_page_text, inspect_controls
+  subgoal     : Click the Go button to submit the 'Whole Foods' search and see the results.
+  plan_step   : submit search via Go button
+  expected    : {'must_see': 'Whole Foods', 'url_contains': 'search'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Whole%20Foods#map=19/42.30274/-71.28579
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, inspect_page_structure, extract_structured_values, inspect_controls, get_task_state
+  subgoal     : Replace the search text with 'Whole Foods Pittsburgh' to find the store near Carnegie Mellon.
+  plan_step   : refine search query to Whole Foods Pittsburgh
+  expected    : {'must_see': 'Whole Foods Pittsburgh'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=Whole%20Foods#map=19/42.30274/-71.28579)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: inspect_page_structure, inspect_controls, compare_values, get_task_state, get_page_experience
+  subgoal     : Click the Go button to submit the 'Whole Foods Pittsburgh' search and get results for the store near Carnegie Mellon.
+  plan_step   : submit the refined search
+  expected    : {'url_contains': 'query=Whole+Foods+Pittsburgh', 'must_see': 'Whole Foods Pittsburgh'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=Whole%20Foods#map=19/42.30274/-71.28579  ->  http://localhost:3000/search?query=Whole%20Foods%20Pittsburgh#map=19/40.46253/-79.92871
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: inspect_page_structure, get_page_experience
+  subgoal     : Open the OSM node description page for the Whole Foods Market in East Liberty (5700 Penn Avenue), the store nearest Carnegie Mellon.
+  plan_step   : navigate to node/10114377662 description page
+  navigate_to : http://localhost:3000/node/10114377662
+  expected    : {'url_contains': '/node/10114377662', 'must_see': 'Whole Foods Market'}
+
+▸ step 4 · env · apply
+    → execute goto (none) url='http://localhost:3000/node/10114377662'
+      url: http://localhost:3000/search?query=Whole%20Foods%20Pittsburgh#map=19/40.46253/-79.92871  ->  http://localhost:3000/node/10114377662
+      reward=1.0  done=False
+
+▸ step 5 · planner
+      tools: verify_criterion, get_task_state, verify_binding, search_page_text, get_criterion
+  subgoal     : Request stop: we are already on the Whole Foods Market description page (node 10114377662) at 5700 Penn Avenue, East Liberty, Pittsburgh — the store nearest Carnegie Mellon.
+  plan_step   : stop - on the correct description page
+    TERMINAL  stop_now  answer='http://localhost:3000/node/10114377662 — Node: Whole Foods Market (10114377662), branch East Liberty, 5700 Penn Avenue, Pittsburgh, PA 15206'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='http://localhost:3000/node/10114377662 — Node: Whole Foods Market (10114377662), branch East Liberty, 5700 Penn Avenue, Pittsburgh, PA 15206'
+      url unchanged (http://localhost:3000/node/10114377662)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 373: steps=6  reward=1.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-d889ce46",
+      "task_id": "373",
+      "n_steps": 6,
+      "final_reward": 1.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

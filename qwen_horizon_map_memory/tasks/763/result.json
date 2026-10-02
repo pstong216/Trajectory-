@@ -1,0 +1,67 @@
+{
+  "task_id": 763,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 586.54,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/763/runtime/runs/nogate/run-H8Dy4Axn",
+  "official_score": 1.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "unresolvable",
+  "final_outcome": {
+    "gate_ending": "unresolvable",
+    "gate_permit_granted": false,
+    "gate_permit_consumed": false,
+    "submission_permitted": false,
+    "answer_withheld": true,
+    "answer_withheld_len": 567,
+    "refusal_reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": false,
+    "permit_id": "",
+    "answer_withheld_len": 567,
+    "ending": "unresolvable",
+    "reason": "task specification unavailable: compiler raised RuntimeError: OpenAI transient request failure: Request timed out.",
+    "readiness": "not_ready",
+    "state_version_now": "b40d52b8b9123a8f",
+    "gate_bypassed": true,
+    "gate_would_permit": false,
+    "answer": "Walk from 401 Shady Ave (Kenmawr Apartments) to Trader Joe's, 6343 Penn Avenue (East Liberty), Pittsburgh: 1. Start on unnamed road 50m; 2. Turn right onto Walnut Street 100m; 3. Turn left onto Denniston Street 20m; 4. Turn right onto Social Way 130m; 5. Turn left onto Sally's Path 180m; 6. Turn left onto Living Place 120m; 7. Turn right onto Reizenstein Way 60m; 8. Turn left onto Penn Avenue (PA 380) 40m; 9. Turn right onto unnamed road 70m; 10. Turn left onto unnamed road 170m; 11. At the end of the road turn left onto unnamed road 30m; 12. Reach destination."
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 49,
+      "tool_call_count": 42,
+      "verification_probe_count": 0
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 555.119101905002,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.45,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 586.99,
+  "replicas_removed": true
+}

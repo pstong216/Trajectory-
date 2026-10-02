@@ -1,0 +1,70 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/253/runtime/runs/nogate/run-G1umxXKi
+
+==============================================================================
+EPISODE · task 253
+==============================================================================
+  intent      : What is the phone number of Carnegie Mellon Café
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/253.json
+
+▸ step 0 · planner
+      tools: inspect_page_structure, verify_binding, inspect_controls, inspect_page_structure, inspect_controls
+  subgoal     : Type 'Carnegie Mellon Café' into the Search textbox to look up the café on OpenStreetMap
+  plan_step   : fill search box with café name
+  expected    : {'must_see': 'Carnegie Mellon Café'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, get_task_state
+  subgoal     : Click the Go button to submit the search for Carnegie Mellon Café
+  plan_step   : submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Carnegie Mellon Café'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Carnegie%20Mellon%20Caf%C3%A9#map=19/40.44242/-79.93974
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, search_page_text, inspect_page_structure, inspect_page_structure, inspect_page_structure
+  subgoal     : Open the Carnegie Mellon Café node detail page to read its tags including the phone number
+  plan_step   : click the café node link to open its detail page
+  navigate_to : http://localhost:3000/node/9234421950
+  expected    : {'url_contains': '/node/9234421950', 'must_see': 'Carnegie Mellon'}
+
+▸ step 2 · env · apply
+    → execute goto (none) url='http://localhost:3000/node/9234421950'
+      url: http://localhost:3000/search?query=Carnegie%20Mellon%20Caf%C3%A9#map=19/40.44242/-79.93974  ->  http://localhost:3000/node/9234421950
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: read_table, search_page_text, search_page_text, extract_structured_values, get_task_state
+  subgoal     : Confirm no phone number exists in the café's tags and report the absence
+  plan_step   : report that no phone number is listed
+    TERMINAL  stop_now  answer='No phone number is listed for Carnegie Mellon Café in OpenStreetMap (tags only show amenity=restaurant and name=Carnegie Mellon Café).'
+
+▸ step 3 · env · apply
+    → execute stop (none) text='No phone number is listed for Carnegie Mellon Café in OpenStreetMap (tags only show amenity=restaurant and name=Carnegie Mellon Café).'
+      url unchanged (http://localhost:3000/node/9234421950)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 253: steps=4  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-95a2022e",
+      "task_id": "253",
+      "n_steps": 4,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

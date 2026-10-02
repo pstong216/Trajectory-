@@ -1,0 +1,67 @@
+{
+  "task_id": 369,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 234.29,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/369/runtime/runs/nogate/run-SjL2ETSO",
+  "official_score": 1.0,
+  "horizon_success": true,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 1.0,
+    "official_pass": true,
+    "combined_success": true,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "509fbd16c71f",
+    "task_id": "369",
+    "spec_version": "4.1",
+    "state_version_at_issue": "12528780014c702c",
+    "answer_hash": "87471903541455336586f536576bf4b50a224b91e82aac2507c9851a6c57286d",
+    "readiness": "ready_to_submit",
+    "issued_step": 5,
+    "unverified": false,
+    "answer": "http://localhost:3000/way/154257484 \u2014 Way: Carnegie Music Hall (154257484), OpenStreetMap description page"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 5,
+      "model_decision_count": 27,
+      "tool_call_count": 25,
+      "verification_probe_count": 7
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 213.71182800500537,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.27,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 234.56,
+  "replicas_removed": true
+}

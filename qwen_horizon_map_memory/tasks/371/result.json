@@ -1,0 +1,67 @@
+{
+  "task_id": 371,
+  "sites": [
+    "map"
+  ],
+  "status": "completed",
+  "exit_code": 0,
+  "watchdog": false,
+  "elapsed_seconds": 344.76,
+  "archive": "/home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/371/runtime/runs/nogate/run-2KVoSlWD",
+  "official_score": 0.0,
+  "horizon_success": false,
+  "infra_failure": false,
+  "runner_failure": false,
+  "error": null,
+  "ending": "completed",
+  "final_outcome": {
+    "gate_ending": "completed",
+    "gate_permit_granted": true,
+    "gate_permit_consumed": true,
+    "submission_permitted": true,
+    "answer_withheld": false,
+    "answer_withheld_len": 0,
+    "refusal_reason": "",
+    "official_score": 0.0,
+    "official_pass": false,
+    "combined_success": false,
+    "terminal_reopenings": 0,
+    "error": null
+  },
+  "submission": {
+    "permitted": true,
+    "permit_id": "085766a0ae4c",
+    "task_id": "371",
+    "spec_version": "4.1",
+    "state_version_at_issue": "4a27546ba28b2145",
+    "answer_hash": "65c943eaaaaf94ecb4fc67525fc171df21ba190ad1475f77ba73697338ca81ed",
+    "readiness": "ready_to_submit",
+    "issued_step": 6,
+    "unverified": false,
+    "answer": "http://localhost:3000/node/5241955436"
+  },
+  "budget": {
+    "counts": {
+      "browser_action_count": 6,
+      "model_decision_count": 28,
+      "tool_call_count": 22,
+      "verification_probe_count": 8
+    },
+    "limits": {
+      "browser_action_count": 30,
+      "model_decision_count": 1000,
+      "tool_call_count": 2000,
+      "verification_probe_count": 240
+    },
+    "elapsed_seconds": 320.3236375240085,
+    "wallclock_seconds": 7200.0,
+    "exhausted": "",
+    "cancelled": false
+  },
+  "replica_setup_seconds": 0.39,
+  "replicas": [],
+  "isolation": "fresh containers for this task; no shared mutable mounts",
+  "replica_cleanup_seconds": 0.0,
+  "total_seconds": 345.16,
+  "replicas_removed": true
+}

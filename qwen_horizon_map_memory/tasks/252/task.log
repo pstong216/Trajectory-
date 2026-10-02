@@ -1,0 +1,94 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/252/runtime/runs/nogate/run-0c7dfcrR
+
+==============================================================================
+EPISODE · task 252
+==============================================================================
+  intent      : Tell me the coordinates of Tokyo Japanese Food Store in Pittsburgh in DD format
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/252.json
+
+▸ step 0 · planner
+      tools: lookup_site, compare_values, get_task_state, get_evidence, inspect_page_structure
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: extract_structured_values, search_page_text, inspect_page_structure, inspect_page_structure, inspect_controls
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 0 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 0 · planner
+      tools: extract_section_records, compare_values, inspect_controls, inspect_page_structure, get_task_state
+  subgoal     : Type the store name into the OpenStreetMap search box to find its location.
+  plan_step   : fill the search box
+  expected    : {'must_see': 'Tokyo Japanese Food Store'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_page_structure, inspect_page_structure, inspect_page_structure, compare_values, inspect_page_structure, get_obligations
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 1 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 1 · planner
+      tools: inspect_page_structure, get_task_state, compare_values, get_page_experience, search_experience, get_site_task_history
+  subgoal     : Click the Go button to submit the search for 'Tokyo Japanese Food Store Pittsburgh' and view the results with coordinates.
+  plan_step   : submit search
+  expected    : {'url_contains': 'search', 'must_see': 'Tokyo Japanese Food Store'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Tokyo%20Japanese%20Food%20Store%20Pittsburgh#map=19/40.45760/-79.92933
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: search_page_text, search_page_text, get_task_state, verify_criterion, refresh_current_state
+    error: max_tool_turns=4 exhausted with pending tool calls
+
+▸ step 2 · executor
+  grounder    : default  →  qwen/qwen3.8-27b
+  local result: yield
+  reason      : Execution scope is missing; choose a current region_ref before delegating.
+
+▸ step 2 · planner
+      tools: get_task_state, search_page_text, inspect_page_structure, verify_criterion, get_obligations
+  subgoal     : Report the coordinates of Tokyo Japanese Food Store in DD format from the map location the search landed on.
+  plan_step   : answer from map URL
+    TERMINAL  stop_now  answer='40.45760, -79.92933'
+
+▸ step 2 · env · apply
+    → execute stop (none) text='40.45760, -79.92933'
+      url unchanged (http://localhost:3000/search?query=Tokyo%20Japanese%20Food%20Store%20Pittsburgh#map=19/40.45760/-79.92933)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 252: steps=3  reward=1.0  success=True
+{
+  "episodes": [
+    {
+      "episode_id": "ep-500d44a3",
+      "task_id": "252",
+      "n_steps": 3,
+      "final_reward": 1.0,
+      "success": true,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}

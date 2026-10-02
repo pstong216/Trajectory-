@@ -1,0 +1,90 @@
+REV2 run archive: /home/ubuntu/webagent_test/runs_nogate/wa-map-full-memory-r1/tasks/371/runtime/runs/nogate/run-2KVoSlWD
+
+==============================================================================
+EPISODE · task 371
+==============================================================================
+  intent      : Pull up the description page of Piada restaurant near Pitt on Map
+  site        : map  (KB hit)
+  config      : /home/ubuntu/webagent_test/world_model/webarena/config_files/371.json
+
+▸ step 0 · planner
+      tools: compare_values, get_bindings, inspect_page_structure, inspect_controls, inspect_page_structure
+  subgoal     : Enter the search query for the Piada restaurant near Pittsburgh into the Search box so a search can be triggered.
+  plan_step   : fill the search field
+  expected    : {'must_see': 'Piada restaurant, Pittsburgh'}
+
+▸ step 0 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/#map=7/42.896/-75.108)
+      reward=1.0  done=False
+
+▸ step 1 · planner
+      tools: inspect_controls, get_obligations, inspect_page_structure, get_task_state, inspect_controls
+  subgoal     : Click the 'Go' button to submit the search for 'Piada restaurant, Pittsburgh' so search results appear.
+  plan_step   : submit search by clicking Go
+  expected    : {'url_contains': 'search', 'must_see': 'Piada'}
+
+▸ step 1 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/#map=7/42.896/-75.108  ->  http://localhost:3000/search?query=Piada%20restaurant%2C%20Pittsburgh#map=7/42.896/-73.180
+      reward=1.0  done=False
+
+▸ step 2 · planner
+      tools: inspect_page_structure, get_site_task_history, inspect_page_structure, assign
+  subgoal     : Replace the search query with the shorter term 'Piada' and submit so the local Nominatim index can match it, since 'Piada restaurant, Pittsburgh' returned no results.
+  plan_step   : search for 'Piada'
+  expected    : {'url_contains': 'query=Piada', 'must_see': 'Piada'}
+
+▸ step 2 · env · apply
+    → execute type (element_id) element_id=79
+      url unchanged (http://localhost:3000/search?query=Piada%20restaurant%2C%20Pittsburgh#map=7/42.896/-73.180)
+      reward=1.0  done=False
+
+▸ step 3 · planner
+      tools: compare_values, compare_values, inspect_controls, get_task_state, inspect_controls
+  subgoal     : Click the 'Go' button to submit the 'Piada' search so results appear for the Piada restaurant near Pittsburgh.
+  plan_step   : submit the Piada search
+  expected    : {'url_contains': 'search', 'must_see': 'Piada'}
+
+▸ step 3 · env · apply
+    → execute click (element_id) element_id=239
+      url: http://localhost:3000/search?query=Piada%20restaurant%2C%20Pittsburgh#map=7/42.896/-73.180  ->  http://localhost:3000/search?query=Piada#map=19/40.55134/-80.02305
+      reward=1.0  done=False
+
+▸ step 4 · planner
+      tools: compare_values, get_task_state, compare_values
+  subgoal     : Open the Piada restaurant description page by clicking the search result link to node 5241955436.
+  plan_step   : open the Piada node description page
+  navigate_to : http://localhost:3000/node/5241955436
+  expected    : {'url_contains': '/node/5241955436', 'must_see': 'Piada'}
+
+▸ step 4 · env · apply
+    → execute goto (none) url='http://localhost:3000/node/5241955436'
+      url: http://localhost:3000/search?query=Piada#map=19/40.55134/-80.02305  ->  http://localhost:3000/node/5241955436
+      reward=1.0  done=False
+
+▸ step 5 · planner
+  subgoal     : The Piada restaurant description page (node 5241955436) is already open; the task is complete.
+    TERMINAL  stop_now  answer='http://localhost:3000/node/5241955436'
+
+▸ step 5 · env · apply
+    → execute stop (none) text='http://localhost:3000/node/5241955436'
+      url unchanged (http://localhost:3000/node/5241955436)
+      reward=0.0  done=True
+
+▸ episode end
+    DONE  task 371: steps=6  reward=0.0  success=False
+{
+  "episodes": [
+    {
+      "episode_id": "ep-a1b0a6b8",
+      "task_id": "371",
+      "n_steps": 6,
+      "final_reward": 0.0,
+      "success": false,
+      "error": null,
+      "infra_failure": false
+    }
+  ],
+  "n": 1
+}
