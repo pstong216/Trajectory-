@@ -1,0 +1,12 @@
+{
+  "map": {
+    "total_attempts": 109,
+    "completed_episodes": 109,
+    "official_passed": 51,
+    "gate_permit_granted": 32,
+    "gate_permit_consumed": 27,
+    "horizon_succeeded": 15,
+    "infra_failures": 0,
+    "runner_failures": 0
+  }
+}

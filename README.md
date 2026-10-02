@@ -18,3 +18,6 @@ Trajectories from the official WebArena baseline agent (`web-arena-x/webarena`, 
 - `luna_webarena_baseline/config.json`, `error.txt`: run configuration and error log.
 
 The self-hosted site address is replaced by `<EC2_HOST>` throughout. Playwright trace recordings are not included (7.3 GB).
+
+## Also in this repo
+- `qwen_horizon_map_memory/`: horizon harness trajectories, qwen3.8-27b, all 109 WebArena map tasks with memory (51/109). See its README.
